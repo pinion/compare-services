@@ -1,4 +1,4 @@
-# Project Name
+# Amplify Service and Spec Duplication Finder
 
 ## Installation
 
