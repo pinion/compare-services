@@ -3,3 +3,5 @@ apispecs*
 service-docs*
 categorytraining*
 .venv
+all_files.csv
+all_files.json
