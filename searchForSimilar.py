@@ -71,10 +71,11 @@ def plot_similarity(similarity_df):
 
 if __name__ == '__main__':
     # Specify the query document path
-    query_document = './compare-services/apispecs/accounts.json'
+    query_document = './apiservices.jq'
+    # query_document = './apispecs/accounts.json'
 
     # Specify the directory containing the documents
-    document_directory = './compare-services/apispecs'
+    document_directory = './apispecs'
 
     # Read the query document
     with open(query_document, 'r') as file:
