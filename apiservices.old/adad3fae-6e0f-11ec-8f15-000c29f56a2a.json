@@ -1,0 +1,72 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "adad3fae-6e0f-11ec-8f15-000c29f56a2a.1",
+        "title": "Security-HIPAA-Control - 2022/01/05 - r 1",
+        "metadata": {
+            "id": "8a2e8a6f7dca5fce017e29b7cb62252d",
+            "audit": {
+                "createTimestamp": "2022-01-05T10:10:18.082+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:57.339+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e8a6f7dca5fce017e29b7c8ec251f",
+                    "kind": "APIService",
+                    "name": "adad3fae-6e0f-11ec-8f15-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/adad3fae-6e0f-11ec-8f15-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/adad3fae-6e0f-11ec-8f15-000c29f56a2a.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "14295903-2583-430a-8e5b-fda415191639",
+            "externalAPIName": "Security-HIPAA-Control",
+            "GatewayType": "Edge",
+            "majorHash": "8172316948134892054",
+            "externalAPIPrimaryKey": "vhost:-path:/api/hipaa/control-routingKey:",
+            "minorHash": "7831627094629719065"
+        },
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "Category_ Control",
+            "Category_Security",
+            "Type_Demo_Amplify_PlexusHealth",
+            "APIID_4a04a4f9-84ec-46e8-9931-1838e49abbe7"
+        ],
+        "spec": {
+            "apiService": "adad3fae-6e0f-11ec-8f15-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIxLjAiLAogICAgInRpdGxlIiA6ICJTZWN1cml0eS1ISVBBQS1Db250cm9sIiwKICAgICJ4LXN1bW1hcnkiIDogIlByb3ZpZGVzIHNlY3VyZSBlbGVjdHJvbmljIGFjY2VzcyB0byBoZWFsdGggZGF0YSBhbmQgdG8gcmVtYWluIGluwqBjb21wbGlhbmNlwqB3aXRoIHByaXZhY3kgcmVndWxhdGlvbnMgc2V0IGJ5IEhIUyAoZW5jcnlwdGlvbiwgbXVsdGkgZmFjdG9yIGF1dGhlbnRpY2F0aW9uLCDigKYpIgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2hpcGFhL2NvbnRyb2wiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvMTQyOTU5MDMtMjU4My00MzBhLThlNWItZmRhNDE1MTkxNjM5L2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvMTQyOTU5MDMtMjU4My00MzBhLThlNWItZmRhNDE1MTkxNjM5L2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvMTQyOTU5MDMtMjU4My00MzBhLThlNWItZmRhNDE1MTkxNjM5L3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrLzE0Mjk1OTAzLTI1ODMtNDMwYS04ZTViLWZkYTQxNTE5MTYzOS9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvMTQyOTU5MDMtMjU4My00MzBhLThlNWItZmRhNDE1MTkxNjM5L25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMTFleCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTU1NjUyNjYzMTU1MywKICAgICJ0YWdzIiA6IHsKICAgICAgIkluZHVzdHJ5IiA6IFsgIkhlYWx0aGNhcmUiIF0sCiAgICAgICJUeXBlIiA6IFsgIkRlbW9fQW1wbGlmeV9QbGV4dXNIZWFsdGgiIF0sCiAgICAgICJDYXRlZ29yeSIgOiBbICJTZWN1cml0eSIsICIgQ29udHJvbCIgXQogICAgfSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgImlkIiA6ICIxNDI5NTkwMy0yNTgzLTQzMGEtOGU1Yi1mZGE0MTUxOTE2MzkiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiCiAgfQp9",
+                "version": "1.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "security-patientauth-service.1",
+        "title": "Security-PatientAuth-Service (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e8c318054cad301807603ecfb2b52",
+            "audit": {
+                "createTimestamp": "2022-04-29T15:50:10.427+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:41.316+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e86048054cad001807603e5e21801",
+                    "kind": "APIService",
+                    "name": "security-patientauth-service",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/security-patientauth-service",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/security-patientauth-service.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth",
+            "Category_ Security",
+            "Category_Auth"
+        ],
+        "spec": {
+            "apiService": "security-patientauth-service",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIyLjIiLAogICAgInRpdGxlIiA6ICJTZWN1cml0eS1QYXRpZW50QXV0aC1TZXJ2aWNlIiwKICAgICJ4LXN1bW1hcnkiIDogIlNlY3VyaXR5IHNlcnZpY2UgcHJvdmlkaW5nIHBhdGllbnQgYXV0aGVudGljYXRpb24iCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvc2VjL2F1dGgvcGF0aWVudCIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJBdXRob3JpemUiLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy9lNjljMDNlMS1kOTlkLTRlZmMtYmJkMS02NTcwMWIyMGVkNzIvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay9lNjljMDNlMS1kOTlkLTRlZmMtYmJkMS02NTcwMWIyMGVkNzIvaW9zLXN3aWZ0IiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2U2OWMwM2UxLWQ5OWQtNGVmYy1iYmQxLTY1NzAxYjIwZWQ3Mi9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvZTY5YzAzZTEtZDk5ZC00ZWZjLWJiZDEtNjU3MDFiMjBlZDcyL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMTFleCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTU1NjUyNjYzMTg4NSwKICAgICJ0YWdzIiA6IHsKICAgICAgIkluZHVzdHJ5IiA6IFsgIkhlYWx0aGNhcmUiIF0sCiAgICAgICJUeXBlIiA6IFsgIkRlbW9fQW1wbGlmeV9QbGV4dXNIZWFsdGgiIF0sCiAgICAgICJDYXRlZ29yeSIgOiBbICJBdXRoIiwgIiBTZWN1cml0eSIgXQogICAgfSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgImlkIiA6ICJlNjljMDNlMS1kOTlkLTRlZmMtYmJkMS02NTcwMWIyMGVkNzIiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiCiAgfQp9",
+                "version": "2.2",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "16505430037411332973",
+            "minorHash": "2143515826285347245",
+            "externalAPIID": "e69c03e1-d99d-4efc-bbd1-65701b20ed72",
+            "externalAPIName": "Security-PatientAuth-Service",
+            "externalAPIPrimaryKey": "path:/api/sec/auth/patient-routingKey:"
+        }
+    }
+]

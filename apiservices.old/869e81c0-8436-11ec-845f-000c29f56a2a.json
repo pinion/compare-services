@@ -1,0 +1,285 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "869e81c0-8436-11ec-845f-000c29f56a2a.2",
+        "title": "Stock - 2022/02/02 - r 2",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e85967ebae105017ebae619e5000c",
+            "audit": {
+                "createTimestamp": "2022-02-02T14:45:49.157+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:52.961+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e82ba7eba8eb9017ebae43fa302e6",
+                    "kind": "APIService",
+                    "name": "869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/869e81c0-8436-11ec-845f-000c29f56a2a.2"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "7c46cd80-f1b2-4e9c-8f6b-4ab6525ea858",
+            "externalAPIName": "Stock",
+            "GatewayType": "Edge",
+            "majorHash": "9112803523812465330",
+            "minorHash": "16803585073307604750",
+            "externalAPIPrimaryKey": "vhost:-path:/finnhub-routingKey:",
+            "prevAPIServiceRevisionID": "8a2e94247eb9a284017ebae441720a9f"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_349a5cc9-10f9-42d8-a088-8a7649df463f"
+        ],
+        "spec": {
+            "apiService": "869e81c0-8436-11ec-845f-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJTdG9jayIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2Zpbm5odWIiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiL2N1c3RvbWVyIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInN1bW1hcnkiIDogIllvdXIgR0VUIGVuZHBvaW50IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogImdldC1jdXN0b21lciIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiaWQiLAogICAgICAgICAgImluIiA6ICJxdWVyeSIsCiAgICAgICAgICAicmVxdWlyZWQiIDogZmFsc2UsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICAgICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICAgICAgICAgInN5bWJvbCIgOiB7CiAgICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgImJhbGFuY2UiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICJuYW1lIiA6IHsKICAgICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAiaWQiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDEiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVuYXV0aG9yaXplZCIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1VuYXV0aG9yaXplZEVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJkZWZpbml0aW9ucyIgOiB7CiAgICAiUGF5bG9hZFRvb0xhcmdlRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImNvZGUiLCAibWVzc2FnZSIsICJyZXF1ZXN0LWlkIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiY29kZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiaW50ZWdlciIsCiAgICAgICAgICAiZm9ybWF0IiA6ICJpbnQzMiIKICAgICAgICB9LAogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgInJlcXVlc3QtaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiN2M0NmNkODAtZjFiMi00ZTljLThmNmItNGFiNjUyNWVhODU4IiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQzODEyOTU5ODgzCiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "869e81c0-8436-11ec-845f-000c29f56a2a.4",
+        "title": "Stock - 2022/02/02 - r 4",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e85967ebae105017ebae77b2d0035",
+            "audit": {
+                "createTimestamp": "2022-02-02T14:47:19.597+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:53.080+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e82ba7eba8eb9017ebae43fa302e6",
+                    "kind": "APIService",
+                    "name": "869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/869e81c0-8436-11ec-845f-000c29f56a2a.4"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "7c46cd80-f1b2-4e9c-8f6b-4ab6525ea858",
+            "externalAPIName": "Stock",
+            "GatewayType": "Edge",
+            "majorHash": "4628519140685131874",
+            "minorHash": "16803585073307604750",
+            "externalAPIPrimaryKey": "vhost:-path:/finnhub-routingKey:",
+            "prevAPIServiceRevisionID": "8a2e90527ebabc86017ebae7052b0196"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_349a5cc9-10f9-42d8-a088-8a7649df463f"
+        ],
+        "spec": {
+            "apiService": "869e81c0-8436-11ec-845f-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJTdG9jayIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2Zpbm5odWIiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiL2N1c3RvbWVyIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInN1bW1hcnkiIDogIllvdXIgR0VUIGVuZHBvaW50IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogImdldC1jdXN0b21lciIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiaWQiLAogICAgICAgICAgImluIiA6ICJxdWVyeSIsCiAgICAgICAgICAicmVxdWlyZWQiIDogZmFsc2UsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICAgICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICAgICAgICAgInN5bWJvbCIgOiB7CiAgICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgImJhbGFuY2UiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICJuYW1lIiA6IHsKICAgICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAiaWQiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDEiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVuYXV0aG9yaXplZCIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1VuYXV0aG9yaXplZEVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJkZWZpbml0aW9ucyIgOiB7CiAgICAiUGF5bG9hZFRvb0xhcmdlRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImNvZGUiLCAibWVzc2FnZSIsICJyZXF1ZXN0LWlkIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiY29kZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiaW50ZWdlciIsCiAgICAgICAgICAiZm9ybWF0IiA6ICJpbnQzMiIKICAgICAgICB9LAogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgInJlcXVlc3QtaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiN2M0NmNkODAtZjFiMi00ZTljLThmNmItNGFiNjUyNWVhODU4IiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQzODEyOTU5ODgzCiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "869e81c0-8436-11ec-845f-000c29f56a2a.3",
+        "title": "Stock - 2022/02/02 - r 3",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e90527ebabc86017ebae7052b0196",
+            "audit": {
+                "createTimestamp": "2022-02-02T14:46:49.387+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:53.032+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e82ba7eba8eb9017ebae43fa302e6",
+                    "kind": "APIService",
+                    "name": "869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/869e81c0-8436-11ec-845f-000c29f56a2a.3"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "7c46cd80-f1b2-4e9c-8f6b-4ab6525ea858",
+            "externalAPIName": "Stock",
+            "GatewayType": "Edge",
+            "majorHash": "7804552452293079575",
+            "minorHash": "16803585073307604750",
+            "externalAPIPrimaryKey": "vhost:-path:/finnhub-routingKey:",
+            "prevAPIServiceRevisionID": "8a2e85967ebae105017ebae619e5000c"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_349a5cc9-10f9-42d8-a088-8a7649df463f"
+        ],
+        "spec": {
+            "apiService": "869e81c0-8436-11ec-845f-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJTdG9jayIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2Zpbm5odWIiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiL2N1c3RvbWVyIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInN1bW1hcnkiIDogIllvdXIgR0VUIGVuZHBvaW50IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogImdldC1jdXN0b21lciIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiaWQiLAogICAgICAgICAgImluIiA6ICJxdWVyeSIsCiAgICAgICAgICAicmVxdWlyZWQiIDogZmFsc2UsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICAgICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICAgICAgICAgInN5bWJvbCIgOiB7CiAgICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgImJhbGFuY2UiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICJuYW1lIiA6IHsKICAgICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAiaWQiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDEiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVuYXV0aG9yaXplZCIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1VuYXV0aG9yaXplZEVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJkZWZpbml0aW9ucyIgOiB7CiAgICAiUGF5bG9hZFRvb0xhcmdlRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImNvZGUiLCAibWVzc2FnZSIsICJyZXF1ZXN0LWlkIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiY29kZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiaW50ZWdlciIsCiAgICAgICAgICAiZm9ybWF0IiA6ICJpbnQzMiIKICAgICAgICB9LAogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgInJlcXVlc3QtaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiN2M0NmNkODAtZjFiMi00ZTljLThmNmItNGFiNjUyNWVhODU4IiwKICAgICJzdGF0ZSIgOiAidW5wdWJsaXNoZWQiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE2NDM4MTI5NTk4ODMKICB9Cn0=",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "869e81c0-8436-11ec-845f-000c29f56a2a.1",
+        "title": "Stock - 2022/02/02 - r 1",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e94247eb9a284017ebae441720a9f",
+            "audit": {
+                "createTimestamp": "2022-02-02T14:43:48.210+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:52.906+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e82ba7eba8eb9017ebae43fa302e6",
+                    "kind": "APIService",
+                    "name": "869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/869e81c0-8436-11ec-845f-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/869e81c0-8436-11ec-845f-000c29f56a2a.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "7c46cd80-f1b2-4e9c-8f6b-4ab6525ea858",
+            "externalAPIName": "Stock",
+            "GatewayType": "Edge",
+            "majorHash": "7804552452293079575",
+            "minorHash": "16803585073307604750",
+            "externalAPIPrimaryKey": "vhost:-path:/finnhub-routingKey:"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_349a5cc9-10f9-42d8-a088-8a7649df463f"
+        ],
+        "spec": {
+            "apiService": "869e81c0-8436-11ec-845f-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJTdG9jayIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2Zpbm5odWIiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiL2N1c3RvbWVyIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInN1bW1hcnkiIDogIllvdXIgR0VUIGVuZHBvaW50IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogImdldC1jdXN0b21lciIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiaWQiLAogICAgICAgICAgImluIiA6ICJxdWVyeSIsCiAgICAgICAgICAicmVxdWlyZWQiIDogZmFsc2UsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICAgICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICAgICAgICAgInN5bWJvbCIgOiB7CiAgICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgImJhbGFuY2UiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICJuYW1lIiA6IHsKICAgICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAiaWQiIDogewogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDEiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVuYXV0aG9yaXplZCIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1VuYXV0aG9yaXplZEVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJkZWZpbml0aW9ucyIgOiB7CiAgICAiUGF5bG9hZFRvb0xhcmdlRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImNvZGUiLCAibWVzc2FnZSIsICJyZXF1ZXN0LWlkIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiY29kZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiaW50ZWdlciIsCiAgICAgICAgICAiZm9ybWF0IiA6ICJpbnQzMiIKICAgICAgICB9LAogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgInJlcXVlc3QtaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay83YzQ2Y2Q4MC1mMWIyLTRlOWMtOGY2Yi00YWI2NTI1ZWE4NTgvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzdjNDZjZDgwLWYxYjItNGU5Yy04ZjZiLTRhYjY1MjVlYTg1OC9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiN2M0NmNkODAtZjFiMi00ZTljLThmNmItNGFiNjUyNWVhODU4IiwKICAgICJzdGF0ZSIgOiAidW5wdWJsaXNoZWQiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE2NDM4MTI5NTk4ODMKICB9Cn0=",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

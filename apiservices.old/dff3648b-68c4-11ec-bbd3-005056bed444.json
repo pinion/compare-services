@@ -1,0 +1,68 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "dff3648b-68c4-11ec-bbd3-005056bed444.1",
+        "title": "Translate Text - 2021/12/29 - r 1",
+        "metadata": {
+            "id": "8a2e8a6f7dca5fce017e0708f238660f",
+            "audit": {
+                "createTimestamp": "2021-12-29T16:32:13.880+0000",
+                "createUserId": "service-account-f161c415-37e3-4bd4-b146-15f9256921d7",
+                "modifyTimestamp": "2023-07-21T03:46:57.149+0000",
+                "modifyUserId": "service-account-f161c415-37e3-4bd4-b146-15f9256921d7"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e06d566714811",
+                "kind": "Environment",
+                "name": "gtw-v7",
+                "title": "gtw-v7",
+                "selfLink": "/management/v1alpha1/environments/gtw-v7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e866e7de2adbf017e0708f05a6943",
+                    "kind": "APIService",
+                    "name": "dff3648b-68c4-11ec-bbd3-005056bed444",
+                    "scopeKind": "Environment",
+                    "scopeName": "gtw-v7",
+                    "selfLink": "/management/v1alpha1/environments/gtw-v7/apiservices/dff3648b-68c4-11ec-bbd3-005056bed444",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/gtw-v7/apiservicerevisions/dff3648b-68c4-11ec-bbd3-005056bed444.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "45523efe-afce-4246-9dd6-b2d4fc985cc1",
+            "externalAPIName": "Translate Text",
+            "GatewayType": "Edge",
+            "majorHash": "4262915062311944099",
+            "externalAPIPrimaryKey": "vhost:-path:/api-routingKey:",
+            "minorHash": "8814187077421686340"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_26925f52-cb96-44db-a4f0-699dbb173bd9"
+        ],
+        "spec": {
+            "apiService": "dff3648b-68c4-11ec-bbd3-005056bed444",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJUcmFuc2xhdGUgVGV4dCIsCiAgICAieC1zdW1tYXJ5IiA6ICJBV1MgQ29tcHJlaGVuZCBmb3IgTmF0dXJhbCBMYW5ndWFnZSBQcm9jZXNzaW5nIChOTFApOiBhcGktYnVpbGRlci1wbHVnaW4tdHJhbnNsYXRldGV4dCIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIkFQSSBLZXkiIDogWyBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2dyZWV0IiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInRhZ3MiIDogWyAiaGVsbG93b3JsZCIgXSwKICAgICAgICAic3VtbWFyeSIgOiAiR3JlZXQgYSB1c2VyIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkdyZWV0IiwKICAgICAgICAicHJvZHVjZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIHsKICAgICAgICAgICJuYW1lIiA6ICJ1c2VybmFtZSIsCiAgICAgICAgICAiaW4iIDogInF1ZXJ5IiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIHVzZXJuYW1lIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9IF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJncmVldGluZyIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL3NjaGVtYS5kZW1vLWFwaV9ncmVldGluZyIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogImJhZCByZXF1ZXN0IiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvc2NoZW1hLmRlbW8tYXBpX2Vycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDEzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXlsb2FkIHRvbyBsYXJnZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1BheWxvYWRUb29MYXJnZUVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAic2VjdXJpdHlEZWZpbml0aW9ucyIgOiB7CiAgICAiQVBJIEtleSIgOiB7CiAgICAgICJkZXNjcmlwdGlvbiIgOiAiQVBJIEtleSIsCiAgICAgICJ0eXBlIiA6ICJhcGlLZXkiLAogICAgICAibmFtZSIgOiAiS2V5SWQiLAogICAgICAiaW4iIDogImhlYWRlciIKICAgIH0KICB9LAogICJkZWZpbml0aW9ucyIgOiB7CiAgICAiUGF5bG9hZFRvb0xhcmdlRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImNvZGUiLCAibWVzc2FnZSIsICJyZXF1ZXN0LWlkIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiY29kZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiaW50ZWdlciIsCiAgICAgICAgICAiZm9ybWF0IiA6ICJpbnQzMiIKICAgICAgICB9LAogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgInJlcXVlc3QtaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgInNjaGVtYS5kZW1vLWFwaV9lcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiZXJyb3IiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiZXJyb3IiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoZSBlcnJvciBtZXNzYWdlIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJzY2hlbWEuZGVtby1hcGlfZ3JlZXRpbmciIDogewogICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIiA6ICJBIGdyZWV0aW5nIG1lc3NhZ2UgZm9yIHRoZSB1c2VyIgogICAgfSwKICAgICJVbmF1dGhvcml6ZWRFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiaWQiLCAibWVzc2FnZSIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZW51bSIgOiBbICJjb20uYXBwY2VsZXJhdG9yLmFwaS51bmF1dGhvcml6ZWQiIF0KICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvNDU1MjNlZmUtYWZjZS00MjQ2LTlkZDYtYjJkNGZjOTg1Y2MxL2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay80NTUyM2VmZS1hZmNlLTQyNDYtOWRkNi1iMmQ0ZmM5ODVjYzEvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay80NTUyM2VmZS1hZmNlLTQyNDYtOWRkNi1iMmQ0ZmM5ODVjYzEvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvNDU1MjNlZmUtYWZjZS00MjQ2LTlkZDYtYjJkNGZjOTg1Y2MxL2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay80NTUyM2VmZS1hZmNlLTQyNDYtOWRkNi1iMmQ0ZmM5ODVjYzEvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIyMCIsCiAgICAiaWQiIDogIjQ1NTIzZWZlLWFmY2UtNDI0Ni05ZGQ2LWIyZDRmYzk4NWNjMSIsCiAgICAic3RhdGUiIDogInVucHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQwNzk1MTIwNTA0CiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

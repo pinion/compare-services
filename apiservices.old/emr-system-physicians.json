@@ -1,0 +1,70 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "emr-system-physicians.1",
+        "title": "EMR-System-Physicians (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e8c318054cad301807602ec322a8d",
+            "audit": {
+                "createTimestamp": "2022-04-29T15:49:04.690+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:44.802+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e91d98054e64601807602e91f1bd4",
+                    "kind": "APIService",
+                    "name": "emr-system-physicians",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/emr-system-physicians",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/emr-system-physicians.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth",
+            "Category_Physician"
+        ],
+        "spec": {
+            "apiService": "emr-system-physicians",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIzLjciLAogICAgInRpdGxlIiA6ICJFTVItU3lzdGVtLVBoeXNpY2lhbnMiLAogICAgIngtc3VtbWFyeSIgOiAiUHJvY2Vzc2luZyBlbGVjdHJvbmljIGhlYWx0aCB0cmFuc2FjdGlvbnMgZm9yIHJldHJpZXZpbmcgcGh5c2ljaWFucyBhdmFpbGFiaWxpdHkiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvZW1yL3BoeXNpY2lhbnMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL2lvcy1zd2lmdCIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9lNGJkZWNlYS1mOGNmLTQxYzYtYTM0My1mYzNlYzk2ZmNjNjIvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2U0YmRlY2VhLWY4Y2YtNDFjNi1hMzQzLWZjM2VjOTZmY2M2Mi9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjExZXgiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE1NTY1MjY2MzE3NzAsCiAgICAidGFncyIgOiB7CiAgICAgICJJbmR1c3RyeSIgOiBbICJIZWFsdGhjYXJlIiBdLAogICAgICAiVHlwZSIgOiBbICJEZW1vX0FtcGxpZnlfUGxleHVzSGVhbHRoIiBdLAogICAgICAiQ2F0ZWdvcnkiIDogWyAiUGh5c2ljaWFuIiBdCiAgICB9LAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAiaWQiIDogImU0YmRlY2VhLWY4Y2YtNDFjNi1hMzQzLWZjM2VjOTZmY2M2MiIsCiAgICAic3RhdGUiIDogInB1Ymxpc2hlZCIKICB9Cn0=",
+                "version": "3.7",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "588005412555697655",
+            "minorHash": "12787480550722789083",
+            "externalAPIID": "e4bdecea-f8cf-41c6-a343-fc3ec96fcc62",
+            "externalAPIName": "EMR-System-Physicians",
+            "externalAPIPrimaryKey": "path:/api/emr/physicians-routingKey:"
+        }
+    }
+]

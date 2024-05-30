@@ -1,0 +1,63 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "scoring-demo-api-26-11",
+        "title": "Scoring Demo API 26 11 (V7)",
+        "metadata": {
+            "id": "8a2e833e75f49753017604c796941260",
+            "audit": {
+                "createTimestamp": "2020-11-26T13:39:17.780+0000",
+                "createUserId": "DOSA_71607e5512ff435ea20837ecb17f85a7",
+                "modifyTimestamp": "2023-07-21T03:47:11.424+0000",
+                "modifyUserId": "DOSA_71607e5512ff435ea20837ecb17f85a7"
+            },
+            "scope": {
+                "id": "e4efe9b572583eae0172798d82f90596",
+                "kind": "Environment",
+                "name": "on-premise",
+                "title": "Minikube",
+                "selfLink": "/management/v1alpha1/environments/on-premise"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "55246",
+            "references": [
+                {
+                    "id": "8a2e833e75f49753017604c795d4125c",
+                    "kind": "APIService",
+                    "name": "scoring-demo-api-26-11",
+                    "scopeKind": "Environment",
+                    "scopeName": "on-premise",
+                    "selfLink": "/management/v1alpha1/environments/on-premise/apiservices/scoring-demo-api-26-11",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/on-premise/apiservicerevisions/scoring-demo-api-26-11"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayAgent",
+            "externalAPIID": "5af95744-e70f-418e-8800-bbafd3885262"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_8af03d7a-44b2-49c2-9083-498ce4a58758"
+        ],
+        "spec": {
+            "apiService": "scoring-demo-api-26-11",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAicHJldmlvdXMiLAogICAgInRpdGxlIiA6ICJTY29yaW5nIERlbW8gQVBJIDI2IDExIgogIH0sCiAgImhvc3QiIDogInRyYWZmaWMuYXh3YXktYW1wbGlmeS1jZW50cmFsLmNvbSIsCiAgImJhc2VQYXRoIiA6ICIvc2NvcmluZy9hcGkiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiL3Njb3Jpbmcve2lkfSIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJ0YWdzIiA6IFsgInNjb3JpbmciIF0sCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJGaW5kIG9uZSBzY29yaW5nIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkZpbmQgQnkgSUQgc2NvcmluZyIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiaWQiLAogICAgICAgICAgImluIiA6ICJwYXRoIiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIHNjb3JpbmcgSUQiLAogICAgICAgICAgInJlcXVpcmVkIiA6IHRydWUsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoZSBmaW5kIHN1Y2NlZWRlZCwgYW5kIHRoZSByZXN1bHRzIGFyZSBhdmFpbGFibGUuIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvc2NvcmluZy1mdWxsIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiQmFkIHJlcXVlc3QuIgogICAgICAgICAgfSwKICAgICAgICAgICI0MDEiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoaXMgcmVxdWVzdCByZXF1aXJlcyB1c2VyIGF1dGhlbnRpY2F0aW9uLCBhcyBjb25maWd1cmVkIGJ5IHRoZSBzZXJ2ZXIuIgogICAgICAgICAgfSwKICAgICAgICAgICI1MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlNvbWV0aGluZyB3ZW50IHdyb25nIGR1cmluZyB0aGUgcmVxdWVzdDsgY2hlY2sgb3V0IHRoZSBsb2dzIG9uIHlvdXIgc2VydmVyLiIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDA0IiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJObyByZXN1bHRzIHdlcmUgZm91bmQuIgogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgImRlZmluaXRpb25zIiA6IHsKICAgICJzY29yaW5nLWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImlkIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInNjb3JlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy81YWY5NTc0NC1lNzBmLTQxOGUtODgwMC1iYmFmZDM4ODUyNjIvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL3RyYWZmaWMuYXh3YXktYW1wbGlmeS1jZW50cmFsLmNvbSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrLzVhZjk1NzQ0LWU3MGYtNDE4ZS04ODAwLWJiYWZkMzg4NTI2Mi9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrLzVhZjk1NzQ0LWU3MGYtNDE4ZS04ODAwLWJiYWZkMzg4NTI2Mi90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay81YWY5NTc0NC1lNzBmLTQxOGUtODgwMC1iYmFmZDM4ODUyNjIvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzVhZjk1NzQ0LWU3MGYtNDE4ZS04ODAwLWJiYWZkMzg4NTI2Mi9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiNWFmOTU3NDQtZTcwZi00MThlLTg4MDAtYmJhZmQzODg1MjYyIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIgogIH0KfQ==",
+                "version": "previous",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

@@ -1,0 +1,136 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "An API Builder service",
+    "version" : "1.0.0",
+    "title" : "Translate Text",
+    "x-summary" : "AWS Comprehend for Natural Language Processing (NLP): api-builder-plugin-translatetext"
+  },
+  "host" : "api-env.demo.axway.com:8065",
+  "basePath" : "/api",
+  "schemes" : [ "https" ],
+  "security" : [ {
+    "API Key" : [ ]
+  } ],
+  "paths" : {
+    "/greet" : {
+      "get" : {
+        "tags" : [ "helloworld" ],
+        "summary" : "Greet a user",
+        "operationId" : "Greet",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "username",
+          "in" : "query",
+          "description" : "The username",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "greeting",
+            "schema" : {
+              "$ref" : "#/definitions/schema.demo-api_greeting"
+            }
+          },
+          "400" : {
+            "description" : "bad request",
+            "schema" : {
+              "$ref" : "#/definitions/schema.demo-api_error"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "413" : {
+            "description" : "Payload too large",
+            "schema" : {
+              "$ref" : "#/definitions/PayloadTooLargeError"
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "API Key" : {
+      "description" : "API Key",
+      "type" : "apiKey",
+      "name" : "KeyId",
+      "in" : "header"
+    }
+  },
+  "definitions" : {
+    "PayloadTooLargeError" : {
+      "type" : "object",
+      "required" : [ "code", "message", "request-id", "success" ],
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "success" : {
+          "type" : "boolean"
+        },
+        "request-id" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "schema.demo-api_error" : {
+      "type" : "object",
+      "required" : [ "error" ],
+      "properties" : {
+        "error" : {
+          "type" : "string",
+          "description" : "The error message"
+        }
+      }
+    },
+    "schema.demo-api_greeting" : {
+      "type" : "string",
+      "description" : "A greeting message for the user"
+    },
+    "UnauthorizedError" : {
+      "type" : "object",
+      "required" : [ "id", "message", "success" ],
+      "properties" : {
+        "success" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string",
+          "enum" : [ "com.appcelerator.api.unauthorized" ]
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "x-axway" : {
+    "serviceType" : "rest",
+    "image" : "/api/portal/v1.3/discovery/swagger/apis/45523efe-afce-4246-9dd6-b2d4fc985cc1/image",
+    "basePaths" : [ "https://api-env.demo.axway.com:8065" ],
+    "expired" : false,
+    "retirementDate" : 0,
+    "corsEnabled" : true,
+    "deprecated" : false,
+    "availableSDK" : {
+      "ios-swift" : "/discovery/sdk/45523efe-afce-4246-9dd6-b2d4fc985cc1/ios-swift",
+      "titanium" : "/discovery/sdk/45523efe-afce-4246-9dd6-b2d4fc985cc1/titanium",
+      "android" : "/discovery/sdk/45523efe-afce-4246-9dd6-b2d4fc985cc1/android",
+      "nodejs" : "/discovery/sdk/45523efe-afce-4246-9dd6-b2d4fc985cc1/nodejs"
+    },
+    "apiResourceType" : "swagger20",
+    "id" : "45523efe-afce-4246-9dd6-b2d4fc985cc1",
+    "state" : "unpublished",
+    "accessGrantedDate" : 1640795120504
+  }
+}

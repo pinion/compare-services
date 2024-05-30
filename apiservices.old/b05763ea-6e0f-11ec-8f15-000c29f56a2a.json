@@ -1,0 +1,141 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "b05763ea-6e0f-11ec-8f15-000c29f56a2a.2",
+        "title": "EMR-System-Physicians - 2022/01/05 - r 2",
+        "metadata": {
+            "id": "8a2e866e7de2adbf017e2a85bd1c3b24",
+            "audit": {
+                "createTimestamp": "2022-01-05T13:55:14.844+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:56.182+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e8a6f7dca5fce017e29b7d9ae255c",
+                    "kind": "APIService",
+                    "name": "b05763ea-6e0f-11ec-8f15-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/b05763ea-6e0f-11ec-8f15-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/b05763ea-6e0f-11ec-8f15-000c29f56a2a.2"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "e4bdecea-f8cf-41c6-a343-fc3ec96fcc62",
+            "externalAPIName": "EMR-System-Physicians",
+            "GatewayType": "Edge",
+            "majorHash": "588005412555697655",
+            "minorHash": "12787480550722789083",
+            "externalAPIPrimaryKey": "vhost:-path:/api/emr/physicians-routingKey:",
+            "prevAPIServiceRevisionID": "8a2e90957de216a6017e29b7db7e2993"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_83511dc1-328d-492e-8da3-6c725f125ab3",
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth",
+            "Category_Physician"
+        ],
+        "spec": {
+            "apiService": "b05763ea-6e0f-11ec-8f15-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIzLjciLAogICAgInRpdGxlIiA6ICJFTVItU3lzdGVtLVBoeXNpY2lhbnMiLAogICAgIngtc3VtbWFyeSIgOiAiUHJvY2Vzc2luZyBlbGVjdHJvbmljIGhlYWx0aCB0cmFuc2FjdGlvbnMgZm9yIHJldHJpZXZpbmcgcGh5c2ljaWFucyBhdmFpbGFiaWxpdHkiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvZW1yL3BoeXNpY2lhbnMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2U0YmRlY2VhLWY4Y2YtNDFjNi1hMzQzLWZjM2VjOTZmY2M2Mi9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMTFleCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTU1NjUyNjYzMTc3MCwKICAgICJ0YWdzIiA6IHsKICAgICAgIkluZHVzdHJ5IiA6IFsgIkhlYWx0aGNhcmUiIF0sCiAgICAgICJUeXBlIiA6IFsgIkRlbW9fQW1wbGlmeV9QbGV4dXNIZWFsdGgiIF0sCiAgICAgICJDYXRlZ29yeSIgOiBbICJQaHlzaWNpYW4iIF0KICAgIH0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJpZCIgOiAiZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIgogIH0KfQ==",
+                "version": "3.7",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "b05763ea-6e0f-11ec-8f15-000c29f56a2a.1",
+        "title": "EMR-System-Physicians - 2022/01/05 - r 1",
+        "metadata": {
+            "id": "8a2e90957de216a6017e29b7db7e2993",
+            "audit": {
+                "createTimestamp": "2022-01-05T10:10:22.206+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:57.375+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e8a6f7dca5fce017e29b7d9ae255c",
+                    "kind": "APIService",
+                    "name": "b05763ea-6e0f-11ec-8f15-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/b05763ea-6e0f-11ec-8f15-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/b05763ea-6e0f-11ec-8f15-000c29f56a2a.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "e4bdecea-f8cf-41c6-a343-fc3ec96fcc62",
+            "externalAPIName": "EMR-System-Physicians",
+            "GatewayType": "Edge",
+            "majorHash": "588005412555697655",
+            "minorHash": "12787480550722789083",
+            "externalAPIPrimaryKey": "vhost:-path:/api/emr/physicians-routingKey:"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_83511dc1-328d-492e-8da3-6c725f125ab3",
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth",
+            "Category_Physician"
+        ],
+        "spec": {
+            "apiService": "b05763ea-6e0f-11ec-8f15-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIzLjciLAogICAgInRpdGxlIiA6ICJFTVItU3lzdGVtLVBoeXNpY2lhbnMiLAogICAgIngtc3VtbWFyeSIgOiAiUHJvY2Vzc2luZyBlbGVjdHJvbmljIGhlYWx0aCB0cmFuc2FjdGlvbnMgZm9yIHJldHJpZXZpbmcgcGh5c2ljaWFucyBhdmFpbGFiaWxpdHkiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvZW1yL3BoeXNpY2lhbnMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2U0YmRlY2VhLWY4Y2YtNDFjNi1hMzQzLWZjM2VjOTZmY2M2Mi9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMTFleCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTU1NjUyNjYzMTc3MCwKICAgICJ0YWdzIiA6IHsKICAgICAgIkluZHVzdHJ5IiA6IFsgIkhlYWx0aGNhcmUiIF0sCiAgICAgICJUeXBlIiA6IFsgIkRlbW9fQW1wbGlmeV9QbGV4dXNIZWFsdGgiIF0sCiAgICAgICJDYXRlZ29yeSIgOiBbICJQaHlzaWNpYW4iIF0KICAgIH0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJpZCIgOiAiZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIgogIH0KfQ==",
+                "version": "3.7",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

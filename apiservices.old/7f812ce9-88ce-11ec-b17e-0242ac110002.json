@@ -1,0 +1,205 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "7f812ce9-88ce-11ec-b17e-0242ac110002-pre-prod-eu-central-1.1",
+        "title": "securePasswordGenerator - 2022/02/08 - r 1",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e845f7ec6f185017ed8ff18b4311b",
+            "audit": {
+                "createTimestamp": "2022-02-08T11:01:43.732+0000",
+                "createUserId": "service-account-9e077a5a-4d2a-42b2-8238-699ff2d198d8",
+                "modifyTimestamp": "2023-07-21T03:46:53.268+0000",
+                "modifyUserId": "service-account-9e077a5a-4d2a-42b2-8238-699ff2d198d8"
+            },
+            "scope": {
+                "id": "8a2e8fc87e580e54017e72754b0523f7",
+                "kind": "Environment",
+                "name": "aws-eu-central-1",
+                "title": "aws-eu-central-1",
+                "selfLink": "/management/v1alpha1/environments/aws-eu-central-1"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e845f7ec6f185017ed8ff170d3115",
+                    "kind": "APIService",
+                    "name": "7f812ce9-88ce-11ec-b17e-0242ac110002",
+                    "scopeKind": "Environment",
+                    "scopeName": "aws-eu-central-1",
+                    "selfLink": "/management/v1alpha1/environments/aws-eu-central-1/apiservices/7f812ce9-88ce-11ec-b17e-0242ac110002",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/aws-eu-central-1/apiservicerevisions/7f812ce9-88ce-11ec-b17e-0242ac110002-pre-prod-eu-central-1.1"
+        },
+        "attributes": {
+            "pre-prod-eu-central-1Hash": "6935142335421831571",
+            "createdBy": "AWSDiscoveryAgent",
+            "externalAPIID": "9nhig1i54i",
+            "externalAPIName": "securePasswordGenerator",
+            "GatewayType": "AWS",
+            "externalAPIStage": "pre-prod-eu-central-1"
+        },
+        "finalizers": [],
+        "tags": [],
+        "spec": {
+            "apiService": "7f812ce9-88ce-11ec-b17e-0242ac110002",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiR2VuZXJhdGUgYSBzZWN1cmUgcGFzc3dvcmQuIiwKICAgICJ2ZXJzaW9uIiA6ICIyMDIyLTAyLTA4VDExOjAxOjM2WiIsCiAgICAidGl0bGUiIDogInNlY3VyZVBhc3N3b3JkR2VuZXJhdG9yIgogIH0sCiAgImhvc3QiIDogIjluaGlnMWk1NGkuZXhlY3V0ZS1hcGkuZXUtY2VudHJhbC0xLmFtYXpvbmF3cy5jb20iLAogICJiYXNlUGF0aCIgOiAiL3ByZS1wcm9kLWV1LWNlbnRyYWwtMSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgInBvc3QiIDogewogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiMjAwIHJlc3BvbnNlIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvRW1wdHkiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJoZWFkZXJzIiA6IHsKICAgICAgICAgICAgICAiQWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2luIiA6IHsKICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9LAogICAgICAib3B0aW9ucyIgOiB7CiAgICAgICAgImNvbnN1bWVzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICIyMDAgcmVzcG9uc2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9FbXB0eSIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgImhlYWRlcnMiIDogewogICAgICAgICAgICAgICJBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW4iIDogewogICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICJBY2Nlc3MtQ29udHJvbC1BbGxvdy1NZXRob2RzIiA6IHsKICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAiQWNjZXNzLUNvbnRyb2wtQWxsb3ctSGVhZGVycyIgOiB7CiAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgImRlZmluaXRpb25zIiA6IHsKICAgICJFbXB0eSIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAidGl0bGUiIDogIkVtcHR5IFNjaGVtYSIKICAgIH0KICB9Cn0=",
+                "version": "2022-02-08T11:01:36Z",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "7f812ce9-88ce-11ec-b17e-0242ac110002-pre-prod-eu-central-1.2",
+        "title": "securePasswordGenerator - 2022/02/08 - r 2",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e845f7ec6f185017ed903afe63180",
+            "audit": {
+                "createTimestamp": "2022-02-08T11:06:44.582+0000",
+                "createUserId": "service-account-9e077a5a-4d2a-42b2-8238-699ff2d198d8",
+                "modifyTimestamp": "2023-07-21T03:46:53.364+0000",
+                "modifyUserId": "service-account-9e077a5a-4d2a-42b2-8238-699ff2d198d8"
+            },
+            "scope": {
+                "id": "8a2e8fc87e580e54017e72754b0523f7",
+                "kind": "Environment",
+                "name": "aws-eu-central-1",
+                "title": "aws-eu-central-1",
+                "selfLink": "/management/v1alpha1/environments/aws-eu-central-1"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e845f7ec6f185017ed8ff170d3115",
+                    "kind": "APIService",
+                    "name": "7f812ce9-88ce-11ec-b17e-0242ac110002",
+                    "scopeKind": "Environment",
+                    "scopeName": "aws-eu-central-1",
+                    "selfLink": "/management/v1alpha1/environments/aws-eu-central-1/apiservices/7f812ce9-88ce-11ec-b17e-0242ac110002",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/aws-eu-central-1/apiservicerevisions/7f812ce9-88ce-11ec-b17e-0242ac110002-pre-prod-eu-central-1.2"
+        },
+        "attributes": {
+            "pre-prod-eu-central-1Hash": "2113832599917543261",
+            "createdBy": "AWSDiscoveryAgent",
+            "externalAPIID": "9nhig1i54i",
+            "externalAPIName": "securePasswordGenerator",
+            "GatewayType": "AWS",
+            "externalAPIStage": "pre-prod-eu-central-1",
+            "prevAPIServiceRevisionID": "8a2e845f7ec6f185017ed8ff18b4311b"
+        },
+        "finalizers": [],
+        "tags": [],
+        "spec": {
+            "apiService": "7f812ce9-88ce-11ec-b17e-0242ac110002",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiR2VuZXJhdGUgYSBzZWN1cmUgcGFzc3dvcmQuIiwKICAgICJ2ZXJzaW9uIiA6ICIyMDIyLTAyLTA4VDExOjA2OjIxWiIsCiAgICAidGl0bGUiIDogInNlY3VyZVBhc3N3b3JkR2VuZXJhdG9yIgogIH0sCiAgImhvc3QiIDogIjluaGlnMWk1NGkuZXhlY3V0ZS1hcGkuZXUtY2VudHJhbC0xLmFtYXpvbmF3cy5jb20iLAogICJiYXNlUGF0aCIgOiAiL3ByZS1wcm9kLWV1LWNlbnRyYWwtMSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAibGVuZ3RoIiwKICAgICAgICAgICJpbiIgOiAiaGVhZGVyIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LCB7CiAgICAgICAgICAibmFtZSIgOiAibl9jYXBpdGFscyIsCiAgICAgICAgICAiaW4iIDogImhlYWRlciIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwgewogICAgICAgICAgIm5hbWUiIDogIm5fbnVtYmVycyIsCiAgICAgICAgICAiaW4iIDogImhlYWRlciIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiMjAwIHJlc3BvbnNlIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvRW1wdHkiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJoZWFkZXJzIiA6IHsKICAgICAgICAgICAgICAiQWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2luIiA6IHsKICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9LAogICAgICAicG9zdCIgOiB7CiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICIyMDAgcmVzcG9uc2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9FbXB0eSIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgImhlYWRlcnMiIDogewogICAgICAgICAgICAgICJBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW4iIDogewogICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIH0sCiAgICAgICJvcHRpb25zIiA6IHsKICAgICAgICAiY29uc3VtZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicHJvZHVjZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIjIwMCByZXNwb25zZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL0VtcHR5IgogICAgICAgICAgICB9LAogICAgICAgICAgICAiaGVhZGVycyIgOiB7CiAgICAgICAgICAgICAgIkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpbiIgOiB7CiAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgIkFjY2Vzcy1Db250cm9sLUFsbG93LU1ldGhvZHMiIDogewogICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICJBY2Nlc3MtQ29udHJvbC1BbGxvdy1IZWFkZXJzIiA6IHsKICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIkVtcHR5IiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJ0aXRsZSIgOiAiRW1wdHkgU2NoZW1hIgogICAgfQogIH0KfQ==",
+                "version": "2022-02-08T11:06:21Z",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "7f812ce9-88ce-11ec-b17e-0242ac110002-pre-prod-eu-central-1.3",
+        "title": "securePasswordGenerator - 2022/02/08 - r 3",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e845f7ec6f185017ed90d745c331d",
+            "audit": {
+                "createTimestamp": "2022-02-08T11:17:24.700+0000",
+                "createUserId": "service-account-9e077a5a-4d2a-42b2-8238-699ff2d198d8",
+                "modifyTimestamp": "2023-07-21T03:46:53.423+0000",
+                "modifyUserId": "service-account-9e077a5a-4d2a-42b2-8238-699ff2d198d8"
+            },
+            "scope": {
+                "id": "8a2e8fc87e580e54017e72754b0523f7",
+                "kind": "Environment",
+                "name": "aws-eu-central-1",
+                "title": "aws-eu-central-1",
+                "selfLink": "/management/v1alpha1/environments/aws-eu-central-1"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e845f7ec6f185017ed8ff170d3115",
+                    "kind": "APIService",
+                    "name": "7f812ce9-88ce-11ec-b17e-0242ac110002",
+                    "scopeKind": "Environment",
+                    "scopeName": "aws-eu-central-1",
+                    "selfLink": "/management/v1alpha1/environments/aws-eu-central-1/apiservices/7f812ce9-88ce-11ec-b17e-0242ac110002",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/aws-eu-central-1/apiservicerevisions/7f812ce9-88ce-11ec-b17e-0242ac110002-pre-prod-eu-central-1.3"
+        },
+        "attributes": {
+            "pre-prod-eu-central-1Hash": "606237847830921444",
+            "createdBy": "AWSDiscoveryAgent",
+            "externalAPIID": "9nhig1i54i",
+            "externalAPIName": "securePasswordGenerator",
+            "GatewayType": "AWS",
+            "externalAPIStage": "pre-prod-eu-central-1",
+            "prevAPIServiceRevisionID": "8a2e845f7ec6f185017ed903afe63180"
+        },
+        "finalizers": [],
+        "tags": [],
+        "spec": {
+            "apiService": "7f812ce9-88ce-11ec-b17e-0242ac110002",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiR2VuZXJhdGUgYSBzZWN1cmUgcGFzc3dvcmQuIiwKICAgICJ2ZXJzaW9uIiA6ICIyMDIyLTAyLTA4VDExOjE2OjU5WiIsCiAgICAidGl0bGUiIDogInNlY3VyZVBhc3N3b3JkR2VuZXJhdG9yIgogIH0sCiAgImhvc3QiIDogIjluaGlnMWk1NGkuZXhlY3V0ZS1hcGkuZXUtY2VudHJhbC0xLmFtYXpvbmF3cy5jb20iLAogICJiYXNlUGF0aCIgOiAiL3ByZS1wcm9kLWV1LWNlbnRyYWwtMSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgInBvc3QiIDogewogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiMjAwIHJlc3BvbnNlIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvRW1wdHkiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJoZWFkZXJzIiA6IHsKICAgICAgICAgICAgICAiQWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2luIiA6IHsKICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9LAogICAgICAib3B0aW9ucyIgOiB7CiAgICAgICAgImNvbnN1bWVzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICIyMDAgcmVzcG9uc2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9FbXB0eSIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgImhlYWRlcnMiIDogewogICAgICAgICAgICAgICJBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW4iIDogewogICAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICJBY2Nlc3MtQ29udHJvbC1BbGxvdy1NZXRob2RzIiA6IHsKICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAiQWNjZXNzLUNvbnRyb2wtQWxsb3ctSGVhZGVycyIgOiB7CiAgICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgImRlZmluaXRpb25zIiA6IHsKICAgICJFbXB0eSIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAidGl0bGUiIDogIkVtcHR5IFNjaGVtYSIKICAgIH0KICB9Cn0=",
+                "version": "2022-02-08T11:16:59Z",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

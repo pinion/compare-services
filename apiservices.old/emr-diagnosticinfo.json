@@ -1,0 +1,70 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "emr-diagnosticinfo.1",
+        "title": "EMR-DiagnosticInfo (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e91d98054e6460180760325561bfe",
+            "audit": {
+                "createTimestamp": "2022-04-29T15:49:19.318+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:44.943+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e8c318054cad30180760321352ae6",
+                    "kind": "APIService",
+                    "name": "emr-diagnosticinfo",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/emr-diagnosticinfo",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/emr-diagnosticinfo.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [
+            "Category_Diagnostic",
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth"
+        ],
+        "spec": {
+            "apiService": "emr-diagnosticinfo",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIzLjciLAogICAgInRpdGxlIiA6ICJFTVItRGlhZ25vc3RpY0luZm8iLAogICAgIngtc3VtbWFyeSIgOiAiUHJvY2Vzc2VzIHN1Ym1pdHRlZCBwYXRpZW50IGRpYWdub3N0aWNzIGRhdGEiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvZW1yL2RpYWdub3N0aWMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvYWQ1YzUxZDEtMWMxNC00OGRkLWFmMTQtMzJmZDNmYzY5OTVkL2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvYWQ1YzUxZDEtMWMxNC00OGRkLWFmMTQtMzJmZDNmYzY5OTVkL2lvcy1zd2lmdCIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9hZDVjNTFkMS0xYzE0LTQ4ZGQtYWYxNC0zMmZkM2ZjNjk5NWQvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2FkNWM1MWQxLTFjMTQtNDhkZC1hZjE0LTMyZmQzZmM2OTk1ZC9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjExZXgiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE1NTY1MjY2MzE0OTUsCiAgICAidGFncyIgOiB7CiAgICAgICJJbmR1c3RyeSIgOiBbICJIZWFsdGhjYXJlIiBdLAogICAgICAiVHlwZSIgOiBbICJEZW1vX0FtcGxpZnlfUGxleHVzSGVhbHRoIiBdLAogICAgICAiQ2F0ZWdvcnkiIDogWyAiRGlhZ25vc3RpYyIgXQogICAgfSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgImlkIiA6ICJhZDVjNTFkMS0xYzE0LTQ4ZGQtYWYxNC0zMmZkM2ZjNjk5NWQiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiCiAgfQp9",
+                "version": "3.7",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "791941995667951287",
+            "minorHash": "7969101001131090277",
+            "externalAPIID": "ad5c51d1-1c14-48dd-af14-32fd3fc6995d",
+            "externalAPIName": "EMR-DiagnosticInfo",
+            "externalAPIPrimaryKey": "path:/api/emr/diagnostic-routingKey:"
+        }
+    }
+]

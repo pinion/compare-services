@@ -1,0 +1,154 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "An API Builder service",
+    "version" : "1.0.0",
+    "title" : "FindSalary",
+    "x-summary" : "FindSalary API from DB"
+  },
+  "host" : "api-env.demo.axway.com:8065",
+  "basePath" : "/api/endpoints",
+  "schemes" : [ "https" ],
+  "security" : [ {
+    "API Key" : [ ]
+  } ],
+  "paths" : {
+    "/findsalary/{emp_no}" : {
+      "get" : {
+        "tags" : [ "FindSalary" ],
+        "description" : "Find one FindSalary",
+        "operationId" : "Find By ID findsalary",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "emp_no",
+          "in" : "path",
+          "description" : "The FindSalary ID",
+          "required" : true,
+          "type" : "number"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The find succeeded, and the results are available.",
+            "schema" : {
+              "$ref" : "#/definitions/FindSalary-full"
+            }
+          },
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "413" : {
+            "description" : "Payload too large",
+            "schema" : {
+              "$ref" : "#/definitions/PayloadTooLargeError"
+            }
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        },
+        "x-axway" : { }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "API Key" : {
+      "description" : "API Key",
+      "type" : "apiKey",
+      "name" : "KeyId",
+      "in" : "header"
+    }
+  },
+  "definitions" : {
+    "PayloadTooLargeError" : {
+      "type" : "object",
+      "required" : [ "code", "message", "request-id", "success" ],
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "success" : {
+          "type" : "boolean"
+        },
+        "request-id" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "FindSalary-full" : {
+      "type" : "object",
+      "required" : [ "emp_no" ],
+      "properties" : {
+        "birth_date" : {
+          "type" : "string"
+        },
+        "first_name" : {
+          "type" : "string"
+        },
+        "last_name" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "hire_date" : {
+          "type" : "string"
+        },
+        "mysql/salaries" : {
+          "type" : "array",
+          "items" : { }
+        },
+        "emp_no" : {
+          "type" : "number"
+        }
+      }
+    },
+    "UnauthorizedError" : {
+      "type" : "object",
+      "required" : [ "id", "message", "success" ],
+      "properties" : {
+        "success" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string",
+          "enum" : [ "com.appcelerator.api.unauthorized" ]
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "x-axway" : {
+    "serviceType" : "rest",
+    "image" : "/api/portal/v1.3/discovery/swagger/apis/169cd77e-561b-42cb-97da-0681c756dd6e/image",
+    "basePaths" : [ "https://api-env.demo.axway.com:8065" ],
+    "expired" : false,
+    "retirementDate" : 0,
+    "corsEnabled" : true,
+    "deprecated" : false,
+    "availableSDK" : {
+      "ios-swift" : "/discovery/sdk/169cd77e-561b-42cb-97da-0681c756dd6e/ios-swift",
+      "titanium" : "/discovery/sdk/169cd77e-561b-42cb-97da-0681c756dd6e/titanium",
+      "android" : "/discovery/sdk/169cd77e-561b-42cb-97da-0681c756dd6e/android",
+      "nodejs" : "/discovery/sdk/169cd77e-561b-42cb-97da-0681c756dd6e/nodejs"
+    },
+    "apiResourceType" : "swagger20",
+    "id" : "169cd77e-561b-42cb-97da-0681c756dd6e",
+    "state" : "published",
+    "accessGrantedDate" : 1647338341574
+  }
+}

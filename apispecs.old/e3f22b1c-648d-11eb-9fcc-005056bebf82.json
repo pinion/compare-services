@@ -1,0 +1,1578 @@
+{
+  "swagger" : "2.0",
+  "host" : "ptx152.demo.axway.com:8065",
+  "basePath" : "/api/emp",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/testuser/count" : {
+      "get" : {
+        "description" : "Count testusers",
+        "operationId" : "findTestuserCount",
+        "tags" : [ "testuser" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The count succeeded, and the results are available.",
+            "schema" : {
+              "required" : [ "key", "request-id", "success" ],
+              "properties" : {
+                "code" : {
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "success" : {
+                  "type" : "boolean"
+                },
+                "testuser" : {
+                  "type" : "integer"
+                },
+                "message" : {
+                  "type" : "string"
+                },
+                "request-id" : {
+                  "type" : "string"
+                },
+                "key" : {
+                  "type" : "string",
+                  "enum" : [ "testuser" ]
+                },
+                "url" : {
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "/testuser/findAndModify" : {
+      "put" : {
+        "description" : "Modifies a single testuser. Although the query may match multiple testusers, only the first one will be modified.",
+        "operationId" : "updateTestuserFindAndModify",
+        "tags" : [ "testuser" ],
+        "consumes" : [ "application/json", "application/x-www-form-urlencoded", "multipart/form-data" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+          "required" : false,
+          "in" : "query",
+          "name" : "limit",
+          "type" : "number"
+        }, {
+          "description" : "The number of records to skip. The value must not be less than 0.",
+          "required" : false,
+          "in" : "query",
+          "name" : "skip",
+          "type" : "number"
+        }, {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        }, {
+          "description" : "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "order",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "sel",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "unsel",
+          "type" : "string"
+        }, {
+          "description" : "Find and Modify body",
+          "required" : true,
+          "in" : "body",
+          "name" : "Find and Modify",
+          "schema" : {
+            "properties" : {
+              "last_name" : {
+                "description" : "last_name field",
+                "type" : "string"
+              },
+              "first_name" : {
+                "description" : "first_name field",
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "email field",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        } ],
+        "responses" : {
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "204" : {
+            "description" : "The find and modify succeeded."
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "/testuser/{id}" : {
+      "get" : {
+        "description" : "Find one testuser by ID",
+        "operationId" : "findTestuserByID",
+        "tags" : [ "testuser" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "The testuser ID",
+          "required" : true,
+          "in" : "path",
+          "name" : "id",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The find succeeded, and the results are available.",
+            "schema" : {
+              "required" : [ "key", "request-id", "success" ],
+              "properties" : {
+                "code" : {
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "success" : {
+                  "type" : "boolean"
+                },
+                "testuser" : {
+                  "$ref" : "#/definitions/testuser-full",
+                  "type" : "object"
+                },
+                "message" : {
+                  "type" : "string"
+                },
+                "request-id" : {
+                  "type" : "string"
+                },
+                "key" : {
+                  "type" : "string",
+                  "enum" : [ "testuser" ]
+                },
+                "url" : {
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      },
+      "put" : {
+        "description" : "Update a specific testuser",
+        "operationId" : "updateTestuserByID",
+        "tags" : [ "testuser" ],
+        "consumes" : [ "application/json", "application/x-www-form-urlencoded", "multipart/form-data" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "The testuser ID",
+          "required" : true,
+          "in" : "path",
+          "name" : "id",
+          "type" : "string"
+        }, {
+          "description" : "Update body",
+          "required" : true,
+          "in" : "body",
+          "name" : "Update",
+          "schema" : {
+            "properties" : {
+              "last_name" : {
+                "description" : "last_name field",
+                "type" : "string"
+              },
+              "first_name" : {
+                "description" : "first_name field",
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "email field",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        } ],
+        "responses" : {
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "204" : {
+            "description" : "The update succeeded."
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "description" : "Delete a specific testuser",
+        "operationId" : "deleteTestuserByID",
+        "tags" : [ "testuser" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "The testuser ID",
+          "required" : true,
+          "in" : "path",
+          "name" : "id",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "204" : {
+            "description" : "The delete succeeded."
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "/endpoints/employees" : {
+      "get" : {
+        "description" : "Find all mysql/employees",
+        "operationId" : "Find All mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "The find all succeeded, and the results are available.",
+            "schema" : {
+              "items" : {
+                "$ref" : "#/definitions/mysql~1employees-full",
+                "type" : "object"
+              },
+              "type" : "array"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      },
+      "post" : {
+        "description" : "Create a mysql/employees",
+        "operationId" : "Create mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "Create body",
+          "required" : false,
+          "in" : "body",
+          "name" : "data",
+          "schema" : {
+            "$ref" : "#/definitions/mysql~1employees-full"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "The create succeeded.",
+            "headers" : {
+              "Location" : {
+                "description" : "The URL to the newly created instance.",
+                "type" : "string"
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      },
+      "delete" : {
+        "description" : "Deletes all mysql/employeess",
+        "operationId" : "Delete All mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "204" : {
+            "description" : "The delete succeeded."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      }
+    },
+    "/endpoints/employees/{emp_no}" : {
+      "get" : {
+        "description" : "Find one mysql/employees",
+        "operationId" : "Find By ID mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "The mysql/employees ID",
+          "required" : true,
+          "in" : "path",
+          "name" : "emp_no",
+          "type" : "number"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The find succeeded, and the results are available.",
+            "schema" : {
+              "$ref" : "#/definitions/mysql~1employees-full"
+            }
+          },
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      },
+      "put" : {
+        "description" : "Update a mysql/employees",
+        "operationId" : "Update mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "The mysql/employees ID",
+          "required" : true,
+          "in" : "path",
+          "name" : "emp_no",
+          "type" : "number"
+        }, {
+          "description" : "Update body",
+          "required" : false,
+          "in" : "body",
+          "name" : "data",
+          "schema" : {
+            "$ref" : "#/definitions/mysql~1employees"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "204" : {
+            "description" : "The update succeeded."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      },
+      "delete" : {
+        "description" : "Delete a specific mysql/employees",
+        "operationId" : "Delete One mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "The mysql/employees ID",
+          "required" : true,
+          "in" : "path",
+          "name" : "emp_no",
+          "type" : "number"
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "204" : {
+            "description" : "The delete succeeded."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      }
+    },
+    "/testuser" : {
+      "get" : {
+        "description" : "Find all testusers",
+        "operationId" : "findTestuser",
+        "tags" : [ "testuser" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "responses" : {
+          "200" : {
+            "description" : "The find all succeeded, and the results are available.",
+            "schema" : {
+              "required" : [ "key", "request-id", "success" ],
+              "properties" : {
+                "code" : {
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "success" : {
+                  "type" : "boolean"
+                },
+                "testusers" : {
+                  "items" : {
+                    "$ref" : "#/definitions/testuser-full",
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                },
+                "message" : {
+                  "type" : "string"
+                },
+                "request-id" : {
+                  "type" : "string"
+                },
+                "key" : {
+                  "type" : "string",
+                  "enum" : [ "testusers" ]
+                },
+                "url" : {
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      },
+      "post" : {
+        "description" : "Create a testuser",
+        "operationId" : "createTestuser",
+        "tags" : [ "testuser" ],
+        "consumes" : [ "application/json", "application/x-www-form-urlencoded", "multipart/form-data" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "Create body",
+          "required" : true,
+          "in" : "body",
+          "name" : "Create",
+          "schema" : {
+            "properties" : {
+              "last_name" : {
+                "description" : "last_name field",
+                "type" : "string"
+              },
+              "first_name" : {
+                "description" : "first_name field",
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "email field",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "The create succeeded.",
+            "headers" : {
+              "Location" : {
+                "description" : "The URL to the newly created instance.",
+                "type" : "string"
+              }
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "description" : "Deletes all testusers",
+        "operationId" : "deleteTestuser",
+        "tags" : [ "testuser" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "responses" : {
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "204" : {
+            "description" : "The delete succeeded."
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "/endpoints/employees/distinct/{field}" : {
+      "get" : {
+        "description" : "Find distinct mysql/employees",
+        "operationId" : "Distinct mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "The field name that must be distinct.",
+          "required" : true,
+          "in" : "path",
+          "name" : "field",
+          "type" : "string"
+        }, {
+          "description" : "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+          "required" : false,
+          "minimum" : 0,
+          "maximum" : 1000,
+          "in" : "query",
+          "name" : "limit",
+          "type" : "number"
+        }, {
+          "description" : "The number of records to skip. The value must not be less than 0.",
+          "required" : false,
+          "minimum" : 0,
+          "in" : "query",
+          "name" : "skip",
+          "type" : "number"
+        }, {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        }, {
+          "description" : "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "order",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Distinct fields response",
+            "schema" : {
+              "items" : {
+                "type" : "string"
+              },
+              "uniqueItems" : true,
+              "type" : "array"
+            }
+          },
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      }
+    },
+    "/endpoints/employees/upsert" : {
+      "post" : {
+        "description" : "Create or update a mysql/employees",
+        "operationId" : "Upsert mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "Upsert body",
+          "required" : false,
+          "in" : "body",
+          "name" : "data",
+          "schema" : {
+            "$ref" : "#/definitions/mysql~1employees-full"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "The upsert succeeded, and resulted in an insert.",
+            "headers" : {
+              "Location" : {
+                "description" : "The URL to the newly created instance.",
+                "type" : "string"
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "204" : {
+            "description" : "The upsert succeeded, and resulted in an update."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      }
+    },
+    "/testapi/{id}" : {
+      "get" : {
+        "description" : "this is an api that shows how to implement an API",
+        "operationId" : "findTestapiByID",
+        "tags" : [ "testapi" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "the test user id",
+          "required" : true,
+          "in" : "path",
+          "name" : "id",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          }
+        }
+      }
+    },
+    "/greet" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "Greet",
+        "summary" : "Greet a user",
+        "tags" : [ "helloworld" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "The username",
+          "required" : true,
+          "in" : "query",
+          "name" : "username",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "greeting",
+            "schema" : {
+              "$ref" : "#/definitions/schema.sscl-db-demo_greeting"
+            }
+          },
+          "400" : {
+            "description" : "bad request",
+            "schema" : {
+              "$ref" : "#/definitions/schema.sscl-db-demo_error"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          }
+        }
+      }
+    },
+    "/testuser/distinct/{field}" : {
+      "get" : {
+        "description" : "Find distinct testusers",
+        "operationId" : "findTestuserDistinctByFIELD",
+        "tags" : [ "testuser" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+          "required" : false,
+          "in" : "query",
+          "name" : "limit",
+          "type" : "number"
+        }, {
+          "description" : "The number of records to skip. The value must not be less than 0.",
+          "required" : false,
+          "in" : "query",
+          "name" : "skip",
+          "type" : "number"
+        }, {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        }, {
+          "description" : "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "order",
+          "type" : "string"
+        }, {
+          "description" : "The field name that must be distinct.",
+          "required" : true,
+          "in" : "path",
+          "name" : "field",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Distinct fields response.",
+            "schema" : {
+              "required" : [ "key", "request-id", "success" ],
+              "properties" : {
+                "code" : {
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "success" : {
+                  "type" : "boolean"
+                },
+                "testusers" : {
+                  "items" : {
+                    "type" : "string"
+                  },
+                  "uniqueItems" : true,
+                  "type" : "array"
+                },
+                "message" : {
+                  "type" : "string"
+                },
+                "request-id" : {
+                  "type" : "string"
+                },
+                "key" : {
+                  "type" : "string",
+                  "enum" : [ "testusers" ]
+                },
+                "url" : {
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "/testuser/query" : {
+      "get" : {
+        "description" : "Query testusers",
+        "operationId" : "findTestuserQuery",
+        "tags" : [ "testuser" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+          "required" : false,
+          "in" : "query",
+          "name" : "limit",
+          "type" : "number"
+        }, {
+          "description" : "The number of records to skip. The value must not be less than 0.",
+          "required" : false,
+          "in" : "query",
+          "name" : "skip",
+          "type" : "number"
+        }, {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        }, {
+          "description" : "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "order",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "sel",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+          "required" : false,
+          "in" : "query",
+          "name" : "unsel",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The query succeeded, and the results are available.",
+            "schema" : {
+              "required" : [ "key", "request-id", "success" ],
+              "properties" : {
+                "code" : {
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "success" : {
+                  "type" : "boolean"
+                },
+                "testusers" : {
+                  "items" : {
+                    "$ref" : "#/definitions/testuser-full",
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                },
+                "message" : {
+                  "type" : "string"
+                },
+                "request-id" : {
+                  "type" : "string"
+                },
+                "key" : {
+                  "type" : "string",
+                  "enum" : [ "testusers" ]
+                },
+                "url" : {
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "/endpoints/employees/findAndModify" : {
+      "put" : {
+        "description" : "Modifies a single mysql/employee. Although the query may match multiple mysql/employees, only the first one will be modified.",
+        "operationId" : "Find and Modify mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "Find and modify body",
+          "required" : false,
+          "in" : "body",
+          "name" : "data",
+          "schema" : {
+            "$ref" : "#/definitions/mysql~1employees"
+          }
+        }, {
+          "description" : "Set to true to allow the method to create a new model.",
+          "required" : false,
+          "in" : "query",
+          "name" : "upsert",
+          "type" : "boolean"
+        }, {
+          "description" : "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+          "required" : false,
+          "minimum" : 0,
+          "maximum" : 1000,
+          "in" : "query",
+          "name" : "limit",
+          "type" : "number"
+        }, {
+          "description" : "The number of records to skip. The value must not be less than 0.",
+          "required" : false,
+          "minimum" : 0,
+          "in" : "query",
+          "name" : "skip",
+          "type" : "number"
+        }, {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        }, {
+          "description" : "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "order",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "sel",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "unsel",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "204" : {
+            "description" : "The find and modify succeeded."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      }
+    },
+    "/testuser/upsert" : {
+      "post" : {
+        "description" : "Create or update a testuser",
+        "operationId" : "createTestuserUpsert",
+        "tags" : [ "testuser" ],
+        "consumes" : [ "application/json", "application/x-www-form-urlencoded", "multipart/form-data" ],
+        "produces" : [ "application/json", "application/xml", "text/yaml", "text/csv", "text/plain" ],
+        "parameters" : [ {
+          "description" : "Upsert body",
+          "required" : true,
+          "in" : "body",
+          "name" : "Upsert",
+          "schema" : {
+            "properties" : {
+              "last_name" : {
+                "description" : "last_name field",
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "The testuser ID",
+                "type" : "string"
+              },
+              "first_name" : {
+                "description" : "first_name field",
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "email field",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "The upsert succeeded, and resulted in an insert.",
+            "headers" : {
+              "Location" : {
+                "description" : "The URL to the newly created instance.",
+                "type" : "string"
+              }
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "204" : {
+            "description" : "The upsert succeeded, and resulted in an update."
+          },
+          "404" : {
+            "description" : "No results were found.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          },
+          "504" : {
+            "description" : "The request took too long to process, and the server timed it out.",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "/endpoints/employees/query" : {
+      "get" : {
+        "description" : "Query a mysql/employees",
+        "operationId" : "Query mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "The number of records to fetch. The value must be greater than 0, and no greater than 1000.",
+          "required" : false,
+          "minimum" : 0,
+          "maximum" : 1000,
+          "in" : "query",
+          "name" : "limit",
+          "type" : "number"
+        }, {
+          "description" : "The number of records to skip. The value must not be less than 0.",
+          "required" : false,
+          "minimum" : 0,
+          "in" : "query",
+          "name" : "skip",
+          "type" : "number"
+        }, {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        }, {
+          "description" : "A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "order",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "sel",
+          "type" : "string"
+        }, {
+          "description" : "Selects which fields to not return from the query. Others are included. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "unsel",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The query succeeded, and the results are available.",
+            "schema" : {
+              "items" : {
+                "$ref" : "#/definitions/mysql~1employees-full",
+                "type" : "object"
+              },
+              "type" : "array"
+            }
+          },
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      }
+    },
+    "/endpoints/employees/count" : {
+      "get" : {
+        "description" : "Count a mysql/employees",
+        "operationId" : "Count mysql/employee",
+        "tags" : [ "mysql/employees" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "Constrains values for fields. The value should be encoded JSON.",
+          "format" : "json",
+          "required" : false,
+          "in" : "query",
+          "name" : "where",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The count succeeded, and the results are available.",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "400" : {
+            "description" : "Bad request."
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "500" : {
+            "description" : "Something went wrong during the request; check out the logs on your server."
+          },
+          "404" : {
+            "description" : "No results were found."
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "testuser-full" : {
+      "required" : [ "id" ],
+      "properties" : {
+        "first_name" : {
+          "type" : "string"
+        },
+        "last_name" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "schema.sscl-db-demo_greeting" : {
+      "description" : "A greeting message for the user",
+      "type" : "string"
+    },
+    "ResponseModel" : {
+      "required" : [ "request-id", "success" ],
+      "properties" : {
+        "code" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "success" : {
+          "type" : "boolean"
+        },
+        "request-id" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "url" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "ErrorModel" : {
+      "required" : [ "code", "message", "request-id", "success" ],
+      "properties" : {
+        "code" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "success" : {
+          "default" : false,
+          "type" : "boolean"
+        },
+        "request-id" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "url" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "mysql/employees-full" : {
+      "required" : [ "emp_no" ],
+      "properties" : {
+        "birth_date" : {
+          "type" : "string"
+        },
+        "first_name" : {
+          "type" : "string"
+        },
+        "last_name" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "hire_date" : {
+          "type" : "string"
+        },
+        "emp_no" : {
+          "type" : "number"
+        }
+      },
+      "type" : "object"
+    },
+    "UnauthorizedError" : {
+      "required" : [ "id", "message", "success" ],
+      "properties" : {
+        "success" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "mysql/employees" : {
+      "properties" : {
+        "birth_date" : {
+          "type" : "string"
+        },
+        "first_name" : {
+          "type" : "string"
+        },
+        "last_name" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "hire_date" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "schema.sscl-db-demo_error" : {
+      "required" : [ "error" ],
+      "properties" : {
+        "error" : {
+          "description" : "The error message",
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  "securityDefinitions" : {
+    "API Key" : {
+      "type" : "apiKey",
+      "description" : "API Key",
+      "name" : "KeyId",
+      "in" : "header"
+    }
+  },
+  "security" : [ {
+    "API Key" : [ ]
+  } ],
+  "info" : {
+    "title" : "YNAP API",
+    "description" : "An API Builder service",
+    "version" : "1.0.0"
+  },
+  "x-axway" : {
+    "corsEnabled" : true,
+    "basePaths" : [ "" ],
+    "serviceType" : "rest",
+    "deprecated" : false,
+    "tags" : {
+      "ENV2" : [ "CENTRAL" ],
+      "ENV" : [ "CENTRAL" ]
+    },
+    "image" : "/api/portal/v1.3/discovery/swagger/apis/08ed6a9b-a06d-46dc-ac74-752f96dbb9e6/image",
+    "availableSDK" : {
+      "ios-swift" : "/discovery/sdk/08ed6a9b-a06d-46dc-ac74-752f96dbb9e6/ios-swift",
+      "titanium" : "/discovery/sdk/08ed6a9b-a06d-46dc-ac74-752f96dbb9e6/titanium",
+      "android" : "/discovery/sdk/08ed6a9b-a06d-46dc-ac74-752f96dbb9e6/android",
+      "nodejs" : "/discovery/sdk/08ed6a9b-a06d-46dc-ac74-752f96dbb9e6/nodejs"
+    },
+    "customProperties" : { }
+  }
+}

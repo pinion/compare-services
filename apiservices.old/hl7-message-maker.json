@@ -1,0 +1,69 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "hl7-message-maker.1",
+        "title": "HL7-Message-Maker (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e86048054cad001807602c5c0171e",
+            "audit": {
+                "createTimestamp": "2022-04-29T15:48:54.848+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:44.634+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e86048054cad001807602c229171a",
+                    "kind": "APIService",
+                    "name": "hl7-message-maker",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/hl7-message-maker",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/hl7-message-maker.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth"
+        ],
+        "spec": {
+            "apiService": "hl7-message-maker",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIyLjEiLAogICAgInRpdGxlIiA6ICJITDctTWVzc2FnZS1NYWtlciIsCiAgICAieC1zdW1tYXJ5IiA6ICJNYW5hZ2UgbWVzc2FnZSBzdGFuZGFyZHMgZm9yIHRyYW5zZmVyIG9mIGNsaW5pY2FsIGFuZCBhZG1pbmlzdHJhdGl2ZSBkYXRhIGJldHdlZW4gc29mdHdhcmUgYXBwbGljYXRpb25zIHVzZWQgYnkgdmFyaW91cyBoZWFsdGhjYXJlIHByb3ZpZGVycyIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaS9obDcvbWVzc2FnZSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJBbGwiLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy9kMTFjMGVhYy00OWQ1LTRiZjMtYjA4Ny1hZDQyODA4MGI2MmEvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay9kMTFjMGVhYy00OWQ1LTRiZjMtYjA4Ny1hZDQyODA4MGI2MmEvaW9zLXN3aWZ0IiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvZDExYzBlYWMtNDlkNS00YmYzLWIwODctYWQ0MjgwODBiNjJhL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMTFleCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTU1NjUyNjYzMTUyNiwKICAgICJ0YWdzIiA6IHsKICAgICAgIkluZHVzdHJ5IiA6IFsgIkhlYWx0aGNhcmUiIF0sCiAgICAgICJUeXBlIiA6IFsgIkRlbW9fQW1wbGlmeV9QbGV4dXNIZWFsdGgiIF0KICAgIH0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJpZCIgOiAiZDExYzBlYWMtNDlkNS00YmYzLWIwODctYWQ0MjgwODBiNjJhIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIgogIH0KfQ==",
+                "version": "2.1",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "11032536595036511960",
+            "minorHash": "10628335276266471818",
+            "externalAPIID": "d11c0eac-49d5-4bf3-b087-ad428080b62a",
+            "externalAPIName": "HL7-Message-Maker",
+            "externalAPIPrimaryKey": "path:/api/hl7/message-routingKey:"
+        }
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "musicalinstrumentsapi-test-1",
+        "title": "Revision 1 of application MusicalInstrumentsAPI, in organization gepagiatakis-eval",
+        "metadata": {
+            "id": "8a2e920c7719a0f80177209007a505b8",
+            "audit": {
+                "createTimestamp": "2021-01-20T16:10:46.053+0000",
+                "createUserId": "DOSA_99d8aec8f9e948a08f96208549b843a3",
+                "modifyTimestamp": "2023-07-21T03:47:08.933+0000",
+                "modifyUserId": "DOSA_99d8aec8f9e948a08f96208549b843a3"
+            },
+            "scope": {
+                "id": "8a2e8f6f76d907050176dd44ac390045",
+                "kind": "Environment",
+                "name": "apigee",
+                "title": "UApigee_Environment",
+                "selfLink": "/management/v1alpha1/environments/apigee"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "65956",
+            "references": [
+                {
+                    "id": "8a2e920c7719a0f801772090038105b6",
+                    "kind": "APIService",
+                    "name": "musicalinstrumentsapi",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigee",
+                    "selfLink": "/management/v1alpha1/environments/apigee/apiservices/musicalinstrumentsapi",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigee/apiservicerevisions/musicalinstrumentsapi-test-1"
+        },
+        "attributes": {
+            "environment": "test",
+            "apiName": "MusicalInstrumentsAPI"
+        },
+        "finalizers": [],
+        "tags": [],
+        "spec": {
+            "apiService": "musicalinstrumentsapi",
+            "definition": {
+                "type": "oas2",
+                "value": "eyJzd2FnZ2VyIjoiMi4wIiwiaW5mbyI6eyJ0aXRsZSI6IiIsInZlcnNpb24iOiIifSwic2NoZW1lcyI6W10sInBhdGhzIjp7fX0=",
+                "version": "",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

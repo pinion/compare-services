@@ -1,0 +1,70 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "emr-system-patient.1",
+        "title": "EMR-System-Patient (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e86048054cad001807602ab2c170a",
+            "audit": {
+                "createTimestamp": "2022-04-29T15:48:48.044+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:44.568+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e91d98054e64601807602a68f1bbe",
+                    "kind": "APIService",
+                    "name": "emr-system-patient",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/emr-system-patient",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/emr-system-patient.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [
+            "Category_Patient",
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth"
+        ],
+        "spec": {
+            "apiService": "emr-system-patient",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIzLjciLAogICAgInRpdGxlIiA6ICJFTVItU3lzdGVtLVBhdGllbnQiLAogICAgIngtc3VtbWFyeSIgOiAiUHJvY2Vzc2luZyBlbGVjdHJvbmljIGhlYWx0aGNhcmUgdHJhbnNhY3Rpb25zIGZvciByZXRyaWV2aW5nIHBhdGllbnQgcmVjb3JkcyIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaS9lbXIvcGF0aWVudCIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvYXBwb2ludG1lbnQiIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAiZGVzY3JpcHRpb24iIDogIlJldHJlaXZlIGFwcG9pbnRtZW50cyBsaXN0IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIlJldHJlaXZlIGFwcG9pbnRtZW50cyBsaXN0IiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgIH0KICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9LAogICAgIi9zaXR1YXRpb24iIDogewogICAgICAicHV0IiA6IHsKICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVwZGF0ZSBwYXRpZW50IGhlYWx0aGNhcmUgc2l0dWF0aW9uIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIlVwZGF0ZSBoZWFsdGhjYXJlIHNpdHVhdGlvbiIsCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiT0siCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfSwKICAgICIvZXZhbHVhdGlvbiIgOiB7CiAgICAgICJwb3N0IiA6IHsKICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVwbG9hZCBtZWRpY2FsIGV2YWx1YXRpb24iLAogICAgICAgICJvcGVyYXRpb25JZCIgOiAiVXBsb2FkIG1lZGljYWwgZXZhbHVhdGlvbiIsCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiQ3JlYXRlZCIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9LAogICAgIi9yZWdpc3RyYXRpb24vZG9jdW1lbnQiIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAiZGVzY3JpcHRpb24iIDogIkdldCByZWdpc3RyYXRpb24gZG9jdW1lbnQiLAogICAgICAgICJvcGVyYXRpb25JZCIgOiAiR2V0IHJlZ2lzdHJhdGlvbiBkb2N1bWVudCIsCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiT0siLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAidHlwZSIgOiAibnVtYmVyIgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfSwKICAgICAgInBvc3QiIDogewogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiU3VibWl0IHJlZ2lzdHJhdGlvbiBkb2N1bWVudCIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJTdWJtaXQgcmVnaXN0cmF0aW9uIGRvY3VtZW50IiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAxIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJDcmVhdGVkIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0sCiAgICAiL3ByZWFkbWlzc2lvbiIgOiB7CiAgICAgICJwb3N0IiA6IHsKICAgICAgICAiZGVzY3JpcHRpb24iIDogIlN1Ym1pdCBhIHByZS1hZG1pc3Npb24gZm9ybSBmb3IgYSBzY2hlZHVsZWQgYXBwb2ludG1lbnQgZm9yIGEgc3BlY2lmaWMgaG9zcGl0YWwiLAogICAgICAgICJvcGVyYXRpb25JZCIgOiAiU2NoZWR1bGUgcHJlLWFkbWlzc2lvbiIsCiAgICAgICAgImNvbnN1bWVzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiaG9zcGl0YWxJZCIsCiAgICAgICAgICAiaW4iIDogInF1ZXJ5IiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiSG9zcGl0YWwgaWRlbnRpZmllciBmb3IgcHJlIGFkbWlzc2lvbiByZXF1ZXN0IiwKICAgICAgICAgICJyZXF1aXJlZCIgOiBmYWxzZSwKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiQ3JlYXRlZCIKICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJJbnRlcm5hbCBTZXJ2ZXIgRXJyb3IiCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRm9yYmlkZGVuIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0sCiAgICAiL2luc3VyYW5jZSIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiR2V0IGluc3VyYW5jZSBkZXRhaWxzIGZvciBhIHBhdGllbnQgOiBjb3ZlcmFnZSwgcGxhbnMsIGVzdGltYXRpb25zIGFuZCByZXNwb25zYWJpbGl0aWVzIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkdldCBpbnN1cmFuY2UgZGV0YWlscyIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAicGF0aWVudElkIiwKICAgICAgICAgICJpbiIgOiAicXVlcnkiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXRpZW50IGlkZW50aWZpZXIiLAogICAgICAgICAgInJlcXVpcmVkIiA6IGZhbHNlLAogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LCB7CiAgICAgICAgICAibmFtZSIgOiAidHlwZSIsCiAgICAgICAgICAiaW4iIDogInF1ZXJ5IiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAidHlwZSBvZiBpbnN1cmFuY2UgZGV0YWlscyIsCiAgICAgICAgICAicmVxdWlyZWQiIDogZmFsc2UsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI1MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkludGVybmFsIFNlcnZlciBFcnJvciIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDAzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJGb3JiaWRkZW4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgIngtYXh3YXkiIDogewogICAgInNlcnZpY2VUeXBlIiA6ICJyZXN0IiwKICAgICJpbWFnZSIgOiAiL2FwaS9wb3J0YWwvdjEuMy9kaXNjb3Zlcnkvc3dhZ2dlci9hcGlzL2U5NWUyMjlkLTZhYzAtNDNhYy05YmYxLWYwOWZiNWI4ZjljNy9pbWFnZSIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2U5NWUyMjlkLTZhYzAtNDNhYy05YmYxLWYwOWZiNWI4ZjljNy9pb3Mtc3dpZnQiLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvZTk1ZTIyOWQtNmFjMC00M2FjLTliZjEtZjA5ZmI1YjhmOWM3L2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay9lOTVlMjI5ZC02YWMwLTQzYWMtOWJmMS1mMDlmYjViOGY5Yzcvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIxMWV4IiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNTU2NTI2NjMxMzg5LAogICAgInRhZ3MiIDogewogICAgICAiSW5kdXN0cnkiIDogWyAiSGVhbHRoY2FyZSIgXSwKICAgICAgIlR5cGUiIDogWyAiRGVtb19BbXBsaWZ5X1BsZXh1c0hlYWx0aCIgXSwKICAgICAgIkNhdGVnb3J5IiA6IFsgIlBhdGllbnQiIF0KICAgIH0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJpZCIgOiAiZTk1ZTIyOWQtNmFjMC00M2FjLTliZjEtZjA5ZmI1YjhmOWM3IiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIgogIH0KfQ==",
+                "version": "3.7",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "12704555244591985731",
+            "minorHash": "14213032110356153316",
+            "externalAPIID": "e95e229d-6ac0-43ac-9bf1-f09fb5b8f9c7",
+            "externalAPIName": "EMR-System-Patient",
+            "externalAPIPrimaryKey": "path:/api/emr/patient-routingKey:"
+        }
+    }
+]

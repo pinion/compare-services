@@ -1,0 +1,4931 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "An API Builder service",
+    "version" : "live",
+    "title" : "Vehicule Mock API 26 11"
+  },
+  "host" : "traffic.axway-amplify-central.com",
+  "basePath" : "/vehicule/api",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/vehicles/cars/brands" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial Selector", "Authentication", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "brands",
+        "description" : "This service enables you to retrieve all manufacturer brands depending on country code and account parameters.",
+        "operationId" : "brands",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "country",
+          "in" : "query",
+          "description" : "country code (in lowercase)",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 150,
+          "maximum" : 150,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesCarsBrandsResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/mileage" : {
+      "patch" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "update_mileage",
+        "description" : "This service enables you to update the current and annual mileage (in kilometers) of a vehicle related to a CMB.\nIn the case there is an existing invoice related to a CMB, the new mileage must be superior than the mileage saved before if the invoice date is inferior than the day date.\nIf you want to modify the current mileage related to an existing past invoice, you must use “remove invoice” service or “Cancel and replace invoice” service.",
+        "operationId" : "update_mileage",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookMileageRequest"
+          }
+        } ],
+        "responses" : {
+          "202" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookMileageResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "422" : {
+            "description" : "Unprocessable Entity",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/switch/maintenance/plan" : {
+      "patch" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "switch_maintenance_plan",
+        "description" : "This service allows you to change the maintenance plan type of a CMB according to the usage of the véhicule. .<br/>To determine the right maintenance plan to apply, you can use “recommended maintenance plan” service, and select the value from the following parameters  <br/>\n* `stricter_plan` recommended for severe conditions,<br/>\n* `less_mileage_plan` or `more_mileage_plan` depending on the average mileage, <br/>\n* `stricter_less_mileage_plan` or `stricter_more_mileage_plan` for both severe and average mileage conditions.<br/>",
+        "operationId" : "switch_maintenance_plan",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookSwitchMaintenancePlanRequest"
+          }
+        } ],
+        "responses" : {
+          "202" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookSwitchMaintenancePlanResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/registration/information" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial Selector", "Authentication", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "registrationInformation",
+        "description" : "This service enables you to retrieve the administrative information by license plate for a vehicle, depending on country code and account parameter.",
+        "operationId" : "registrationInformation",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "licensePlate",
+          "in" : "query",
+          "description" : "Plate number",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "country code (in lowercase)",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "fr", "it", "gb", "fi", "no", "se", "pt" ]
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesRegistrationInformationResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/standard/dtc/transcription" : {
+      "get" : {
+        "tags" : [ "Diagnostic Trouble Codes", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Dealer locator" ],
+        "summary" : "standard_dtc_transcription",
+        "description" : "Allows you to obtain the textual transcription of DTC codes",
+        "operationId" : "standard_dtc_transcription",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "obd_codes",
+          "in" : "query",
+          "description" : "list of OBD code",
+          "required" : false,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesCarsStandardDtcTranscriptionResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/dealers/locator/by/zipcode/town" : {
+      "get" : {
+        "tags" : [ "Dealer locator", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes" ],
+        "summary" : "zipcode_town",
+        "description" : "This service provides a service center list. Note that one of the postal code or town parameters must be completed",
+        "operationId" : "zipcode_town",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "Code pays (iso format)",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "zipcode",
+          "in" : "query",
+          "description" : "Postal code",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "town",
+          "in" : "query",
+          "description" : "town",
+          "required" : false,
+          "type" : "number",
+          "format" : "double"
+        }, {
+          "name" : "network",
+          "in" : "query",
+          "description" : "sign networks",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dealerType",
+          "in" : "query",
+          "description" : "Type of service center",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "promotionalOffers",
+          "in" : "query",
+          "description" : "included promotional offers",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "yes", "no" ]
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "maximum" : 20,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/DealersLocatorByZipcodeTownResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/maintenance/tobe/performed" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "maintenance_to_be_performed",
+        "description" : "This service provides you with the operations to be performed for a created CMB. It will retrieve data related to your account parameters and depending on the information provided upstream.",
+        "operationId" : "maintenance_to_be_performed",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "numberMonthForTimeline",
+          "in" : "query",
+          "description" : "Number of months in the timeline",
+          "required" : false,
+          "type" : "integer",
+          "default" : 18,
+          "maximum" : 60,
+          "exclusiveMaximum" : false,
+          "minimum" : 12,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/MaintenanceTimelineToBePerformed"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "maintenance_to_be_performed_add",
+        "description" : "This service allows you to add external operations to a CMB.\n\nNote :<br>\nthat for each operation to add the `mileage` or` maintenance_date` property must be populated.<br/>\nIf the mileage is not filled, it will be calculated, ditto if the date is not filled, it will be calculated. <br/>\nfamily and category property cannot be null.",
+        "operationId" : "maintenance_to_be_performed_add",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceTobePerformedRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/MaintenanceTimelineToBePerformed"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "maintenance_to_be_performed_remove",
+        "description" : "Service to remove an external predictive operation from a CMB.",
+        "operationId" : "maintenance_to_be_performed_remove",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceTobePerformedRequest1"
+          }
+        } ],
+        "responses" : {
+          "202" : {
+            "description" : "Success"
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/brands/{id}/models" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial Selector", "Authentication", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "models",
+        "description" : "This service enables you to retrieve all models depending on brand Id parameter.",
+        "operationId" : "models",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID brand",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 150,
+          "maximum" : 150,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesCarsBrandsModelsResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/auth" : {
+      "post" : {
+        "tags" : [ "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "authentification",
+        "description" : "If authentication is successful, a JWT token is returned. This token must be decoded (with Javascript/PHP/Java or other langage library) to access the payload part :\n\n\n    {\n        \"iss\": \"vds-api\",\n        \"jti\": \"5c66897a1c226\",\n        \"iat\": 1550223738,\n        \"exp\": 1550223978,\n        \"customer_code\": \"VDS-API\",\n        \"customer_api_key\": \"2i56phKJ81tx386VJTU1N21v8817dgOQ\",\n        \"customer_raison_sociale\": \"V DATA SERVICES TEST\"\n    }\n\nThe **exp** field contains the expiration time of the token (timestamp).  After this time the token become invalid, so the API consumer should retrieve a new token  before expiration time.\n\nFor all the next requests to the API, these HTTP headers must be defined :\n| Header | Value |\n|-----|-----|\n| VDS-API-KEY     | token field value of **customer_api_key**  |\n| Authorization   | Bearer **token** |\n\nTo know more on JWT Token, see https://jwt.io/",
+        "operationId" : "authentification",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/AuthRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/AuthResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/version_by_plate" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial Selector", "Authentication", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "versionsByPlate",
+        "description" : "This service enables you to retrieve a version by license plate, depending on country code and account parameter, as well as the availability of the data. <br /><br />**IMPORTANT** In some cases, an error code can be returned if several version id are found. You must then choose one based on additional criteria you may have on your side or select the first one assuming there is no difference.",
+        "operationId" : "versionsByPlate",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "licensePlate",
+          "in" : "query",
+          "description" : "Plate number",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "country code (in lowercase)",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "fr", "it", "gb", "fi", "no", "se", "pt" ]
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Version"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/maintenance/plan/recommended" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "maintenance_plan_recommended",
+        "description" : "Service that determines for a car or light commercial vehicle the optimal maintenance plan according to the conditions of use registered.",
+        "operationId" : "maintenance_plan_recommended",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "annual_average_mileage",
+          "in" : "query",
+          "description" : "Average annual mileage",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "urban_use",
+          "in" : "query",
+          "description" : "Mainly urban trips (average speed < 25 km/h)",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "yes", "no" ]
+        }, {
+          "name" : "multiple_daily_startups",
+          "in" : "query",
+          "description" : "More than 8 startups per day",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "yes", "no" ]
+        }, {
+          "name" : "cold_engine_trips",
+          "in" : "query",
+          "description" : "Frequent daily journeys of less than 10 km after stop of 1 hour or more",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "yes", "no" ]
+        }, {
+          "name" : "extreme_conditions",
+          "in" : "query",
+          "description" : "Long usage in extreme conditions (>30°C or <15°C or sand/dust)",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "yes", "no" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenancePlanRecommendedResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/brands/autocomplete" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial Selector", "Authentication", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "brandsAutocomplete",
+        "description" : "This service enables you to retrieve all manufacturer brands by autocompletion depending on country code and account parameters.",
+        "operationId" : "brandsAutocomplete",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "country",
+          "in" : "query",
+          "description" : "country code (in lowercase)",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "text",
+          "in" : "query",
+          "description" : "text to search",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 150,
+          "maximum" : 150,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesCarsBrandsAutocompleteResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/dealers/locator/dealer/types" : {
+      "get" : {
+        "tags" : [ "Dealer locator", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes" ],
+        "summary" : "dealer_type",
+        "description" : "This service provides the types of service centers by country",
+        "operationId" : "dealer_type",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "Country code (iso format)",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "maximum" : 20,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/DealersLocatorDealerTypesResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}//summary/revisions/tobe/performed" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "summary_revision_to_be_performed",
+        "description" : "This service provides a summary of the revisions to be performed.\nBe careful, before using this service you must have asked for the timeline of future maintenance.",
+        "operationId" : "summary_revision_to_be_performed",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookSummaryRevisionsTobePerformedResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/tires/sizes/by/version/{id}" : {
+      "get" : {
+        "tags" : [ "Car tires sizes", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "car_tires_sizes_by_version",
+        "description" : "This service makes it possible to obtain the list of tire dimensions for cars or light commercial  vehicles from a car version.",
+        "operationId" : "car_tires_sizes_by_version",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID version",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/maintenance/invoices/cancel/and/replace" : {
+      "post" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "cancel_replace_invoice",
+        "description" : "Note that you will not be able to modify only one of the required parameters of an existing invoice. To do so you must use this service which enables you cancel and replace an existing invoice.",
+        "operationId" : "cancel_replace_invoice",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceInvoicesCancelAndReplaceRequest"
+          }
+        } ],
+        "responses" : {
+          "202" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceInvoicesCancelAndReplaceResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "422" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/alerts" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "cmb_maintenance_alerts",
+        "description" : "This service enables you to get the alerts computed for a time period, based on information recorded.",
+        "operationId" : "cmb_maintenance_alerts",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "alertBeginDate",
+          "in" : "query",
+          "description" : "Interval start date for calculating alerts (must be greater than the maintenance book creation date)",
+          "required" : true,
+          "type" : "string",
+          "format" : "date"
+        }, {
+          "name" : "alertEndDate",
+          "in" : "query",
+          "description" : "End date interval for calculating alerts",
+          "required" : true,
+          "type" : "string",
+          "format" : "date"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookAlertsResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book" : {
+      "post" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "maintenance_book_create",
+        "description" : "If **manufactureDate** is not defined in the request, by default it will be assigned to **firstRegistrationDate** value.\n\nIf both **manufactureDate** and **firstRegistrationDate** are defined, **manufactureDate** must be inferior to **firstRegistrationDate**\n\n**externalId** is your identifier. If you fill this identifier you can use it for all other services of the CMB.\n\nBe careful, creating a car maintenance book can take up to 20 seconds. To avoid the wait you can use the **callBack** property, an object in json format will be posted to you after the complete creation of a CMB. As this property is mandatory, either you enter a valid URL, or, if you don't want to use a callback, simply enter an empty value.\n\nIf the **annualAverageMileage** property is zero then the vehicle's average annual mileage will automatically be calculated.\n\n**Genre**  is defined by the type of vehicle: particular (VP) or light commercial (VU). This information is provided by the Vehicle Selector.\n**SevereCondition** is defined by the way the vehicle is used. To do so, refer to your end-user.\n\n**LonglifeProgram** refers to the type of the last servicing performed on the vehicle: to define the value “Y” or “N”, please refer to your end-user depending on the last servicing performed.\nBoth **severeCondition** and **longlifeProgram** parameters also depend on manufacturers guidelines per vehicle.\n\n\n**Please** note that you must call for **method** **GET** **maintenance** **operations** immediately  after getting the information related to the car maintenance book created previously.  Otherwise, you may get error messages for some of the following services.",
+        "operationId" : "maintenance_book_create",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookRequest"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "422" : {
+            "description" : "unprocessable entity",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/maintenance/past/not/performed" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "maintenance_past_not_performed",
+        "description" : "Past maintenance operations timeline not performed\nThis service provides you with the past operations not performed from the creation of a CMB. It will retrieve data related to your account parameters.\nBy default, we assume the vehicle has been serviced according to the official recommendations of the manufacturer. See “Add maintenance operation” service to update the history of the vehicle.",
+        "operationId" : "maintenance_past_not_performed",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "numberMonthForTimeline",
+          "in" : "query",
+          "description" : "Number of months in the timeline",
+          "required" : false,
+          "type" : "integer",
+          "default" : 18,
+          "maximum" : 36,
+          "exclusiveMaximum" : false,
+          "minimum" : 12,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/MaintenanceTimelineToBePerformed"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/tires/sizes/by/national/code" : {
+      "get" : {
+        "tags" : [ "Car tires sizes", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "car_tires_sizes_by_national_code",
+        "description" : "This service makes it possible to obtain the list of tire dimensions for cars or light commercial  vehicles from a national code (registration or Kba).\n\nThis service works for the following country codes: fr, it,  gb,  pt, fi, se, no",
+        "operationId" : "car_tires_sizes_by_national_code",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "nationalCode",
+          "in" : "query",
+          "description" : "registration or Kba",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/CarTireSizes"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/disable" : {
+      "patch" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "disable_cmb",
+        "description" : "This service enables you to deactivate a car maintenance book. When disabling a car maintenance book, no further updating operation is possible.\nSee “Enable car maintenance book” service to get it back. Note that a disabled CMB will permanently be deleted 12 months after the date of deactivation.\nIf the maintenance book is disabled, no further update operation will be possible.",
+        "operationId" : "disable_cmb",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "202" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookDisableResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/maintenance/performed" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "cmb_maintenance_performed",
+        "description" : "This service enables you to retrieve all the recorded maintenance operations for a CMB.",
+        "operationId" : "cmb_maintenance_performed",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenancePerformedResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/models/{id}/versions" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial Selector", "Authentication", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "versions",
+        "description" : "This service enables you to retrieve all versions depending on model Id parameter.",
+        "operationId" : "versions",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID model",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 150,
+          "maximum" : 150,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesCarsModelsVersionsResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/maintenance/invoices" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "cmb_invoices",
+        "description" : "This service enables you to retrieve the list of invoices related to a CMB.",
+        "operationId" : "cmb_invoices",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceInvoicesResponse1"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "add_invoice",
+        "description" : "This service enables you to add a maintenance operation to a CMB.<br/> When adding an invoice, the mileage is automatically updated with the information provided.<br/> In the case there is an existing invoice related to a CMB, the new mileage must be superior than the mileage saved before if the invoice date is prior to the present date.<br/> If you want to modify the current mileage related to an existing past invoice, you must use **remove invoice** service or **Cancel and replace invoice** service.",
+        "operationId" : "add_invoice",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceInvoicesRequest"
+          }
+        } ],
+        "responses" : {
+          "202" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceInvoicesResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "422" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "cmb_invoices_remove",
+        "description" : "This service enables you to remove an existing invoice related to a CMB.",
+        "operationId" : "cmb_invoices_remove",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/VehiclesMaintenanceBookMaintenanceInvoicesRequest1"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/cars/information" : {
+      "get" : {
+        "tags" : [ "Car and Light Commercial Vehicle Datasheet", "Authentication", "Car and light Commercial Selector", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "vehicle_sheet",
+        "description" : "This service allows to retrieve information related to an identified vehicle and organized by data blocks: \"standard\", \"description\", \"general\",\"technical\", \"administrative\",\"connectivity”, “rims and tires”. <br/><br/>Vehicle datasheet is available by Version Id if you have previously identified the vehicle using Brands/models/versions directory or by license Plate. In the case the service “version_by_plate” returns several version Ids, you must then use both “VersionId + licensePlate” as mandatory parameters to retrieve the vehicle datasheet.",
+        "operationId" : "vehicle_sheet",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "versionId",
+          "in" : "query",
+          "description" : "UUID vehicle version",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "licensePlate",
+          "in" : "query",
+          "description" : "License plate number",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "",
+          "required" : false,
+          "type" : "string",
+          "default" : "fr"
+        }, {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehicleSheet"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/maintenance/operations" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "Maintenance_operations",
+        "description" : "This service provides you with all the operations that can be performed on a specific vehicle and classified by families and categories.",
+        "operationId" : "Maintenance_operations",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/MaintenanceOperation"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "412" : {
+            "description" : "Precondition failed",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/vehicles/maintenance_book/{id}/average/annual/milage/computed" : {
+      "get" : {
+        "tags" : [ "Car and light Commercial maintenance Book (CMB)", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Diagnostic Trouble Codes", "Dealer locator" ],
+        "summary" : "calculated_average_annual_mileage",
+        "description" : "Service to calculate the average annual mileage of a CMB",
+        "operationId" : "calculated_average_annual_mileage",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "UUID car maintenance book or your Id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/VehiclesMaintenanceBookAverageAnnualMilageComputedResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/dealers/locator/networks" : {
+      "get" : {
+        "tags" : [ "Dealer locator", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes" ],
+        "summary" : "networks",
+        "description" : "This service provides a list of signage networks",
+        "operationId" : "networks",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "Code pays (iso format)",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "builder",
+          "in" : "query",
+          "description" : "Allows filtering of sign networks that are only constructors, or that are not builders or that include builders",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "only", "without", "with" ]
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "maximum" : 20,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/DealersLocatorNetworksResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/dealers/locator/by/geolocation" : {
+      "get" : {
+        "tags" : [ "Dealer locator", "Authentication", "Car and light Commercial Selector", "Car and Light Commercial Vehicle Datasheet", "Car tires sizes", "Car and light Commercial maintenance Book (CMB)", "Diagnostic Trouble Codes" ],
+        "summary" : "géolocation",
+        "description" : "This service provides a service center list from geospatial coordinates.",
+        "operationId" : "géolocation",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Accept-Language",
+          "in" : "header",
+          "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "fr-fr" ]
+        }, {
+          "name" : "country",
+          "in" : "query",
+          "description" : "Code pays (iso format)",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "latitude",
+          "in" : "query",
+          "description" : "Latitude coordinate",
+          "required" : true,
+          "type" : "number",
+          "format" : "double"
+        }, {
+          "name" : "longitude",
+          "in" : "query",
+          "description" : "Longitude coordinate",
+          "required" : true,
+          "type" : "number",
+          "format" : "double"
+        }, {
+          "name" : "distance",
+          "in" : "query",
+          "description" : "Search perimeter (expressed in kilometers)",
+          "required" : true,
+          "type" : "number",
+          "maximum" : 100,
+          "exclusiveMaximum" : false,
+          "format" : "double"
+        }, {
+          "name" : "network",
+          "in" : "query",
+          "description" : "sign networks",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dealerType",
+          "in" : "query",
+          "description" : "Type of service center",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "promotionalOffers",
+          "in" : "query",
+          "description" : "included promotional offers",
+          "required" : false,
+          "type" : "string",
+          "enum" : [ "yes", "no" ]
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : "Current page number",
+          "required" : false,
+          "type" : "integer",
+          "default" : 1,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items per page",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "maximum" : 150,
+          "exclusiveMaximum" : false,
+          "minimum" : 1,
+          "exclusiveMinimum" : false,
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/DealersLocatorByGeolocationResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "500" : {
+            "description" : "Internal error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "403" : {
+            "description" : "Authentication error",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "AuthRequest" : {
+      "type" : "object",
+      "properties" : {
+        "clientId" : {
+          "type" : "string",
+          "example" : "GhR0x4V3G2q3fdWeyOJ1HUqMMU"
+        },
+        "clientSecret" : {
+          "type" : "string",
+          "example" : "MmyJsR9zzdpuYqEV3G2q3fdWey"
+        }
+      },
+      "title" : "AuthRequest"
+    },
+    "Invoice" : {
+      "type" : "object",
+      "required" : [ "maintenance_date", "maintenances", "mileage" ],
+      "properties" : {
+        "external_id" : {
+          "type" : "string",
+          "example" : "MY-INVOICE-ID",
+          "description" : "Your invoice identifier"
+        },
+        "title" : {
+          "type" : "string",
+          "example" : "my first revision",
+          "description" : "Invoice name"
+        },
+        "amount_ttc" : {
+          "type" : "object",
+          "example" : 188.1,
+          "description" : "Amount including all taxes including maintenance operations",
+          "properties" : { }
+        },
+        "amount_ht" : {
+          "type" : "object",
+          "example" : 156.75,
+          "description" : "Non-tax amount of maintenance operations",
+          "properties" : { }
+        },
+        "maintenance_date" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2019-04-23",
+          "description" : "Date on which the maintenance operations were carried out"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 32040,
+          "description" : "mileage at which maintenance operations were performed"
+        },
+        "maintenances" : {
+          "type" : "array",
+          "description" : "List of maintenance operations performed",
+          "items" : {
+            "$ref" : "#/definitions/Maintenance"
+          }
+        }
+      },
+      "title" : "Invoice"
+    },
+    "Address" : {
+      "type" : "object",
+      "properties" : {
+        "main_address" : {
+          "type" : "string",
+          "description" : "Main adress"
+        },
+        "additional_address" : {
+          "type" : "string",
+          "description" : "Additional address"
+        },
+        "zipcode" : {
+          "type" : "string",
+          "description" : "Postal code"
+        },
+        "town" : {
+          "type" : "string",
+          "description" : "Twon"
+        },
+        "country" : {
+          "type" : "string",
+          "description" : "country code (iso format)"
+        },
+        "latitude" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Latitude coordinate"
+        },
+        "longitude" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Longitude coordinate"
+        }
+      },
+      "title" : "Address"
+    },
+    "promotionalOffers" : {
+      "type" : "string",
+      "title" : "promotionalOffers",
+      "enum" : [ "yes", "no" ]
+    },
+    "Invoice1" : {
+      "type" : "object",
+      "required" : [ "id", "maintenance_date", "maintenances", "mileage" ],
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "MY-INVOICE-ID",
+          "description" : "Your invoice identifier or VDS Identifier"
+        },
+        "title" : {
+          "type" : "string",
+          "example" : "my first revision",
+          "description" : "Invoice name"
+        },
+        "amount_ttc" : {
+          "type" : "object",
+          "example" : 188.1,
+          "description" : "Amount including all taxes including maintenance operations",
+          "properties" : { }
+        },
+        "amount_ht" : {
+          "type" : "object",
+          "example" : 156.75,
+          "description" : "Non-tax amount of maintenance operations",
+          "properties" : { }
+        },
+        "maintenance_date" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2019-04-23",
+          "description" : "Date on which the maintenance operations were carried out"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 32040,
+          "description" : "mileage at which maintenance operations were performed"
+        },
+        "maintenances" : {
+          "type" : "array",
+          "description" : "List of maintenance operations performed",
+          "items" : {
+            "$ref" : "#/definitions/Maintenance"
+          }
+        }
+      },
+      "title" : "Invoice1"
+    },
+    "VehiclesCarsStandardDtcTranscriptionResponse" : {
+      "type" : "object",
+      "properties" : {
+        "records" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/TranscriptionObd"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesCarsStandardDtcTranscriptionResponse"
+    },
+    "TyresPneumaticPressure" : {
+      "type" : "object",
+      "properties" : {
+        "bar" : {
+          "type" : "string",
+          "example" : "2.20",
+          "description" : "Presssure in Bar unit (may be empty)"
+        },
+        "psi" : {
+          "type" : "string",
+          "example" : "31.9",
+          "description" : "Presssure in PSI unit (may be empty)"
+        }
+      },
+      "title" : "TyresPneumaticPressure"
+    },
+    "TranscriptionObd" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "string",
+          "example" : "P0001",
+          "description" : "obd code"
+        },
+        "title" : {
+          "type" : "string",
+          "example" : "Fuel Volume Regulator Control Circuit\\/Open",
+          "description" : "description obd code"
+        }
+      },
+      "title" : "TranscriptionObd",
+      "description" : "Vehicle car tires size"
+    },
+    "Pneumatic" : {
+      "type" : "object",
+      "properties" : {
+        "marking" : {
+          "type" : "string",
+          "example" : "145/70 R 13 S"
+        },
+        "location" : {
+          "type" : "string",
+          "example" : "Front"
+        },
+        "height" : {
+          "type" : "string",
+          "example" : "145"
+        },
+        "width" : {
+          "type" : "string",
+          "example" : "70"
+        },
+        "diameter" : {
+          "type" : "string",
+          "example" : "13",
+          "description" : "Diameter (feet)"
+        },
+        "rimSize" : {
+          "type" : "string",
+          "example" : "13",
+          "description" : "Rim size (feet)"
+        },
+        "speed_index" : {
+          "type" : "string",
+          "example" : "T"
+        },
+        "load_index" : {
+          "type" : "string",
+          "example" : "81"
+        },
+        "regular_load_pressure" : {
+          "$ref" : "#/definitions/TyresPneumaticPressure"
+        },
+        "extra_load_pressure" : {
+          "$ref" : "#/definitions/TyresPneumaticPressure"
+        },
+        "usage" : {
+          "type" : "string",
+          "example" : "summer and winter"
+        }
+      },
+      "title" : "Pneumatic",
+      "description" : "Pneumatic schema"
+    },
+    "VehiclesMaintenanceBookMileageResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord1"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMileageResponse"
+    },
+    "Maintenance1" : {
+      "type" : "object",
+      "properties" : {
+        "family" : {
+          "type" : "string",
+          "description" : "maintenance operation family ID"
+        },
+        "nameFamily" : {
+          "type" : "string",
+          "description" : "maintenance operation family name"
+        },
+        "category" : {
+          "type" : "string",
+          "description" : "maintenance operation category ID"
+        },
+        "name_category" : {
+          "type" : "string",
+          "description" : "maintenance operation category name"
+        },
+        "amountTtc" : {
+          "type" : "object",
+          "description" : "Amount including all taxes including maintenance operation",
+          "properties" : { }
+        },
+        "amountHt" : {
+          "type" : "object",
+          "description" : "Non-tax amount of maintenance operation",
+          "properties" : { }
+        }
+      },
+      "title" : "Maintenance1"
+    },
+    "VehiclesMaintenanceBookMaintenancePlanRecommendedResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord2"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenancePlanRecommendedResponse"
+    },
+    "cold_engine_trips" : {
+      "type" : "string",
+      "title" : "cold_engine_trips",
+      "enum" : [ "yes", "no" ]
+    },
+    "TypePlan" : {
+      "type" : "string",
+      "title" : "TypePlan",
+      "enum" : [ "normal_plan", "stricter_plan", "longLife_plan", "less_mileage_plan", "more_mileage_plan", "stricter_less_mileage_plan", "stricter_more_mileage_plan" ]
+    },
+    "MaintenanceProgramsAvailable" : {
+      "type" : "object",
+      "properties" : {
+        "program_inspection" : {
+          "type" : "boolean",
+          "example" : true
+        },
+        "program_aditional_maintenance" : {
+          "type" : "boolean",
+          "example" : true
+        },
+        "program_mandatory" : {
+          "type" : "boolean",
+          "example" : true
+        }
+      },
+      "title" : "MaintenanceProgramsAvailable",
+      "description" : "Maintenance programs available for the vehicle"
+    },
+    "DealersLocatorNetworksResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord12"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "DealersLocatorNetworksResponse",
+      "example" : {
+        "reccords" : [ {
+          "name" : "123 AUTOSERVICE",
+          "builder" : "No"
+        }, {
+          "name" : "ABARTH",
+          "builder" : "No"
+        }, {
+          "name" : "AD",
+          "builder" : "No"
+        }, {
+          "name" : "A+GLASS",
+          "builder" : "No"
+        }, {
+          "name" : "ALFA ROMEO",
+          "builder" : "Yes"
+        } ]
+      }
+    },
+    "Technical" : {
+      "type" : "object",
+      "properties" : {
+        "engineVolume" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 1.2
+        },
+        "tpGearbox" : {
+          "type" : "string",
+          "example" : "MECANIQUE",
+          "description" : "Gearbox type (may be null)"
+        },
+        "numberRatioGearbox" : {
+          "type" : "string",
+          "example" : "5",
+          "description" : "Number of gears (may be null)"
+        },
+        "drive_axle_position" : {
+          "type" : "string",
+          "example" : "AVANT",
+          "description" : "drive axle position type (may be null)"
+        },
+        "clean_up_system" : {
+          "type" : "string",
+          "example" : "OUI",
+          "description" : "vehicle clean-up"
+        },
+        "turbo" : {
+          "type" : "string",
+          "example" : "OUI",
+          "description" : "vehicle equipped with a turbo"
+        },
+        "oils" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Oil"
+          }
+        }
+      },
+      "title" : "Technical"
+    },
+    "cmb" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "UUID car mainteance book or your identifier"
+        },
+        "finalized" : {
+          "type" : "boolean",
+          "example" : true,
+          "description" : "Indicates whether the car maintenance book is finalized or not"
+        },
+        "enable" : {
+          "type" : "boolean",
+          "example" : true,
+          "description" : "Indicates whether the car maintenance book is enable or not"
+        },
+        "dateDisable" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Date of disabled the car maintenance book"
+        },
+        "creationDate" : {
+          "type" : "string",
+          "format" : "date-time",
+          "example" : "2019-04-11T19:25:51.000Z",
+          "description" : "Date created the car maintenance book"
+        },
+        "lastUpdate" : {
+          "type" : "string",
+          "format" : "date-time",
+          "example" : "2019-04-11T19:26:05.000Z",
+          "description" : "Date last update the car maintenance book"
+        },
+        "conditionUseOfVehicle" : {
+          "$ref" : "#/definitions/ConditionUseOfVehicle"
+        },
+        "scheduleInformations" : {
+          "$ref" : "#/definitions/ScheduleInformations"
+        }
+      },
+      "title" : "cmb",
+      "description" : "Entity car maintenance book"
+    },
+    "Accept-Language" : {
+      "type" : "string",
+      "title" : "Accept-Language",
+      "description" : "Allows you to set the working language (localization). If defined, must be in iso format (Ex **fr-fr**). By default **fr-fr** is used.",
+      "enum" : [ "fr-fr" ]
+    },
+    "VehiclesMaintenanceBookMaintenanceTobePerformedRequest1" : {
+      "type" : "object",
+      "required" : [ "preventive_maintenance" ],
+      "properties" : {
+        "preventive_maintenance" : {
+          "$ref" : "#/definitions/PreventiveMaintenance"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceTobePerformedRequest1"
+    },
+    "Description" : {
+      "type" : "object",
+      "properties" : {
+        "numberDoor" : {
+          "type" : "string",
+          "example" : "3",
+          "description" : "Number of doors (may be null)"
+        },
+        "numberSeat" : {
+          "type" : "string",
+          "example" : "4",
+          "description" : "Number of seat (may be null)"
+        },
+        "bodyType" : {
+          "type" : "string",
+          "example" : "CI",
+          "description" : "body type"
+        },
+        "type" : {
+          "type" : "string",
+          "example" : "VL",
+          "description" : "Vehicle type"
+        },
+        "generation" : {
+          "type" : "string",
+          "description" : "Vehicle generation"
+        },
+        "segment" : {
+          "type" : "string",
+          "description" : "Vehicle segment"
+        },
+        "fuel" : {
+          "type" : "string",
+          "example" : "ESSENCE",
+          "description" : "Fuel type"
+        }
+      },
+      "title" : "Description"
+    },
+    "MaintenanceOperation" : {
+      "type" : "object",
+      "properties" : {
+        "records" : {
+          "type" : "array",
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/MaintenancePlanItem"
+            }
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination1"
+        }
+      },
+      "title" : "MaintenanceOperation",
+      "description" : "tobe performed maintenance timeline"
+    },
+    "Data2" : {
+      "type" : "object",
+      "required" : [ "mileage" ],
+      "properties" : {
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "annualAverageMileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 0,
+          "default" : 0
+        }
+      },
+      "title" : "Data2"
+    },
+    "Data3" : {
+      "type" : "object",
+      "required" : [ "type_plan" ],
+      "properties" : {
+        "type_plan" : {
+          "$ref" : "#/definitions/TypePlan"
+        }
+      },
+      "title" : "Data3"
+    },
+    "VehiclesMaintenanceBookSummaryRevisionsTobePerformedResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookSummaryRevisionsTobePerformedResponse"
+    },
+    "Data1" : {
+      "type" : "object",
+      "required" : [ "category", "family", "name_category", "name_family" ],
+      "properties" : {
+        "family" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 1018
+        },
+        "name_family" : {
+          "type" : "string",
+          "example" : "Habitacle"
+        },
+        "category" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 77010
+        },
+        "name_category" : {
+          "type" : "string",
+          "example" : "Balais essuie-glace"
+        },
+        "action_description" : {
+          "type" : "string"
+        },
+        "action" : {
+          "type" : "string",
+          "example" : "Remplacer"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 109500
+        },
+        "maintenance_date" : {
+          "type" : "string",
+          "format" : "date"
+        }
+      },
+      "title" : "Data1"
+    },
+    "VehiclesMaintenanceBookMaintenanceInvoicesResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord4"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceInvoicesResponse"
+    },
+    "builder" : {
+      "type" : "string",
+      "title" : "builder",
+      "enum" : [ "only", "without", "with" ]
+    },
+    "Administratif" : {
+      "type" : "object",
+      "properties" : {
+        "yearModel" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 2003,
+          "description" : "Model year (may be null)"
+        },
+        "firstRegistrationDate" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2003-03-04",
+          "description" : "First Registration Date (may be null)"
+        },
+        "lastRegistrationDate" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2003-03-04",
+          "description" : "Last Registration Date (may be null)"
+        },
+        "vin" : {
+          "type" : "string",
+          "example" : "VSSZZZ5FZFR115022",
+          "description" : "Vehicle Identification Number, registration card is a unique number assigned to each vehicle"
+        },
+        "cnit" : {
+          "type" : "string",
+          "example" : "M10SETVP003J060",
+          "description" : "National identification number (France only)"
+        },
+        "lastMot" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2018-12-01",
+          "description" : "Last technical control Date (may be null)"
+        }
+      },
+      "title" : "Administratif"
+    },
+    "DealersLocatorDealerTypesResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord11"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "DealersLocatorDealerTypesResponse",
+      "example" : {
+        "reccords" : [ {
+          "code" : "Official-dealer",
+          "name" : "Concessionnaire"
+        }, {
+          "code" : "Official-agent",
+          "name" : "Agent"
+        } ],
+        "metadata" : {
+          "total" : 11,
+          "page" : 1,
+          "limit" : 2
+        }
+      }
+    },
+    "LonglifeProgram" : {
+      "type" : "string",
+      "title" : "LonglifeProgram",
+      "enum" : [ "y", "n" ]
+    },
+    "Reccord7" : {
+      "type" : "object",
+      "properties" : {
+        "year" : {
+          "type" : "string",
+          "description" : "year maintenance operation"
+        },
+        "month" : {
+          "type" : "string",
+          "description" : "month maintenance operation"
+        },
+        "date" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "date maintenance operations"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "mileage maintenance operations"
+        },
+        "family" : {
+          "type" : "string",
+          "description" : "maintenance operation family ID"
+        },
+        "nameFamily" : {
+          "type" : "string",
+          "description" : "maintenance operation family name"
+        },
+        "category" : {
+          "type" : "string",
+          "description" : "maintenance operation category ID"
+        },
+        "name_category" : {
+          "type" : "string",
+          "description" : "maintenance operation category name"
+        },
+        "amountTtc" : {
+          "type" : "object",
+          "description" : "Amount including all taxes including maintenance operation",
+          "properties" : { }
+        },
+        "amountHt" : {
+          "type" : "object",
+          "description" : "Non-tax amount of maintenance operation",
+          "properties" : { }
+        }
+      },
+      "title" : "Reccord7"
+    },
+    "Reccord8" : {
+      "type" : "object",
+      "properties" : {
+        "family" : {
+          "type" : "string",
+          "description" : "maintenance operation family ID"
+        },
+        "nameFamily" : {
+          "type" : "string",
+          "description" : "maintenance operation family name"
+        },
+        "category" : {
+          "type" : "string",
+          "description" : "maintenance operation category ID"
+        },
+        "name_category" : {
+          "type" : "string",
+          "description" : "maintenance operation category name"
+        },
+        "maintenanceName" : {
+          "type" : "string",
+          "description" : "name operation maintenance"
+        },
+        "action" : {
+          "type" : "string",
+          "description" : "maintenance action"
+        },
+        "maintenanceCritical" : {
+          "type" : "boolean",
+          "description" : "Indicates if maintenance operation is critical"
+        },
+        "year" : {
+          "type" : "string",
+          "description" : "year maintenance operation"
+        },
+        "month" : {
+          "type" : "string",
+          "description" : "month maintenance operation"
+        },
+        "date" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "date maintenance operations"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "mileage maintenance operations"
+        }
+      },
+      "title" : "Reccord8"
+    },
+    "Reccord9" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "format" : "uuid",
+          "description" : "Service center ID"
+        },
+        "social_name" : {
+          "type" : "string",
+          "description" : "Social reason of the service center"
+        },
+        "network" : {
+          "type" : "string",
+          "description" : "Network (builder or commercial sign)"
+        },
+        "presentation" : {
+          "type" : "string",
+          "description" : "Presentation of the service center"
+        },
+        "dealer_type" : {
+          "type" : "string",
+          "description" : "Type of service center"
+        },
+        "address" : {
+          "$ref" : "#/definitions/Address"
+        },
+        "contact" : {
+          "$ref" : "#/definitions/Contact"
+        },
+        "services" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "schedule" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Schedule"
+          }
+        },
+        "promotional_offers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/PromotionalOffers1"
+          }
+        }
+      },
+      "title" : "Reccord9"
+    },
+    "Reccord2" : {
+      "type" : "object",
+      "properties" : {
+        "recommanded_schedule" : {
+          "$ref" : "#/definitions/RecommandedSchedule"
+        },
+        "comments" : {
+          "type" : "string",
+          "description" : "comments"
+        }
+      },
+      "title" : "Reccord2"
+    },
+    "Reccord3" : {
+      "type" : "object",
+      "properties" : {
+        "last_mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Last mileage"
+        },
+        "date_last_mileage" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Last mileage date"
+        },
+        "average_annueal_mileage_computed" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "calculated average annual mileage"
+        },
+        "first_mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "First mileage"
+        },
+        "date_first_mileage" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "First mileage date"
+        }
+      },
+      "title" : "Reccord3"
+    },
+    "Reccord4" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "MY-INVOICE-ID",
+          "description" : "Your Id invoice or VDS invoice"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 32040
+        },
+        "date" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2019-04-23"
+        },
+        "amountTtc" : {
+          "type" : "object",
+          "example" : 188.1,
+          "properties" : { }
+        },
+        "amountHt" : {
+          "type" : "object",
+          "example" : 156.75,
+          "properties" : { }
+        }
+      },
+      "title" : "Reccord4"
+    },
+    "urban_use" : {
+      "type" : "string",
+      "title" : "urban_use",
+      "enum" : [ "yes", "no" ]
+    },
+    "VehiclesMaintenanceBookMaintenanceInvoicesRequest1" : {
+      "type" : "object",
+      "required" : [ "invoice_id" ],
+      "properties" : {
+        "invoice_id" : {
+          "type" : "string"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceInvoicesRequest1"
+    },
+    "Reccord5" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "Your Id invoice or VDS invoice"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "mileage maintenance operations"
+        },
+        "date" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "date maintenance operations"
+        },
+        "amountTtc" : {
+          "type" : "object",
+          "description" : "Amount including all taxes including maintenance operations",
+          "properties" : { }
+        },
+        "amountHt" : {
+          "type" : "object",
+          "description" : "Non-tax amount of maintenance operations",
+          "properties" : { }
+        },
+        "maintenances" : {
+          "type" : "array",
+          "description" : "List of maintenance operations performed",
+          "items" : {
+            "$ref" : "#/definitions/Maintenance1"
+          }
+        }
+      },
+      "title" : "Reccord5"
+    },
+    "AuthResponse" : {
+      "type" : "object",
+      "properties" : {
+        "token" : {
+          "type" : "string",
+          "example" : "eyJ0eXAiOiJKV1QiLCJ.eyJpuNvh4bsIGIIHNkB0AggkFWPPMa7Xo",
+          "description" : "JWT Token"
+        }
+      },
+      "title" : "AuthResponse"
+    },
+    "Reccord1" : {
+      "type" : "object",
+      "properties" : {
+        "cmb" : {
+          "$ref" : "#/definitions/cmb"
+        },
+        "historical_mileages" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/historic_mileage"
+          }
+        }
+      },
+      "title" : "Reccord1"
+    },
+    "historic_mileage" : {
+      "type" : "object",
+      "properties" : {
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "date" : {
+          "type" : "string",
+          "format" : "date"
+        }
+      },
+      "title" : "historic_mileage",
+      "description" : "Historic mileage"
+    },
+    "VehiclesMaintenanceBookMaintenanceInvoicesCancelAndReplaceResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord4"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceInvoicesCancelAndReplaceResponse"
+    },
+    "VehiclesMaintenanceBookMileageRequest" : {
+      "type" : "object",
+      "required" : [ "data" ],
+      "properties" : {
+        "data" : {
+          "$ref" : "#/definitions/Data2"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMileageRequest"
+    },
+    "Type" : {
+      "type" : "string",
+      "title" : "Type",
+      "description" : "type of vehicle",
+      "enum" : [ "VL", "PL", "TR" ]
+    },
+    "Error1" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 2000
+        },
+        "message" : {
+          "type" : "string",
+          "example" : "Error message"
+        }
+      },
+      "title" : "Error1"
+    },
+    "ScheduleInformations" : {
+      "type" : "object",
+      "properties" : {
+        "typesApplicablesMaintenancePrograms" : {
+          "$ref" : "#/definitions/TypesApplicablesMaintenancePrograms"
+        },
+        "maintenanceProgramsAvailable" : {
+          "$ref" : "#/definitions/MaintenanceProgramsAvailable"
+        }
+      },
+      "title" : "ScheduleInformations",
+      "description" : "Schedule informations"
+    },
+    "PromotionalOffers1" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "format" : "uuid",
+          "description" : "Promotional offer ID"
+        },
+        "label" : {
+          "type" : "string",
+          "description" : "Title of the promotional offer"
+        },
+        "short_description" : {
+          "type" : "string",
+          "description" : "Short description of the promotional offer"
+        },
+        "long_description" : {
+          "type" : "string",
+          "description" : "Long description of the promotional offer"
+        },
+        "legal_condition" : {
+          "type" : "string",
+          "description" : "legal conditions of the promotional offer"
+        },
+        "start_date_validity" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Start date validity of the promotional offer"
+        },
+        "end_date_validity" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "End date validity of the promotional offer"
+        },
+        "url_picture" : {
+          "type" : "string",
+          "description" : "URL image of the promotional offer"
+        }
+      },
+      "title" : "PromotionalOffers1"
+    },
+    "Model" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "576ca83a-703e-4183-a76b-ebfe2a45c35",
+          "description" : "model UUID"
+        },
+        "model" : {
+          "type" : "string",
+          "description" : "model name"
+        },
+        "modelTiny" : {
+          "type" : "string",
+          "description" : "model name ()short version)"
+        },
+        "modelFullName" : {
+          "type" : "string",
+          "description" : "model name (full version)"
+        },
+        "countryCode" : {
+          "type" : "string",
+          "example" : "fr",
+          "description" : "country code"
+        },
+        "type" : {
+          "$ref" : "#/definitions/Type"
+        }
+      },
+      "title" : "Model",
+      "description" : "entity representing a vehicle model"
+    },
+    "Genre" : {
+      "type" : "string",
+      "title" : "Genre",
+      "enum" : [ "VP", "VU" ]
+    },
+    "country" : {
+      "type" : "string",
+      "title" : "country",
+      "description" : "country code (in lowercase)",
+      "enum" : [ "fr", "it", "gb", "fi", "no", "se", "pt" ]
+    },
+    "VehiclesCarsModelsVersionsResponse" : {
+      "type" : "object",
+      "properties" : {
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        },
+        "records" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Version"
+          }
+        }
+      },
+      "title" : "VehiclesCarsModelsVersionsResponse"
+    },
+    "Builder1" : {
+      "type" : "string",
+      "title" : "Builder1",
+      "description" : "Indicates if the sign network is a constructor",
+      "enum" : [ "Yes", "No" ]
+    },
+    "VehiclesMaintenanceBookMaintenanceInvoicesCancelAndReplaceRequest" : {
+      "type" : "object",
+      "required" : [ "invoice" ],
+      "properties" : {
+        "invoice" : {
+          "$ref" : "#/definitions/Invoice1"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceInvoicesCancelAndReplaceRequest"
+    },
+    "VehiclesMaintenanceBookSwitchMaintenancePlanResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/cmb"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookSwitchMaintenancePlanResponse",
+      "example" : {
+        "records" : [ {
+          "id" : "aca57a3b-8dad-42bc-8fc6-f7fb138b8c74",
+          "finalized" : true,
+          "enable" : true,
+          "creationDate" : "2019-04-11 19:25:51",
+          "lastUpdate" : "2019-04-11 19:26:05",
+          "conditionUseOfVehicle" : {
+            "mileage" : "280500",
+            "annual_average_mileage" : "16879",
+            "severe_condition" : false,
+            "longlife_program" : false,
+            "current_program" : "Severe"
+          },
+          "scheduleInformations" : {
+            "typesApplicablesMaintenancePrograms" : {
+              "normal" : true,
+              "longlife" : false,
+              "severe_condition" : false,
+              "annualAverageMileage" : false
+            },
+            "maintenanceProgramsAvailable" : {
+              "program_inspection" : true,
+              "program_aditional_maintenance" : true,
+              "program_mandatory" : true
+            }
+          }
+        } ],
+        "metadata" : {
+          "total" : 1,
+          "page" : 1,
+          "limit" : 1
+        }
+      }
+    },
+    "VehicleSheet" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "fe0c2088-4fb3-4cb1-b7e7-7fbec8602279",
+          "description" : "sheet technical ID"
+        },
+        "standard" : {
+          "$ref" : "#/definitions/Standard"
+        },
+        "description" : {
+          "$ref" : "#/definitions/Description"
+        },
+        "general" : {
+          "$ref" : "#/definitions/General"
+        },
+        "technical" : {
+          "$ref" : "#/definitions/Technical"
+        },
+        "administratif" : {
+          "$ref" : "#/definitions/Administratif"
+        },
+        "connectivity" : {
+          "$ref" : "#/definitions/Connectivity"
+        },
+        "rims_and_tires" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Pneumatic"
+          }
+        }
+      },
+      "title" : "VehicleSheet",
+      "description" : "Vehicle Sheet"
+    },
+    "extreme_conditions" : {
+      "type" : "string",
+      "title" : "extreme_conditions",
+      "enum" : [ "yes", "no" ]
+    },
+    "VehiclesMaintenanceBookAverageAnnualMilageComputedResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord3"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookAverageAnnualMilageComputedResponse"
+    },
+    "Version" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "b81b7857-13f4-443a-b1d7-293d53f01058",
+          "description" : "UUID Version"
+        },
+        "brand" : {
+          "type" : "string",
+          "example" : "Renault",
+          "description" : "Nom marque"
+        },
+        "model" : {
+          "type" : "string",
+          "example" : "Twingo",
+          "description" : "Model name"
+        },
+        "version" : {
+          "type" : "string",
+          "example" : "Twingo"
+        },
+        "versionTiny" : {
+          "type" : "string",
+          "example" : "twingo 1.2l 16v"
+        },
+        "longNameVersion" : {
+          "type" : "string",
+          "example" : "Twingo 1.2L 16V"
+        },
+        "fullNameVersion" : {
+          "type" : "string",
+          "example" : "Twingo 1.2L 16V (C/S06) (93-07)"
+        },
+        "subbody" : {
+          "type" : "string",
+          "example" : "(C/S06) (93-07)"
+        },
+        "technicalInformations" : {
+          "$ref" : "#/definitions/TechnicalInformations"
+        },
+        "countryCode" : {
+          "type" : "string",
+          "example" : "fr"
+        },
+        "type" : {
+          "type" : "string",
+          "example" : "VL"
+        }
+      },
+      "title" : "Version",
+      "description" : "Entity version"
+    },
+    "VehiclesMaintenanceBookMaintenanceTobePerformedRequest" : {
+      "type" : "object",
+      "required" : [ "data" ],
+      "properties" : {
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Data1"
+          }
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceTobePerformedRequest"
+    },
+    "multiple_daily_startups" : {
+      "type" : "string",
+      "title" : "multiple_daily_startups",
+      "enum" : [ "yes", "no" ]
+    },
+    "Reccord11" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "string",
+          "description" : "Code dealer type"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : "Name dealer type"
+        }
+      },
+      "title" : "Reccord11"
+    },
+    "Reccord12" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "description" : "Name of the sign networks"
+        },
+        "builder" : {
+          "$ref" : "#/definitions/Builder1"
+        }
+      },
+      "title" : "Reccord12"
+    },
+    "VehiclesCarsBrandsAutocompleteResponse" : {
+      "type" : "object",
+      "properties" : {
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        },
+        "records" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Brand"
+          }
+        }
+      },
+      "title" : "VehiclesCarsBrandsAutocompleteResponse"
+    },
+    "MaintenancePlanItem" : {
+      "type" : "object",
+      "properties" : {
+        "family" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Family Identifier"
+        },
+        "nameFamily" : {
+          "type" : "string",
+          "description" : "Family name"
+        },
+        "category" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Identifier maintenance category\""
+        },
+        "nameCategory" : {
+          "type" : "string",
+          "description" : "Name maintenance category"
+        },
+        "nameMaintenance" : {
+          "type" : "string",
+          "description" : "Name maintenance"
+        },
+        "action" : {
+          "type" : "string",
+          "description" : "Action to be carried out"
+        }
+      },
+      "title" : "MaintenancePlanItem",
+      "description" : "Maintenance plan item"
+    },
+    "MaintenanceTimelineToBePerformedItem" : {
+      "type" : "object",
+      "properties" : {
+        "family" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Family Identifier"
+        },
+        "familyName" : {
+          "type" : "string",
+          "description" : "Family name"
+        },
+        "categoryId" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Maintenance Category Identifier"
+        },
+        "categoryName" : {
+          "type" : "string",
+          "description" : "Maintenance Category Name"
+        },
+        "maintenanceName" : {
+          "type" : "string",
+          "description" : "Maintenance Name"
+        },
+        "action" : {
+          "type" : "string",
+          "description" : "Maintenance action to be performed"
+        },
+        "maintenanceCritical" : {
+          "type" : "boolean",
+          "description" : "Indicates critical maintenance"
+        },
+        "year" : {
+          "type" : "string",
+          "description" : "Year of maintenance"
+        },
+        "month" : {
+          "type" : "string",
+          "description" : "Month of maintenance"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "mileage of maintenance"
+        }
+      },
+      "title" : "MaintenanceTimelineToBePerformedItem",
+      "description" : "Maintenance timeline item"
+    },
+    "DealersLocatorByGeolocationResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord9"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "DealersLocatorByGeolocationResponse",
+      "example" : {
+        "records" : [ {
+          "id" : "f98e4607-1670-4f18-a1a4-f2201af0d674",
+          "social_name" : "GARAGE DACIA COPERNIC NANTES",
+          "network" : "DACIA",
+          "dealer_type" : "Official-dealer",
+          "address" : {
+            "main_address" : "5 Rue COPERNIC",
+            "additional_address" : "",
+            "zipcode" : "44000",
+            "town" : "NANTES",
+            "country" : "fr",
+            "latitude" : "47.214625",
+            "longitude" : "-1.564934"
+          },
+          "contact" : {
+            "number_phone_reception" : "+3321055555",
+            "other_number_phone" : "",
+            "fax" : "",
+            "email\"" : "sample@sample.fr",
+            "website" : "https://www.sample.fr/apres-vente/",
+            "equotation" : "https://www.sample.fr/apres-vente/devis-en-ligne/",
+            "ebooking" : "https://www.sample.fr/apres-vente/rdv-en-ligne/"
+          },
+          "services" : [ "Entretien climatisation", "réparation du pare-brise", "Vente véhicule occasion", "Vente véhicule neuf", "Garantie constructeur", "Vente accessoires" ],
+          "schedule" : [ {
+            "daysOffWeek" : "Monday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Tuesday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Wednesday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Thursday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Friday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Saturday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30"
+          } ],
+          "promotional_offers" : [ {
+            "id" : "409a2282-5889-43fb-8028-b477bc6970e1",
+            "customer_code" : "DDI",
+            "label" : "OFFRE 2",
+            "short_description" : "offre desctiption court",
+            "long_description" : "Offre desctiption longue",
+            "legal_condition" : "Condition légales",
+            "start_date_validity" : "2019-09-01",
+            "end_date_validity" : "2020-10-31"
+          } ]
+        } ],
+        "metadata" : {
+          "total" : 47,
+          "page" : 1,
+          "limit" : 2
+        }
+      }
+    },
+    "Maintenance" : {
+      "type" : "object",
+      "required" : [ "family", "family_name" ],
+      "properties" : {
+        "family" : {
+          "type" : "string",
+          "example" : "1000",
+          "description" : "maintenance operation family ID"
+        },
+        "family_name" : {
+          "type" : "string",
+          "example" : "Révision construteur",
+          "description" : "maintenance operation family name"
+        },
+        "category" : {
+          "type" : "string",
+          "example" : "0",
+          "description" : "maintenance operation category ID"
+        },
+        "category_name" : {
+          "type" : "string",
+          "description" : "maintenance operation category name"
+        },
+        "amount_ttc" : {
+          "type" : "object",
+          "example" : 0,
+          "description" : "Amount including all taxes including maintenance operation",
+          "properties" : { }
+        },
+        "amount_ht" : {
+          "type" : "object",
+          "example" : 0,
+          "description" : "Non-tax amount of maintenance operation",
+          "properties" : { }
+        }
+      },
+      "title" : "Maintenance"
+    },
+    "VehiclesCarsBrandsResponse" : {
+      "type" : "object",
+      "properties" : {
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        },
+        "records" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Brand"
+          }
+        }
+      },
+      "title" : "VehiclesCarsBrandsResponse"
+    },
+    "MaintenanceTimelineToBePerformed" : {
+      "type" : "object",
+      "properties" : {
+        "records" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/MaintenanceTimelineToBePerformedItem"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination1"
+        }
+      },
+      "title" : "MaintenanceTimelineToBePerformed",
+      "description" : "tobe performed maintenance timeline"
+    },
+    "Brand" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "fe0c2088-4fb3-4cb1-b7e7-7fbec8602279",
+          "description" : "brand technical ID"
+        },
+        "brand" : {
+          "type" : "string",
+          "example" : "Alfa Romeo",
+          "description" : "Brand name"
+        },
+        "brandTiny" : {
+          "type" : "string",
+          "example" : "alfa romeo",
+          "description" : "Brand name (lowercase)"
+        },
+        "countryCode" : {
+          "type" : "string",
+          "example" : "fr",
+          "description" : "country code"
+        },
+        "type" : {
+          "$ref" : "#/definitions/Type"
+        }
+      },
+      "title" : "Brand",
+      "description" : "entity representing a vehicle brand"
+    },
+    "Oil" : {
+      "type" : "object",
+      "properties" : {
+        "gradeValue" : {
+          "type" : "string",
+          "example" : "0W-30"
+        },
+        "gradeQualifier" : {
+          "type" : "string",
+          "example" : "SAE"
+        },
+        "temperatureDesc" : {
+          "type" : "string",
+          "example" : "Température ambiante"
+        },
+        "engineCapacityUnit" : {
+          "type" : "string",
+          "example" : "Litres"
+        },
+        "classificationValue" : {
+          "type" : "string",
+          "example" : "RN0700"
+        },
+        "engineCapacityLiter" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 4
+        },
+        "engineCapacityValue" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 4
+        },
+        "classificationQualifier" : {
+          "type" : "string",
+          "example" : "OEM"
+        }
+      },
+      "title" : "Oil",
+      "description" : "Oil schema"
+    },
+    "AdministrativeInformationRegistration" : {
+      "type" : "object",
+      "properties" : {
+        "brandName" : {
+          "type" : "string",
+          "example" : "ALFA ROMEO",
+          "description" : "manufacturer name"
+        },
+        "modelNameCar" : {
+          "type" : "string",
+          "example" : "GIULIETTA",
+          "description" : "commercial designation of the model"
+        },
+        "versionNameCar" : {
+          "type" : "string",
+          "example" : "1.4 T",
+          "description" : "commercial designation of the version"
+        },
+        "fullNameVersion" : {
+          "type" : "string",
+          "example" : "GIULIETTA 1.4 T",
+          "description" : "VDS designation version"
+        },
+        "firstRegistrationDate" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2014-07-08",
+          "description" : "date of first registration of the vehicle"
+        },
+        "lastRegistrationDate" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2014-07-08",
+          "description" : "date of last registration of the vehicle"
+        },
+        "yearModel" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Year of manufacture"
+        },
+        "genre" : {
+          "type" : "string",
+          "example" : "VP",
+          "description" : "type of vehicle"
+        },
+        "genreVCG" : {
+          "type" : "string",
+          "example" : "VP"
+        },
+        "body" : {
+          "type" : "string",
+          "example" : "BERLINE",
+          "description" : "Body"
+        },
+        "body_type" : {
+          "type" : "string",
+          "example" : "CI",
+          "description" : "Body type"
+        },
+        "energyName" : {
+          "type" : "string",
+          "example" : "essence",
+          "description" : "motor energy"
+        },
+        "horsePowerDin" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 120.0,
+          "description" : "din horsepower of the vehicle"
+        },
+        "horsePowerKw" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 88.0,
+          "description" : "power in kilojoule of the vehicle"
+        },
+        "horsePoweFiscal" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 7.0,
+          "description" : "fiscal horsepower of the vehicle"
+        },
+        "propulsion" : {
+          "type" : "string",
+          "example" : "AVANT",
+          "description" : "indicates if the vehicle can be polluted"
+        },
+        "cylinder" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 1368.0,
+          "description" : "cylinder capacity of the vehicle"
+        },
+        "co2" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 148.0,
+          "description" : "Co2 level of the vehicle"
+        },
+        "tpGearbox" : {
+          "type" : "string",
+          "example" : "MECANIQUE",
+          "description" : "type of vehicle gearbox"
+        },
+        "numberRatioGearbox" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 6.0,
+          "description" : "number of gear ratios of the vehicle"
+        },
+        "axisConfiguration" : {
+          "type" : "string",
+          "example" : "4X2",
+          "description" : "number of axes of the vehicle"
+        },
+        "codifVin" : {
+          "type" : "string",
+          "example" : "ZAR94000007349329",
+          "description" : "International vehicle identification"
+        },
+        "cnit" : {
+          "type" : "string",
+          "example" : "M10ALFVP000P409",
+          "description" : "Administration identification"
+        },
+        "ktype" : {
+          "type" : "string",
+          "example" : "16917",
+          "description" : "TecDoc identification"
+        }
+      },
+      "title" : "AdministrativeInformationRegistration",
+      "description" : "Entity adminstrative information licence plate"
+    },
+    "Reccord" : {
+      "type" : "object",
+      "properties" : {
+        "year" : {
+          "type" : "string",
+          "description" : "year of revision"
+        },
+        "month" : {
+          "type" : "string",
+          "description" : "month of revision"
+        },
+        "componentsToChange" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Number components to change"
+        },
+        "checksToCarryOut" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Number checks to carry out and top-up or change if needed"
+        },
+        "servicesToCarryOut" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "number services to carry out and components to change if needed"
+        },
+        "categories" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Category"
+          }
+        }
+      },
+      "title" : "Reccord"
+    },
+    "TypesApplicablesMaintenancePrograms" : {
+      "type" : "object",
+      "properties" : {
+        "normal" : {
+          "type" : "boolean",
+          "example" : true
+        },
+        "longlife" : {
+          "type" : "boolean",
+          "example" : false
+        },
+        "severe_condition" : {
+          "type" : "boolean",
+          "example" : true
+        },
+        "annualAverageMileage" : {
+          "type" : "boolean",
+          "example" : true
+        }
+      },
+      "title" : "TypesApplicablesMaintenancePrograms",
+      "description" : "Types applicables maintenance programs for the vehicle"
+    },
+    "MetadataPagination1" : {
+      "type" : "object",
+      "properties" : {
+        "total" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 1,
+          "description" : "total items"
+        },
+        "page" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 1,
+          "description" : "current page number"
+        },
+        "numberPerPage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 1,
+          "description" : "items par page"
+        }
+      },
+      "title" : "MetadataPagination1",
+      "description" : "Metadata on all paginated results"
+    },
+    "Connectivity" : {
+      "type" : "object",
+      "properties" : {
+        "image" : {
+          "type" : "string",
+          "example" : "https://api-vds.vdataservices.com/assets/vehicle/odb/odb-b7a1ec80-a232-45cd-9e97-d9ece95ca114.png",
+          "description" : "ODB image URL"
+        },
+        "steering_whell_position" : {
+          "type" : "string",
+          "example" : "LHD",
+          "description" : "(LHD) Driving Right or (RHD) Left"
+        },
+        "eligibleVehicle" : {
+          "type" : "boolean"
+        }
+      },
+      "title" : "Connectivity"
+    },
+    "General" : {
+      "type" : "object",
+      "properties" : {
+        "kw" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 55,
+          "description" : "Power in kw"
+        },
+        "cv" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 75,
+          "description" : "Power in CH"
+        },
+        "emptyWeight" : {
+          "type" : "string",
+          "example" : "900",
+          "description" : "Empty weight (kg)"
+        },
+        "totalRunningWeight" : {
+          "type" : "string",
+          "example" : "1020",
+          "description" : "Running weight (kg)"
+        },
+        "width" : {
+          "type" : "string",
+          "example" : "171",
+          "description" : "Vehicle width (cm)"
+        },
+        "height" : {
+          "type" : "string",
+          "example" : "155",
+          "description" : "Vehicle height (cm)"
+        },
+        "length" : {
+          "type" : "string",
+          "example" : "387",
+          "description" : "Vehicle length (cm)"
+        },
+        "consExurb" : {
+          "type" : "string",
+          "example" : "4.8",
+          "description" : "Extra Urban consommation (may be null)"
+        },
+        "consMixte" : {
+          "type" : "string",
+          "example" : "5.8",
+          "description" : "Mix consommation (may be null)"
+        },
+        "consUrb" : {
+          "type" : "string",
+          "example" : "7.6",
+          "description" : "Urban consommation (may be null)"
+        },
+        "co2" : {
+          "type" : "string",
+          "example" : "138",
+          "description" : "CO2 emission (may be null)"
+        },
+        "color" : {
+          "type" : "string",
+          "example" : "JAUNE",
+          "description" : "Vehicle color (may be null)"
+        },
+        "tankCapavity" : {
+          "type" : "string",
+          "example" : "9 L",
+          "description" : "Capacité du réservoir"
+        },
+        "chestVolume" : {
+          "type" : "string",
+          "example" : "320 L",
+          "description" : "Volulume du coffre"
+        },
+        "picture" : {
+          "type" : "string",
+          "example" : "https://api-vds.vdataservices.com/assets/vehicle/odb/odb-b7a1ec80-a232-45cd-9e97-d9ece95ca114.png",
+          "description" : "URL Picture of the vehicle"
+        },
+        "userManuel" : {
+          "type" : "string",
+          "example" : "https://api-vds.vdataservices.com/assets/vehicle/odb/odb-b7a1ec80-a232-45cd-9e97-d9ece95ca114.png",
+          "description" : "URL user manuel"
+        }
+      },
+      "title" : "General"
+    },
+    "VehiclesMaintenanceBookSwitchMaintenancePlanRequest" : {
+      "type" : "object",
+      "required" : [ "data" ],
+      "properties" : {
+        "data" : {
+          "$ref" : "#/definitions/Data3"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookSwitchMaintenancePlanRequest"
+    },
+    "DealersLocatorByZipcodeTownResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord9"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "DealersLocatorByZipcodeTownResponse",
+      "example" : {
+        "records" : [ {
+          "id" : "f98e4607-1670-4f18-a1a4-f2201af0d674",
+          "social_name" : "GARAGE DACIA COPERNIC NANTES",
+          "network" : "DACIA",
+          "dealer_type" : "Official-dealer",
+          "address" : {
+            "main_address" : "5 Rue COPERNIC",
+            "additional_address" : "",
+            "zipcode" : "44000",
+            "town" : "NANTES",
+            "country" : "fr",
+            "latitude" : "47.214625",
+            "longitude" : "-1.564934"
+          },
+          "contact" : {
+            "number_phone_reception" : "+3321055555",
+            "other_number_phone" : "",
+            "fax" : "",
+            "email\"" : "sample@sample.fr",
+            "website" : "https://www.sample.fr/apres-vente/",
+            "equotation" : "https://www.sample.fr/apres-vente/devis-en-ligne/",
+            "ebooking" : "https://www.sample.fr/apres-vente/rdv-en-ligne/"
+          },
+          "services" : [ "Entretien climatisation", "réparation du pare-brise", "Vente véhicule occasion", "Vente véhicule neuf", "Garantie constructeur", "Vente accessoires" ],
+          "schedule" : [ {
+            "daysOffWeek" : "Monday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Tuesday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Wednesday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Thursday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Friday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30",
+            "pmFrom" : "14h00",
+            "pmTo" : "19h00"
+          }, {
+            "daysOffWeek" : "Saturday",
+            "amFrom" : "08h00",
+            "amTo" : "12h30"
+          } ],
+          "promotional_offers" : [ {
+            "id" : "409a2282-5889-43fb-8028-b477bc6970e1",
+            "customer_code" : "DDI",
+            "label" : "OFFRE 2",
+            "short_description" : "offre desctiption court",
+            "long_description" : "Offre desctiption longue",
+            "legal_condition" : "Condition légales",
+            "start_date_validity" : "2019-09-01",
+            "end_date_validity" : "2020-10-31"
+          } ]
+        } ],
+        "metadata" : {
+          "total" : 11,
+          "page" : 1,
+          "limit" : 2
+        }
+      }
+    },
+    "VehiclesMaintenanceBookAlertsResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord8"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookAlertsResponse"
+    },
+    "Category" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "format" : "uuid",
+          "description" : "Id category"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : "name category"
+        },
+        "componentsToChange" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Number components to change"
+        },
+        "checksToCarryOut" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Number checks to carry out and top-up or change if needed"
+        },
+        "servicesToCarryOut" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "number services to carry out and components to change if needed"
+        }
+      },
+      "title" : "Category"
+    },
+    "VehiclesCarsBrandsModelsResponse" : {
+      "type" : "object",
+      "properties" : {
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        },
+        "records" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Model"
+          }
+        }
+      },
+      "title" : "VehiclesCarsBrandsModelsResponse"
+    },
+    "Standard" : {
+      "type" : "object",
+      "properties" : {
+        "brand" : {
+          "type" : "string",
+          "example" : "Renault",
+          "description" : "Brand name"
+        },
+        "model" : {
+          "type" : "string",
+          "example" : "Twingo",
+          "description" : "Model name"
+        },
+        "version" : {
+          "type" : "string",
+          "example" : "Twingo 1.2L 16V (C/S06) (93-07)",
+          "description" : "Version name"
+        },
+        "madeFrom" : {
+          "type" : "string",
+          "example" : "2000",
+          "description" : "Model date start"
+        },
+        "madeUntil" : {
+          "type" : "string",
+          "example" : "2007",
+          "description" : "Model date end"
+        }
+      },
+      "title" : "Standard"
+    },
+    "VehiclesRegistrationInformationResponse" : {
+      "type" : "object",
+      "properties" : {
+        "records" : {
+          "$ref" : "#/definitions/AdministrativeInformationRegistration"
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesRegistrationInformationResponse"
+    },
+    "TyresPneumatics" : {
+      "type" : "object",
+      "properties" : {
+        "marking" : {
+          "type" : "string",
+          "example" : "145/70 R 13 S"
+        },
+        "location" : {
+          "type" : "string",
+          "example" : "Front"
+        },
+        "height" : {
+          "type" : "string",
+          "example" : "145"
+        },
+        "width" : {
+          "type" : "string",
+          "example" : "70"
+        },
+        "diameter" : {
+          "type" : "string",
+          "example" : "13",
+          "description" : "Diameter (feet)"
+        },
+        "rimSize" : {
+          "type" : "string",
+          "example" : "13",
+          "description" : "Rim size (feet)"
+        },
+        "speed_index" : {
+          "type" : "string",
+          "example" : "T"
+        },
+        "load_index" : {
+          "type" : "string",
+          "example" : "81"
+        },
+        "usage" : {
+          "type" : "string",
+          "example" : "summer and winter"
+        }
+      },
+      "title" : "TyresPneumatics",
+      "description" : "Pneumatic schema"
+    },
+    "TechnicalInformations" : {
+      "type" : "object",
+      "properties" : {
+        "kw" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 55
+        },
+        "rpm" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 5500
+        },
+        "fuel" : {
+          "type" : "string",
+          "example" : "ESSENCE"
+        },
+        "dinHp" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 75
+        },
+        "ktype" : {
+          "type" : "string",
+          "example" : "15109"
+        },
+        "litres" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 1.2
+        },
+        "tuning" : {
+          "type" : "string",
+          "example" : "R-Cat"
+        },
+        "vehtype" : {
+          "type" : "string",
+          "example" : "1"
+        },
+        "madeFrom" : {
+          "type" : "string",
+          "example" : "2000"
+        },
+        "typeAbbr" : {
+          "type" : "string",
+          "example" : "PC"
+        },
+        "extraInfo" : {
+          "type" : "string",
+          "example" : "16V"
+        },
+        "madeUntil" : {
+          "type" : "string",
+          "example" : "2007"
+        },
+        "engineCode" : {
+          "type" : "string",
+          "example" : "D4F 702"
+        }
+      },
+      "title" : "TechnicalInformations"
+    },
+    "VehiclesMaintenanceBookDisableResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/cmb"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookDisableResponse"
+    },
+    "RecommandedSchedule" : {
+      "type" : "string",
+      "title" : "RecommandedSchedule",
+      "description" : "Recommended maintenance plan",
+      "enum" : [ "none", "normal_plan", "less_mileage_plan", "more_mileage_plan", "stricter_plan", "stricter_less_mileage_plan", "stricter_more_mileage_plan" ]
+    },
+    "VehiclesMaintenanceBookMaintenanceInvoicesResponse1" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord5"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceInvoicesResponse1"
+    },
+    "VehiclesMaintenanceBookMaintenancePerformedResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reccord7"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenancePerformedResponse"
+    },
+    "Error" : {
+      "type" : "object",
+      "properties" : {
+        "error" : {
+          "$ref" : "#/definitions/Error1"
+        }
+      },
+      "title" : "Error",
+      "description" : "Error object"
+    },
+    "Data" : {
+      "type" : "object",
+      "required" : [ "annualAverageMileage", "callBack", "externalId", "firstRegistrationDate", "genre", "longlifeProgram", "manufactureDate", "mileage", "severeCondition", "versionId" ],
+      "properties" : {
+        "versionId" : {
+          "type" : "string",
+          "example" : "b81b7857-13f4-443a-b1d7-293d53f01058"
+        },
+        "externalId" : {
+          "type" : "string",
+          "example" : "myref-0001212-55656"
+        },
+        "manufactureDate" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2015-01-01"
+        },
+        "firstRegistrationDate" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2017-11-30"
+        },
+        "genre" : {
+          "$ref" : "#/definitions/Genre"
+        },
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 75000
+        },
+        "annualAverageMileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 12000
+        },
+        "severeCondition" : {
+          "$ref" : "#/definitions/SevereCondition"
+        },
+        "longlifeProgram" : {
+          "$ref" : "#/definitions/LonglifeProgram"
+        },
+        "callBack" : {
+          "type" : "string",
+          "example" : "https://your_url"
+        }
+      },
+      "title" : "Data"
+    },
+    "SevereCondition" : {
+      "type" : "string",
+      "title" : "SevereCondition",
+      "enum" : [ "y", "n" ]
+    },
+    "ConditionUseOfVehicle" : {
+      "type" : "object",
+      "properties" : {
+        "mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 280500,
+          "description" : "mileage of the vehicle"
+        },
+        "annual_average_mileage" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 16800,
+          "description" : "annual average mileage of the vehicle"
+        },
+        "severe_condition" : {
+          "type" : "boolean",
+          "example" : false,
+          "description" : "vehicle used in severe conditions"
+        },
+        "longlife_program" : {
+          "type" : "boolean",
+          "example" : false,
+          "description" : "vehicle maintained with a longlife program"
+        },
+        "current_program" : {
+          "$ref" : "#/definitions/CurrentProgram"
+        }
+      },
+      "title" : "ConditionUseOfVehicle",
+      "description" : "Vehicle usage condition"
+    },
+    "PreventiveMaintenance" : {
+      "type" : "object",
+      "required" : [ "category", "family", "maintenance_date" ],
+      "properties" : {
+        "family" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 1018
+        },
+        "category" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 77010
+        },
+        "maintenance_date" : {
+          "type" : "string",
+          "format" : "date",
+          "example" : "2020-11-30"
+        }
+      },
+      "title" : "PreventiveMaintenance"
+    },
+    "Contact" : {
+      "type" : "object",
+      "properties" : {
+        "number_phone_reception" : {
+          "type" : "string",
+          "description" : "Telephone number of the reception of the service center"
+        },
+        "other_number_phone" : {
+          "type" : "string",
+          "description" : "Other service center phone number"
+        },
+        "fax" : {
+          "type" : "string",
+          "description" : "Fax number"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Email address of the service center"
+        },
+        "website" : {
+          "type" : "string",
+          "description" : "URL service center website"
+        },
+        "equotation" : {
+          "type" : "string",
+          "description" : "Service center online quote URL"
+        },
+        "ebooking" : {
+          "type" : "string",
+          "description" : "booking URL of service center"
+        }
+      },
+      "title" : "Contact"
+    },
+    "MetadataPagination" : {
+      "type" : "object",
+      "properties" : {
+        "total" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 10,
+          "description" : "total items"
+        },
+        "page" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 1,
+          "description" : "current page number"
+        },
+        "limit" : {
+          "type" : "integer",
+          "format" : "int32",
+          "example" : 150,
+          "description" : "items par page"
+        }
+      },
+      "title" : "MetadataPagination",
+      "description" : "Metadata on all paginated results"
+    },
+    "Schedule" : {
+      "type" : "object",
+      "properties" : {
+        "daysOffWeek" : {
+          "type" : "string",
+          "description" : "Day of the week"
+        },
+        "amFrom" : {
+          "type" : "string",
+          "description" : "opening hours"
+        },
+        "amTo" : {
+          "type" : "string",
+          "description" : "morning closing time"
+        },
+        "pmFrom" : {
+          "type" : "string",
+          "description" : "opening time of the afternoon"
+        },
+        "pmTo" : {
+          "type" : "string",
+          "description" : "evening closing time"
+        }
+      },
+      "title" : "Schedule"
+    },
+    "CurrentProgram" : {
+      "type" : "string",
+      "title" : "CurrentProgram",
+      "description" : "Currently selected maintenance program type",
+      "enum" : [ "None", "Normal", "Severe", "LongLife", "Normal_more", "Normal_less", "Severe_more", "Severe_less" ]
+    },
+    "CarTireSizes" : {
+      "type" : "object",
+      "properties" : {
+        "car_designation" : {
+          "type" : "string",
+          "example" : "ALFA ROMEO 147 (937_)",
+          "description" : "Vehicle name"
+        },
+        "car_version" : {
+          "type" : "string",
+          "example" : "ALFA ROMEO 147 (937_) 1.9 JTDM 8V (937.AXD1A, 937.AXU1A, 937.BXU1A)",
+          "description" : "version name"
+        },
+        "car_energy" : {
+          "type" : "string",
+          "example" : "gazole",
+          "description" : "type energy"
+        },
+        "car_vin" : {
+          "type" : "string",
+          "example" : "ZAR93700003386331",
+          "description" : "vin"
+        },
+        "car_power_din" : {
+          "type" : "string",
+          "example" : "120",
+          "description" : "horsepower din"
+        },
+        "car_power_kw" : {
+          "type" : "string",
+          "example" : "88",
+          "description" : "power expressed in kilojoule"
+        },
+        "tires_sizes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/TyresPneumatics"
+          }
+        }
+      },
+      "title" : "CarTireSizes",
+      "description" : "Vehicle car tires size"
+    },
+    "VehiclesMaintenanceBookMaintenanceInvoicesRequest" : {
+      "type" : "object",
+      "required" : [ "invoice" ],
+      "properties" : {
+        "invoice" : {
+          "$ref" : "#/definitions/Invoice"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookMaintenanceInvoicesRequest"
+    },
+    "VehiclesMaintenanceBookResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reccords" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/cmb"
+          }
+        },
+        "metadata" : {
+          "$ref" : "#/definitions/MetadataPagination"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookResponse",
+      "example" : {
+        "records" : [ {
+          "id" : "aca57a3b-8dad-42bc-8fc6-f7fb138b8c74",
+          "finalized" : true,
+          "enable" : true,
+          "creationDate" : "2019-04-11 19:25:51",
+          "lastUpdate" : "2019-04-11 19:26:05",
+          "conditionUseOfVehicle" : {
+            "mileage" : "280500",
+            "annual_average_mileage" : "16879",
+            "severe_condition" : false,
+            "longlife_program" : false,
+            "current_program" : "Normal"
+          },
+          "scheduleInformations" : {
+            "typesApplicablesMaintenancePrograms" : {
+              "normal" : true,
+              "longlife" : false,
+              "severe_condition" : false,
+              "annualAverageMileage" : false
+            },
+            "maintenanceProgramsAvailable" : {
+              "program_inspection" : true,
+              "program_aditional_maintenance" : true,
+              "program_mandatory" : true
+            }
+          }
+        } ],
+        "metadata" : {
+          "total" : 1,
+          "page" : 1,
+          "limit" : 1
+        }
+      }
+    },
+    "VehiclesMaintenanceBookRequest" : {
+      "type" : "object",
+      "required" : [ "data" ],
+      "properties" : {
+        "data" : {
+          "$ref" : "#/definitions/Data"
+        }
+      },
+      "title" : "VehiclesMaintenanceBookRequest"
+    }
+  },
+  "x-axway" : {
+    "serviceType" : "rest",
+    "image" : "/api/portal/v1.3/discovery/swagger/apis/7a7c3c9a-aa1b-4d1b-8074-83b9fa20bff9/image",
+    "basePaths" : [ "https://traffic.axway-amplify-central.com" ],
+    "expired" : false,
+    "retirementDate" : 0,
+    "corsEnabled" : true,
+    "deprecated" : false,
+    "availableSDK" : {
+      "ios-swift" : "/discovery/sdk/7a7c3c9a-aa1b-4d1b-8074-83b9fa20bff9/ios-swift",
+      "titanium" : "/discovery/sdk/7a7c3c9a-aa1b-4d1b-8074-83b9fa20bff9/titanium",
+      "android" : "/discovery/sdk/7a7c3c9a-aa1b-4d1b-8074-83b9fa20bff9/android",
+      "nodejs" : "/discovery/sdk/7a7c3c9a-aa1b-4d1b-8074-83b9fa20bff9/nodejs"
+    },
+    "apiResourceType" : "swagger20",
+    "id" : "7a7c3c9a-aa1b-4d1b-8074-83b9fa20bff9",
+    "state" : "published"
+  }
+}

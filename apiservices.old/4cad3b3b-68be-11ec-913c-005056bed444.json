@@ -1,0 +1,71 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4cad3b3b-68be-11ec-913c-005056bed444.1",
+        "title": "EMR-System-Physicians - 2021/12/29 - r 1",
+        "metadata": {
+            "id": "8a2e8a6f7dca5fce017e06ddda93639a",
+            "audit": {
+                "createTimestamp": "2021-12-29T15:45:09.779+0000",
+                "createUserId": "service-account-f161c415-37e3-4bd4-b146-15f9256921d7",
+                "modifyTimestamp": "2023-07-21T03:46:59.472+0000",
+                "modifyUserId": "service-account-f161c415-37e3-4bd4-b146-15f9256921d7"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e06d566714811",
+                "kind": "Environment",
+                "name": "gtw-v7",
+                "title": "gtw-v7",
+                "selfLink": "/management/v1alpha1/environments/gtw-v7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e8a6f7dca5fce017e06ddd8d1638e",
+                    "kind": "APIService",
+                    "name": "4cad3b3b-68be-11ec-913c-005056bed444",
+                    "scopeKind": "Environment",
+                    "scopeName": "gtw-v7",
+                    "selfLink": "/management/v1alpha1/environments/gtw-v7/apiservices/4cad3b3b-68be-11ec-913c-005056bed444",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/gtw-v7/apiservicerevisions/4cad3b3b-68be-11ec-913c-005056bed444.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "e4bdecea-f8cf-41c6-a343-fc3ec96fcc62",
+            "externalAPIName": "EMR-System-Physicians",
+            "GatewayType": "Edge",
+            "majorHash": "588005412555697655",
+            "minorHash": "12787480550722789083",
+            "externalAPIPrimaryKey": "vhost:-path:/api/emr/physicians-routingKey:"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_83511dc1-328d-492e-8da3-6c725f125ab3",
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth",
+            "Category_Physician"
+        ],
+        "spec": {
+            "apiService": "4cad3b3b-68be-11ec-913c-005056bed444",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIzLjciLAogICAgInRpdGxlIiA6ICJFTVItU3lzdGVtLVBoeXNpY2lhbnMiLAogICAgIngtc3VtbWFyeSIgOiAiUHJvY2Vzc2luZyBlbGVjdHJvbmljIGhlYWx0aCB0cmFuc2FjdGlvbnMgZm9yIHJldHJpZXZpbmcgcGh5c2ljaWFucyBhdmFpbGFiaWxpdHkiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvZW1yL3BoeXNpY2lhbnMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy9lNGJkZWNlYS1mOGNmLTQxYzYtYTM0My1mYzNlYzk2ZmNjNjIvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay9lNGJkZWNlYS1mOGNmLTQxYzYtYTM0My1mYzNlYzk2ZmNjNjIvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay9lNGJkZWNlYS1mOGNmLTQxYzYtYTM0My1mYzNlYzk2ZmNjNjIvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvZTRiZGVjZWEtZjhjZi00MWM2LWEzNDMtZmMzZWM5NmZjYzYyL2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay9lNGJkZWNlYS1mOGNmLTQxYzYtYTM0My1mYzNlYzk2ZmNjNjIvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIxMWV4IiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNTU2NTI2NjMxNzcwLAogICAgInRhZ3MiIDogewogICAgICAiSW5kdXN0cnkiIDogWyAiSGVhbHRoY2FyZSIgXSwKICAgICAgIlR5cGUiIDogWyAiRGVtb19BbXBsaWZ5X1BsZXh1c0hlYWx0aCIgXSwKICAgICAgIkNhdGVnb3J5IiA6IFsgIlBoeXNpY2lhbiIgXQogICAgfSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgImlkIiA6ICJlNGJkZWNlYS1mOGNmLTQxYzYtYTM0My1mYzNlYzk2ZmNjNjIiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiCiAgfQp9",
+                "version": "3.7",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

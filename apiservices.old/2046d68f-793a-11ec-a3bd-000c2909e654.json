@@ -1,0 +1,72 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "2046d68f-793a-11ec-a3bd-000c2909e654.1",
+        "title": "greetings - 2022/01/19 - r 1",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e83427e57fff4017e72e4e94e25fc",
+            "audit": {
+                "createTimestamp": "2022-01-19T15:11:51.630+0000",
+                "createUserId": "service-account-be14cef9-a29e-4bd4-acc8-24caf17a3819",
+                "modifyTimestamp": "2023-07-21T03:46:54.963+0000",
+                "modifyUserId": "service-account-be14cef9-a29e-4bd4-acc8-24caf17a3819"
+            },
+            "scope": {
+                "id": "8a2e90957e57ffd4017e72ddf5852601",
+                "kind": "Environment",
+                "name": "apigateway-v1a-7.7",
+                "title": "apigateway-v1a-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1a-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e90957e57ffd4017e72e4e75927ef",
+                    "kind": "APIService",
+                    "name": "2046d68f-793a-11ec-a3bd-000c2909e654",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1a-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1a-7.7/apiservices/2046d68f-793a-11ec-a3bd-000c2909e654",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1a-7.7/apiservicerevisions/2046d68f-793a-11ec-a3bd-000c2909e654.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "f3273433-f6e6-42a7-a5a8-82ecc7590ed2",
+            "externalAPIName": "greetings",
+            "GatewayType": "Edge",
+            "majorHash": "1997034970190824806",
+            "externalAPIPrimaryKey": "vhost:-path:/api-routingKey:",
+            "minorHash": "6705419841308499834"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5c105b25-230d-4496-b71d-47c3619f7d32"
+        ],
+        "spec": {
+            "apiService": "2046d68f-793a-11ec-a3bd-000c2909e654",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJncmVldGluZ3MiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiL2dyZWV0IiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInRhZ3MiIDogWyAiaGVsbG93b3JsZCIgXSwKICAgICAgICAic3VtbWFyeSIgOiAiR3JlZXQgYSB1c2VyIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkdyZWV0IiwKICAgICAgICAicHJvZHVjZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIHsKICAgICAgICAgICJuYW1lIiA6ICJ1c2VybmFtZSIsCiAgICAgICAgICAiaW4iIDogInF1ZXJ5IiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIHVzZXJuYW1lIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9IF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJncmVldGluZyIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL3NjaGVtYS50ZXN0MV9ncmVldGluZyIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogImJhZCByZXF1ZXN0IiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvc2NoZW1hLnRlc3QxX2Vycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDEzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXlsb2FkIHRvbyBsYXJnZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1BheWxvYWRUb29MYXJnZUVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJzY2hlbWEudGVzdDFfZXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVycm9yIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImVycm9yIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgZXJyb3IgbWVzc2FnZSIKICAgICAgICB9CiAgICAgIH0KICAgIH0sCiAgICAiVW5hdXRob3JpemVkRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImlkIiwgIm1lc3NhZ2UiLCAic3VjY2VzcyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgImlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciLAogICAgICAgICAgImVudW0iIDogWyAiY29tLmFwcGNlbGVyYXRvci5hcGkudW5hdXRob3JpemVkIiBdCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJzY2hlbWEudGVzdDFfZ3JlZXRpbmciIDogewogICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIiA6ICJBIGdyZWV0aW5nIG1lc3NhZ2UgZm9yIHRoZSB1c2VyIgogICAgfQogIH0sCiAgIngtYXh3YXkiIDogewogICAgInNlcnZpY2VUeXBlIiA6ICJyZXN0IiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay9mMzI3MzQzMy1mNmU2LTQyYTctYTVhOC04MmVjYzc1OTBlZDIvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay9mMzI3MzQzMy1mNmU2LTQyYTctYTVhOC04MmVjYzc1OTBlZDIvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvZjMyNzM0MzMtZjZlNi00MmE3LWE1YTgtODJlY2M3NTkwZWQyL2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay9mMzI3MzQzMy1mNmU2LTQyYTctYTVhOC04MmVjYzc1OTBlZDIvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIyMCIsCiAgICAiaWQiIDogImYzMjczNDMzLWY2ZTYtNDJhNy1hNWE4LTgyZWNjNzU5MGVkMiIsCiAgICAic3RhdGUiIDogInVucHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjMwOTI5MTUxMjEzCiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

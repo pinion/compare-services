@@ -1,0 +1,69 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "sample-weather.1",
+        "title": "Sample-Weather (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e8c3180769707018083f28b284200",
+            "audit": {
+                "createTimestamp": "2022-05-02T08:45:52.296+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:42.878+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e84ba8076936f018083f287dc45ad",
+                    "kind": "APIService",
+                    "name": "sample-weather",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/sample-weather",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/sample-weather.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [
+            "sample_sample",
+            "sample_ test"
+        ],
+        "spec": {
+            "apiService": "sample-weather",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQSB3ZWF0aGVyIHRlc3QgQVBJLiBGcm9udGVuZCBBUEkgaXMgdXNpbmcgT0F1dGggMi4wLiBHcmFudCBUeXBlOiBDbGllbnQgQ3JlZGVudGlhbHMuIEFQSSBHYXRld2F5IGNhbiBhY3QgYXMgdGhlIGNsaWVudCBhcHBsaWNhdGlvbiBpbiBhbiBPQXV0aCAyLjAgc2NlbmFyaW8sIGFuZCBhcyBzdWNoIEFQSSBHYXRld2F5IGNhbiBpbnN0aWdhdGUgdGhlIGF1dGhvcml6YXRpb24gcHJvY2VzcyBoYW5kbGUgcmVkaXJlY3RzLCBhbmQgcmVxdWVzdCBPQXV0aCB0b2tlbnMgZnJvbSBhbiBhdXRob3JpemF0aW9uIHNlcnZlci4gUmVjZWl2ZWQgdG9rZW5zIGFyZSBzdG9yZWQgc2VjdXJlbHkgYW5kIHN1YnNlcXVlbnRseSB1c2VkIHRvIGFjY2VzcyBwcm90ZWN0ZWQgcmVzb3VyY2VzIG9uIGJlaGFsZiBvZiB1c2Vycy4gQXh3YXkgRG9jIGhlcmUgOiBodHRwczovL2RvY3MuYXh3YXkuY29tL2J1bmRsZS9heHdheS1vcGVuLWRvY3MvcGFnZS9kb2NzL2FwaW1fcG9saWN5ZGV2L2FwaWd3X29hdXRoL2d3X29hdXRoX2NsaWVudC9pbmRleC5odG1sIiwKICAgICJ2ZXJzaW9uIiA6ICIxLjAuMCIsCiAgICAidGl0bGUiIDogIlNhbXBsZS1XZWF0aGVyIiwKICAgICJ4LXN1bW1hcnkiIDogIlRoaXMgaXMgYSBtb2NrIGFwaSB0ZXN0LiIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL3NhbXBsZSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIk9BdXRoSW1wbGljaXQiIDogWyAicmVzb3VyY2UuV1JJVEUiIF0KICB9LCB7CiAgICAiT0F1dGhJbXBsaWNpdCIgOiBbICJyZXNvdXJjZS5SRUFEIiBdCiAgfSwgewogICAgIk9BdXRoQWNjZXNzQ29kZSIgOiBbICJyZXNvdXJjZS5XUklURSIgXQogIH0sIHsKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogWyAicmVzb3VyY2UuUkVBRCIgXQogIH0sIHsKICAgICJPQXV0aEFwcGxpY2F0aW9uIiA6IFsgInJlc291cmNlLldSSVRFIiBdCiAgfSwgewogICAgIk9BdXRoQXBwbGljYXRpb24iIDogWyAicmVzb3VyY2UuUkVBRCIgXQogIH0gXSwKICAicGF0aHMiIDogewogICAgIi93ZWF0aGVyL3tjaXR5fSIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJ0YWdzIiA6IFsgIndlYXRoZXIiIF0sCiAgICAgICAgInN1bW1hcnkiIDogIllvdXIgR0VUIHdlYXRoZXIgZW5kcG9pbnQiLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiQSB3ZWF0aGVyIGFwaS4iLAogICAgICAgICJvcGVyYXRpb25JZCIgOiAiZ2V0LXdlYXRoZXIiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImNpdHkiLAogICAgICAgICAgImluIiA6ICJwYXRoIiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiSW5zZXJ0IGEgdmFsaWQgY2l0eSBuYW1lLiIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciLAogICAgICAgICAgInBhdHRlcm4iIDogIl5bQS1aYS16XSIKICAgICAgICB9IF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICJ0eXBlIiA6ICJvYmplY3QiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAxIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJVbmF1dGhvcml6ZWQiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9VbmF1dGhvcml6ZWRFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MTMiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlBheWxvYWQgdG9vIGxhcmdlIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvUGF5bG9hZFRvb0xhcmdlRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAic2VjdXJpdHlEZWZpbml0aW9ucyIgOiB7CiAgICAiT0F1dGhBcHBsaWNhdGlvbiIgOiB7CiAgICAgICJkZXNjcmlwdGlvbiIgOiAiT0F1dGgiLAogICAgICAidHlwZSIgOiAib2F1dGgyIiwKICAgICAgInRva2VuVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC90b2tlbiIsCiAgICAgICJmbG93IiA6ICJhcHBsaWNhdGlvbiIsCiAgICAgICJzY29wZXMiIDogewogICAgICAgICJyZXNvdXJjZS5XUklURSIgOiAiIiwKICAgICAgICAicmVzb3VyY2UuUkVBRCIgOiAiIgogICAgICB9LAogICAgICAieC1heHdheSIgOiB7CiAgICAgICAgInRva2VuTmFtZSIgOiAiYWNjZXNzX3Rva2VuIiwKICAgICAgICAic2NvcGVzTWF0Y2hpbmciIDogIkFueSIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb24iIDogIkhFQURFUiIsCiAgICAgICAgInR5cGVEaXNwbGF5TmFtZSIgOiAiT0F1dGggMi4wIiwKICAgICAgICAiYXV0aG9yaXphdGlvbkhlYWRlclByZWZpeCIgOiAiQmVhcmVyIgogICAgICB9CiAgICB9LAogICAgIk9BdXRoSW1wbGljaXQiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAiZmxvdyIgOiAiaW1wbGljaXQiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgInJlc291cmNlLlJFQUQiIDogIiIKICAgICAgfSwKICAgICAgIngtYXh3YXkiIDogewogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc190b2tlbiIsCiAgICAgICAgInNjb3Blc01hdGNoaW5nIiA6ICJBbnkiLAogICAgICAgICJhY2Nlc3NUb2tlbkxvY2F0aW9uIiA6ICJIRUFERVIiLAogICAgICAgICJ0eXBlRGlzcGxheU5hbWUiIDogIk9BdXRoIDIuMCIsCiAgICAgICAgImF1dGhvcml6YXRpb25IZWFkZXJQcmVmaXgiIDogIkJlYXJlciIKICAgICAgfQogICAgfSwKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAidG9rZW5VcmwiIDogImh0dHBzOi8vbG9jYWxob3N0OjgwODkvYXBpL29hdXRoL3Rva2VuIiwKICAgICAgImZsb3ciIDogImFjY2Vzc0NvZGUiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgInJlc291cmNlLlJFQUQiIDogIiIKICAgICAgfSwKICAgICAgIngtYXh3YXkiIDogewogICAgICAgICJjbGllbnRTZWNyZXROYW1lIiA6ICJjbGllbnRfc2VjcmV0IiwKICAgICAgICAiYXV0aG9yaXphdGlvbkhlYWRlclByZWZpeCIgOiAiQmVhcmVyIiwKICAgICAgICAiY2xpZW50SWROYW1lIiA6ICJjbGllbnRfaWQiLAogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc19jb2RlIiwKICAgICAgICAic2NvcGVzTWF0Y2hpbmciIDogIkFueSIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb24iIDogIkhFQURFUiIsCiAgICAgICAgInR5cGVEaXNwbGF5TmFtZSIgOiAiT0F1dGggMi4wIgogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJVbmF1dGhvcml6ZWRFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiaWQiLCAibWVzc2FnZSIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZW51bSIgOiBbICJjb20uYXBwY2VsZXJhdG9yLmFwaS51bmF1dGhvcml6ZWQiIF0KICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvZGM2NWFjZjgtNDFhMC00NjVhLWFhZjctMTJiZmRlYmE2OWZhL2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvZGM2NWFjZjgtNDFhMC00NjVhLWFhZjctMTJiZmRlYmE2OWZhL2lvcy1zd2lmdCIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9kYzY1YWNmOC00MWEwLTQ2NWEtYWFmNy0xMmJmZGViYTY5ZmEvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2RjNjVhY2Y4LTQxYTAtNDY1YS1hYWY3LTEyYmZkZWJhNjlmYS9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjUxNDc3NjkwMzgyLAogICAgInRhZ3MiIDogewogICAgICAic2FtcGxlIiA6IFsgInNhbXBsZSIsICIgdGVzdCIgXQogICAgfSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgImlkIiA6ICJkYzY1YWNmOC00MWEwLTQ2NWEtYWFmNy0xMmJmZGViYTY5ZmEiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiCiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "16602275099091977194",
+            "minorHash": "2342757984540164549",
+            "externalAPIID": "dc65acf8-41a0-465a-aaf7-12bfdeba69fa",
+            "externalAPIName": "Sample-Weather",
+            "externalAPIPrimaryKey": "path:/sample-routingKey:"
+        }
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "7d13d407-8da5-11ec-842a-005056be31e6.1",
+        "title": "Security-PatientAuth-Service - 2022/02/14 - r 1",
+        "metadata": {
+            "id": "8a2e87fd7ee6c062017ef8b6f675502e",
+            "audit": {
+                "createTimestamp": "2022-02-14T14:50:47.285+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:48.763+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e89e67ee84513017ef8b6f3a84f0d",
+                    "kind": "APIService",
+                    "name": "7d13d407-8da5-11ec-842a-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/7d13d407-8da5-11ec-842a-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/7d13d407-8da5-11ec-842a-005056be31e6.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "e69c03e1-d99d-4efc-bbd1-65701b20ed72",
+            "externalAPIName": "Security-PatientAuth-Service",
+            "GatewayType": "Edge",
+            "majorHash": "16505430037411332973",
+            "minorHash": "2143515826285347245",
+            "externalAPIPrimaryKey": "vhost:-path:/api/sec/auth/patient-routingKey:"
+        },
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "APIID_c0110ba8-e746-4a3a-bd38-5d5c31c5f849",
+            "Type_Demo_Amplify_PlexusHealth",
+            "Category_ Security",
+            "Category_Auth"
+        ],
+        "spec": {
+            "apiService": "7d13d407-8da5-11ec-842a-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIyLjIiLAogICAgInRpdGxlIiA6ICJTZWN1cml0eS1QYXRpZW50QXV0aC1TZXJ2aWNlIiwKICAgICJ4LXN1bW1hcnkiIDogIlNlY3VyaXR5IHNlcnZpY2UgcHJvdmlkaW5nIHBhdGllbnQgYXV0aGVudGljYXRpb24iCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvc2VjL2F1dGgvcGF0aWVudCIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJBdXRob3JpemUiLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy9lNjljMDNlMS1kOTlkLTRlZmMtYmJkMS02NTcwMWIyMGVkNzIvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay9lNjljMDNlMS1kOTlkLTRlZmMtYmJkMS02NTcwMWIyMGVkNzIvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay9lNjljMDNlMS1kOTlkLTRlZmMtYmJkMS02NTcwMWIyMGVkNzIvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvZTY5YzAzZTEtZDk5ZC00ZWZjLWJiZDEtNjU3MDFiMjBlZDcyL2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay9lNjljMDNlMS1kOTlkLTRlZmMtYmJkMS02NTcwMWIyMGVkNzIvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIxMWV4IiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNTU2NTI2NjMxODg1LAogICAgInRhZ3MiIDogewogICAgICAiSW5kdXN0cnkiIDogWyAiSGVhbHRoY2FyZSIgXSwKICAgICAgIlR5cGUiIDogWyAiRGVtb19BbXBsaWZ5X1BsZXh1c0hlYWx0aCIgXSwKICAgICAgIkNhdGVnb3J5IiA6IFsgIkF1dGgiLCAiIFNlY3VyaXR5IiBdCiAgICB9LAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAiaWQiIDogImU2OWMwM2UxLWQ5OWQtNGVmYy1iYmQxLTY1NzAxYjIwZWQ3MiIsCiAgICAic3RhdGUiIDogInB1Ymxpc2hlZCIKICB9Cn0=",
+                "version": "2.2",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

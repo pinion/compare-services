@@ -1,0 +1,738 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.11",
+        "title": "FindSalary - 2022/04/06 - r 11",
+        "metadata": {
+            "id": "8a2e80e77ffcceee017ffdd7ba86066b",
+            "audit": {
+                "createTimestamp": "2022-04-06T07:47:28.006+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:44.371+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.11"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "169cd77e-561b-42cb-97da-0681c756dd6e",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "2942317506234113275",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "15977256784312329657",
+            "prevAPIServiceRevisionID": "8a2e92be7f4fadb1017f5410356026d9"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_199501ff-cc81-4564-8fcc-7faccd632509"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IiwKICAgICJ4LXN1bW1hcnkiIDogIkZpbmRTYWxhcnkgQVBJIGZyb20gREIiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvZW5kcG9pbnRzIiwKICAic2NoZW1lcyIgOiBbICJodHRwcyIgXSwKICAic2VjdXJpdHkiIDogWyB7CiAgICAiQVBJIEtleSIgOiBbIF0KICB9IF0sCiAgInBhdGhzIiA6IHsKICAgICIvZmluZHNhbGFyeS97ZW1wX25vfSIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJ0YWdzIiA6IFsgIkZpbmRTYWxhcnkiIF0sCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJGaW5kIG9uZSBGaW5kU2FsYXJ5IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkZpbmQgQnkgSUQgZmluZHNhbGFyeSIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiZW1wX25vIiwKICAgICAgICAgICJpbiIgOiAicGF0aCIsCiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoZSBGaW5kU2FsYXJ5IElEIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgInR5cGUiIDogIm51bWJlciIKICAgICAgICB9IF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgZmluZCBzdWNjZWVkZWQsIGFuZCB0aGUgcmVzdWx0cyBhcmUgYXZhaWxhYmxlLiIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL0ZpbmRTYWxhcnktZnVsbCIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkJhZCByZXF1ZXN0LiIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDAxIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJVbmF1dGhvcml6ZWQiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9VbmF1dGhvcml6ZWRFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI1MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlNvbWV0aGluZyB3ZW50IHdyb25nIGR1cmluZyB0aGUgcmVxdWVzdDsgY2hlY2sgb3V0IHRoZSBsb2dzIG9uIHlvdXIgc2VydmVyLiIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDEzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXlsb2FkIHRvbyBsYXJnZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1BheWxvYWRUb29MYXJnZUVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwNCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiTm8gcmVzdWx0cyB3ZXJlIGZvdW5kLiIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAic2VjdXJpdHlEZWZpbml0aW9ucyIgOiB7CiAgICAiQVBJIEtleSIgOiB7CiAgICAgICJkZXNjcmlwdGlvbiIgOiAiQVBJIEtleSIsCiAgICAgICJ0eXBlIiA6ICJhcGlLZXkiLAogICAgICAibmFtZSIgOiAiS2V5SWQiLAogICAgICAiaW4iIDogImhlYWRlciIKICAgIH0KICB9LAogICJkZWZpbml0aW9ucyIgOiB7CiAgICAiUGF5bG9hZFRvb0xhcmdlRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImNvZGUiLCAibWVzc2FnZSIsICJyZXF1ZXN0LWlkIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiY29kZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiaW50ZWdlciIsCiAgICAgICAgICAiZm9ybWF0IiA6ICJpbnQzMiIKICAgICAgICB9LAogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgInJlcXVlc3QtaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIkZpbmRTYWxhcnktZnVsbCIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiZW1wX25vIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImJpcnRoX2RhdGUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJmaXJzdF9uYW1lIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibGFzdF9uYW1lIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZ2VuZGVyIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiaGlyZV9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibXlzcWwvc2FsYXJpZXMiIDogewogICAgICAgICAgInR5cGUiIDogImFycmF5IiwKICAgICAgICAgICJpdGVtcyIgOiB7IH0KICAgICAgICB9LAogICAgICAgICJlbXBfbm8iIDogewogICAgICAgICAgInR5cGUiIDogIm51bWJlciIKICAgICAgICB9CiAgICAgIH0KICAgIH0sCiAgICAiVW5hdXRob3JpemVkRXJyb3IiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImlkIiwgIm1lc3NhZ2UiLCAic3VjY2VzcyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJzdWNjZXNzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJib29sZWFuIgogICAgICAgIH0sCiAgICAgICAgImlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciLAogICAgICAgICAgImVudW0iIDogWyAiY29tLmFwcGNlbGVyYXRvci5hcGkudW5hdXRob3JpemVkIiBdCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgIngtYXh3YXkiIDogewogICAgInNlcnZpY2VUeXBlIiA6ICJyZXN0IiwKICAgICJpbWFnZSIgOiAiL2FwaS9wb3J0YWwvdjEuMy9kaXNjb3Zlcnkvc3dhZ2dlci9hcGlzLzE2OWNkNzdlLTU2MWItNDJjYi05N2RhLTA2ODFjNzU2ZGQ2ZS9pbWFnZSIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvMTY5Y2Q3N2UtNTYxYi00MmNiLTk3ZGEtMDY4MWM3NTZkZDZlL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvMTY5Y2Q3N2UtNTYxYi00MmNiLTk3ZGEtMDY4MWM3NTZkZDZlL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrLzE2OWNkNzdlLTU2MWItNDJjYi05N2RhLTA2ODFjNzU2ZGQ2ZS9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvMTY5Y2Q3N2UtNTYxYi00MmNiLTk3ZGEtMDY4MWM3NTZkZDZlL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMjAiLAogICAgImlkIiA6ICIxNjljZDc3ZS01NjFiLTQyY2ItOTdkYS0wNjgxYzc1NmRkNmUiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE2NDczMzgzNDE1NzQKICB9Cn0=",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.1",
+        "title": "FindSalary - 2022/03/02 - r 1",
+        "metadata": {
+            "id": "8a2e83037f4669c4017f4aefeb0216c6",
+            "audit": {
+                "createTimestamp": "2022-03-02T14:01:51.618+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:46.449+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "b62d3840-4602-4d88-af10-c0c0b4b0140a",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "5613603819727258771",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5e5d25ad-69a5-4e74-8636-e42d2b126513"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvZmluZHNhbGFyeS97ZW1wX25vfSIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJ0YWdzIiA6IFsgIkZpbmRTYWxhcnkiIF0sCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJGaW5kIG9uZSBGaW5kU2FsYXJ5IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkZpbmQgQnkgSUQgZmluZHNhbGFyeSIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiZW1wX25vIiwKICAgICAgICAgICJpbiIgOiAicGF0aCIsCiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoZSBGaW5kU2FsYXJ5IElEIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgInR5cGUiIDogIm51bWJlciIKICAgICAgICB9IF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgZmluZCBzdWNjZWVkZWQsIGFuZCB0aGUgcmVzdWx0cyBhcmUgYXZhaWxhYmxlLiIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL0ZpbmRTYWxhcnktZnVsbCIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkJhZCByZXF1ZXN0LiIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDAxIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJVbmF1dGhvcml6ZWQiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9VbmF1dGhvcml6ZWRFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI1MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlNvbWV0aGluZyB3ZW50IHdyb25nIGR1cmluZyB0aGUgcmVxdWVzdDsgY2hlY2sgb3V0IHRoZSBsb2dzIG9uIHlvdXIgc2VydmVyLiIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDEzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXlsb2FkIHRvbyBsYXJnZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1BheWxvYWRUb29MYXJnZUVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwNCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiTm8gcmVzdWx0cyB3ZXJlIGZvdW5kLiIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMjAiLAogICAgImlkIiA6ICJiNjJkMzg0MC00NjAyLTRkODgtYWYxMC1jMGMwYjRiMDE0MGEiLAogICAgInN0YXRlIiA6ICJ1bnB1Ymxpc2hlZCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTY0NjIyOTY3OTQyMQogIH0KfQ==",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.2",
+        "title": "FindSalary - 2022/03/02 - r 2",
+        "metadata": {
+            "id": "8a2e85e17f466d27017f4af65a37149d",
+            "audit": {
+                "createTimestamp": "2022-03-02T14:08:53.303+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:46.509+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.2"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "b62d3840-4602-4d88-af10-c0c0b4b0140a",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "9515234364949464128",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834",
+            "prevAPIServiceRevisionID": "8a2e83037f4669c4017f4aefeb0216c6"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5e5d25ad-69a5-4e74-8636-e42d2b126513"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIk9BdXRoSW1wbGljaXQiIDogWyAicmVzb3VyY2UuV1JJVEUiIF0KICB9LCB7CiAgICAiT0F1dGhJbXBsaWNpdCIgOiBbICIgcmVzb3VyY2UuUkVBRCIgXQogIH0sIHsKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogWyAicmVzb3VyY2UuV1JJVEUiIF0KICB9LCB7CiAgICAiT0F1dGhBY2Nlc3NDb2RlIiA6IFsgIiByZXNvdXJjZS5SRUFEIiBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIk9BdXRoSW1wbGljaXQiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAiZmxvdyIgOiAiaW1wbGljaXQiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgIiByZXNvdXJjZS5SRUFEIiA6ICIiCiAgICAgIH0sCiAgICAgICJ4LWF4d2F5IiA6IHsKICAgICAgICAiYWNjZXNzVG9rZW5Mb2NhdGlvblF1ZXJ5U3RyaW5nIiA6ICJCZWFyZXIiLAogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc190b2tlbiIsCiAgICAgICAgInNjb3Blc01hdGNoaW5nIiA6ICJBbnkiLAogICAgICAgICJhY2Nlc3NUb2tlbkxvY2F0aW9uIiA6ICJIRUFERVIiLAogICAgICAgICJ0eXBlRGlzcGxheU5hbWUiIDogIk9BdXRoIDIuMCIsCiAgICAgICAgImF1dGhvcml6YXRpb25IZWFkZXJQcmVmaXgiIDogIiIKICAgICAgfQogICAgfSwKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAidG9rZW5VcmwiIDogImh0dHBzOi8vbG9jYWxob3N0OjgwODkvYXBpL29hdXRoL3Rva2VuIiwKICAgICAgImZsb3ciIDogImFjY2Vzc0NvZGUiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgIiByZXNvdXJjZS5SRUFEIiA6ICIiCiAgICAgIH0sCiAgICAgICJ4LWF4d2F5IiA6IHsKICAgICAgICAiY2xpZW50U2VjcmV0TmFtZSIgOiAiY2xpZW50X3NlY3JldCIsCiAgICAgICAgImF1dGhvcml6YXRpb25IZWFkZXJQcmVmaXgiIDogIiIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb25RdWVyeVN0cmluZyIgOiAiQmVhcmVyIiwKICAgICAgICAiY2xpZW50SWROYW1lIiA6ICJjbGllbnRfaWQiLAogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc19jb2RlIiwKICAgICAgICAic2NvcGVzTWF0Y2hpbmciIDogIkFueSIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb24iIDogIkhFQURFUiIsCiAgICAgICAgInR5cGVEaXNwbGF5TmFtZSIgOiAiT0F1dGggMi4wIgogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMjAiLAogICAgImlkIiA6ICJiNjJkMzg0MC00NjAyLTRkODgtYWYxMC1jMGMwYjRiMDE0MGEiLAogICAgInN0YXRlIiA6ICJ1bnB1Ymxpc2hlZCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTY0NjIyOTY3OTQyMQogIH0KfQ==",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.3",
+        "title": "FindSalary - 2022/03/02 - r 3",
+        "metadata": {
+            "id": "8a2e85e17f466d27017f4af6d03814c4",
+            "audit": {
+                "createTimestamp": "2022-03-02T14:09:23.512+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:46.568+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.3"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "b62d3840-4602-4d88-af10-c0c0b4b0140a",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "13467773829123827323",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834",
+            "prevAPIServiceRevisionID": "8a2e85e17f466d27017f4af65a37149d"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5e5d25ad-69a5-4e74-8636-e42d2b126513"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIk9BdXRoSW1wbGljaXQiIDogWyAicmVzb3VyY2UuV1JJVEUiIF0KICB9LCB7CiAgICAiT0F1dGhJbXBsaWNpdCIgOiBbICIgcmVzb3VyY2UuUkVBRCIgXQogIH0sIHsKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogWyAicmVzb3VyY2UuV1JJVEUiIF0KICB9LCB7CiAgICAiT0F1dGhBY2Nlc3NDb2RlIiA6IFsgIiByZXNvdXJjZS5SRUFEIiBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIk9BdXRoSW1wbGljaXQiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAiZmxvdyIgOiAiaW1wbGljaXQiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgIiByZXNvdXJjZS5SRUFEIiA6ICIiCiAgICAgIH0sCiAgICAgICJ4LWF4d2F5IiA6IHsKICAgICAgICAiYWNjZXNzVG9rZW5Mb2NhdGlvblF1ZXJ5U3RyaW5nIiA6ICJCZWFyZXIiLAogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc190b2tlbiIsCiAgICAgICAgInNjb3Blc01hdGNoaW5nIiA6ICJBbnkiLAogICAgICAgICJhY2Nlc3NUb2tlbkxvY2F0aW9uIiA6ICJIRUFERVIiLAogICAgICAgICJ0eXBlRGlzcGxheU5hbWUiIDogIk9BdXRoIDIuMCIsCiAgICAgICAgImF1dGhvcml6YXRpb25IZWFkZXJQcmVmaXgiIDogIiIKICAgICAgfQogICAgfSwKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAidG9rZW5VcmwiIDogImh0dHBzOi8vbG9jYWxob3N0OjgwODkvYXBpL29hdXRoL3Rva2VuIiwKICAgICAgImZsb3ciIDogImFjY2Vzc0NvZGUiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgIiByZXNvdXJjZS5SRUFEIiA6ICIiCiAgICAgIH0sCiAgICAgICJ4LWF4d2F5IiA6IHsKICAgICAgICAiY2xpZW50U2VjcmV0TmFtZSIgOiAiY2xpZW50X3NlY3JldCIsCiAgICAgICAgImF1dGhvcml6YXRpb25IZWFkZXJQcmVmaXgiIDogIiIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb25RdWVyeVN0cmluZyIgOiAiQmVhcmVyIiwKICAgICAgICAiY2xpZW50SWROYW1lIiA6ICJjbGllbnRfaWQiLAogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc19jb2RlIiwKICAgICAgICAic2NvcGVzTWF0Y2hpbmciIDogIkFueSIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb24iIDogIkhFQURFUiIsCiAgICAgICAgInR5cGVEaXNwbGF5TmFtZSIgOiAiT0F1dGggMi4wIgogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMjAiLAogICAgImlkIiA6ICJiNjJkMzg0MC00NjAyLTRkODgtYWYxMC1jMGMwYjRiMDE0MGEiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE2NDYyMjk2Nzk0MjEKICB9Cn0=",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.5",
+        "title": "FindSalaryTest - 2022/03/02 - r 5",
+        "metadata": {
+            "id": "8a2e85e17f466d27017f4cadc8ee21bf",
+            "audit": {
+                "createTimestamp": "2022-03-02T22:08:51.950+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:46.702+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.5"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "b62d3840-4602-4d88-af10-c0c0b4b0140a",
+            "externalAPIName": "FindSalaryTest",
+            "GatewayType": "Edge",
+            "majorHash": "12220031636053631426",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834",
+            "prevAPIServiceRevisionID": "8a2e88797f466ab7017f4cad539e25a3"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5e5d25ad-69a5-4e74-8636-e42d2b126513"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5VGVzdCIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaS9lbmRwb2ludHMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgImRlZmluaXRpb25zIiA6IHsKICAgICJQYXlsb2FkVG9vTGFyZ2VFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiY29kZSIsICJtZXNzYWdlIiwgInJlcXVlc3QtaWQiLCAic3VjY2VzcyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJjb2RlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJpbnRlZ2VyIiwKICAgICAgICAgICJmb3JtYXQiIDogImludDMyIgogICAgICAgIH0sCiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAicmVxdWVzdC1pZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0sCiAgICAiRmluZFNhbGFyeS1mdWxsIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJlbXBfbm8iIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiYmlydGhfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImZpcnN0X25hbWUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJsYXN0X25hbWUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJnZW5kZXIiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJoaXJlX2RhdGUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJteXNxbC9zYWxhcmllcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYXJyYXkiLAogICAgICAgICAgIml0ZW1zIiA6IHsgfQogICAgICAgIH0sCiAgICAgICAgImVtcF9ubyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAibnVtYmVyIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJVbmF1dGhvcml6ZWRFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiaWQiLCAibWVzc2FnZSIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZW51bSIgOiBbICJjb20uYXBwY2VsZXJhdG9yLmFwaS51bmF1dGhvcml6ZWQiIF0KICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9iNjJkMzg0MC00NjAyLTRkODgtYWYxMC1jMGMwYjRiMDE0MGEvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQ2MjI5Njc5NDIxCiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.9",
+        "title": "FindSalary - 2022/03/04 - r 9",
+        "metadata": {
+            "id": "8a2e85e17f4fad85017f537168561e3a",
+            "audit": {
+                "createTimestamp": "2022-03-04T05:40:15.574+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:47.977+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.9"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "f149a575-52aa-44d6-b640-6c6d2bbf4d2b",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "11985901213692548139",
+            "minorHash": "5154189500270149805",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "prevAPIServiceRevisionID": "8a2e94837f4fac87017f50deb9cb0925"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5c729d1d-88fb-4d49-a0f5-d61db4e0ee9a"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIkFQSSBLZXkiIDogWyBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIkFQSSBLZXkiLAogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy9mMTQ5YTU3NS01MmFhLTQ0ZDYtYjY0MC02YzZkMmJiZjRkMmIvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9mMTQ5YTU3NS01MmFhLTQ0ZDYtYjY0MC02YzZkMmJiZjRkMmIvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiZjE0OWE1NzUtNTJhYS00NGQ2LWI2NDAtNmM2ZDJiYmY0ZDJiIiwKICAgICJzdGF0ZSIgOiAidW5wdWJsaXNoZWQiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE2NDYzMTUyNjA0NzUKICB9Cn0=",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.4",
+        "title": "FindSalary - 2022/03/02 - r 4",
+        "metadata": {
+            "id": "8a2e88797f466ab7017f4cad539e25a3",
+            "audit": {
+                "createTimestamp": "2022-03-02T22:08:21.918+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:46.632+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.4"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "b62d3840-4602-4d88-af10-c0c0b4b0140a",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "9515234364949464128",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834",
+            "prevAPIServiceRevisionID": "8a2e85e17f466d27017f4af6d03814c4"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5e5d25ad-69a5-4e74-8636-e42d2b126513"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIk9BdXRoSW1wbGljaXQiIDogWyAicmVzb3VyY2UuV1JJVEUiIF0KICB9LCB7CiAgICAiT0F1dGhJbXBsaWNpdCIgOiBbICIgcmVzb3VyY2UuUkVBRCIgXQogIH0sIHsKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogWyAicmVzb3VyY2UuV1JJVEUiIF0KICB9LCB7CiAgICAiT0F1dGhBY2Nlc3NDb2RlIiA6IFsgIiByZXNvdXJjZS5SRUFEIiBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIk9BdXRoSW1wbGljaXQiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAiZmxvdyIgOiAiaW1wbGljaXQiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgIiByZXNvdXJjZS5SRUFEIiA6ICIiCiAgICAgIH0sCiAgICAgICJ4LWF4d2F5IiA6IHsKICAgICAgICAiYWNjZXNzVG9rZW5Mb2NhdGlvblF1ZXJ5U3RyaW5nIiA6ICJCZWFyZXIiLAogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc190b2tlbiIsCiAgICAgICAgInNjb3Blc01hdGNoaW5nIiA6ICJBbnkiLAogICAgICAgICJhY2Nlc3NUb2tlbkxvY2F0aW9uIiA6ICJIRUFERVIiLAogICAgICAgICJ0eXBlRGlzcGxheU5hbWUiIDogIk9BdXRoIDIuMCIsCiAgICAgICAgImF1dGhvcml6YXRpb25IZWFkZXJQcmVmaXgiIDogIiIKICAgICAgfQogICAgfSwKICAgICJPQXV0aEFjY2Vzc0NvZGUiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIk9BdXRoIiwKICAgICAgInR5cGUiIDogIm9hdXRoMiIsCiAgICAgICJhdXRob3JpemF0aW9uVXJsIiA6ICJodHRwczovL2xvY2FsaG9zdDo4MDg5L2FwaS9vYXV0aC9hdXRob3JpemUiLAogICAgICAidG9rZW5VcmwiIDogImh0dHBzOi8vbG9jYWxob3N0OjgwODkvYXBpL29hdXRoL3Rva2VuIiwKICAgICAgImZsb3ciIDogImFjY2Vzc0NvZGUiLAogICAgICAic2NvcGVzIiA6IHsKICAgICAgICAicmVzb3VyY2UuV1JJVEUiIDogIiIsCiAgICAgICAgIiByZXNvdXJjZS5SRUFEIiA6ICIiCiAgICAgIH0sCiAgICAgICJ4LWF4d2F5IiA6IHsKICAgICAgICAiY2xpZW50U2VjcmV0TmFtZSIgOiAiY2xpZW50X3NlY3JldCIsCiAgICAgICAgImF1dGhvcml6YXRpb25IZWFkZXJQcmVmaXgiIDogIiIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb25RdWVyeVN0cmluZyIgOiAiQmVhcmVyIiwKICAgICAgICAiY2xpZW50SWROYW1lIiA6ICJjbGllbnRfaWQiLAogICAgICAgICJ0b2tlbk5hbWUiIDogImFjY2Vzc19jb2RlIiwKICAgICAgICAic2NvcGVzTWF0Y2hpbmciIDogIkFueSIsCiAgICAgICAgImFjY2Vzc1Rva2VuTG9jYXRpb24iIDogIkhFQURFUiIsCiAgICAgICAgInR5cGVEaXNwbGF5TmFtZSIgOiAiT0F1dGggMi4wIgogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMjAiLAogICAgImlkIiA6ICJiNjJkMzg0MC00NjAyLTRkODgtYWYxMC1jMGMwYjRiMDE0MGEiLAogICAgInN0YXRlIiA6ICJ1bnB1Ymxpc2hlZCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTY0NjIyOTY3OTQyMQogIH0KfQ==",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.6",
+        "title": "FindSalaryTest - 2022/03/02 - r 6",
+        "metadata": {
+            "id": "8a2e8cc87f466ae7017f4cafa14623cb",
+            "audit": {
+                "createTimestamp": "2022-03-02T22:10:52.870+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:46.762+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.6"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "b62d3840-4602-4d88-af10-c0c0b4b0140a",
+            "externalAPIName": "FindSalaryTest",
+            "GatewayType": "Edge",
+            "majorHash": "11372005823289466397",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834",
+            "prevAPIServiceRevisionID": "8a2e85e17f466d27017f4cadc8ee21bf"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5e5d25ad-69a5-4e74-8636-e42d2b126513"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5VGVzdCIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaS9lbmRwb2ludHMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJzZWN1cml0eSIgOiBbIHsKICAgICJBUEkgS2V5IiA6IFsgXQogIH0gXSwKICAicGF0aHMiIDogewogICAgIi9maW5kc2FsYXJ5L3tlbXBfbm99IiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInRhZ3MiIDogWyAiRmluZFNhbGFyeSIgXSwKICAgICAgICAiZGVzY3JpcHRpb24iIDogIkZpbmQgb25lIEZpbmRTYWxhcnkiLAogICAgICAgICJvcGVyYXRpb25JZCIgOiAiRmluZCBCeSBJRCBmaW5kc2FsYXJ5IiwKICAgICAgICAicHJvZHVjZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIHsKICAgICAgICAgICJuYW1lIiA6ICJlbXBfbm8iLAogICAgICAgICAgImluIiA6ICJwYXRoIiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIEZpbmRTYWxhcnkgSUQiLAogICAgICAgICAgInJlcXVpcmVkIiA6IHRydWUsCiAgICAgICAgICAidHlwZSIgOiAibnVtYmVyIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoZSBmaW5kIHN1Y2NlZWRlZCwgYW5kIHRoZSByZXN1bHRzIGFyZSBhdmFpbGFibGUuIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvRmluZFNhbGFyeS1mdWxsIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiQmFkIHJlcXVlc3QuIgogICAgICAgICAgfSwKICAgICAgICAgICI0MDEiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVuYXV0aG9yaXplZCIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1VuYXV0aG9yaXplZEVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjUwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiU29tZXRoaW5nIHdlbnQgd3JvbmcgZHVyaW5nIHRoZSByZXF1ZXN0OyBjaGVjayBvdXQgdGhlIGxvZ3Mgb24geW91ciBzZXJ2ZXIuIgogICAgICAgICAgfSwKICAgICAgICAgICI0MTMiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlBheWxvYWQgdG9vIGxhcmdlIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvUGF5bG9hZFRvb0xhcmdlRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDA0IiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJObyByZXN1bHRzIHdlcmUgZm91bmQuIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJzZWN1cml0eURlZmluaXRpb25zIiA6IHsKICAgICJBUEkgS2V5IiA6IHsKICAgICAgImRlc2NyaXB0aW9uIiA6ICJBUEkgS2V5IiwKICAgICAgInR5cGUiIDogImFwaUtleSIsCiAgICAgICJuYW1lIiA6ICJLZXlJZCIsCiAgICAgICJpbiIgOiAiaGVhZGVyIgogICAgfQogIH0sCiAgImRlZmluaXRpb25zIiA6IHsKICAgICJQYXlsb2FkVG9vTGFyZ2VFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiY29kZSIsICJtZXNzYWdlIiwgInJlcXVlc3QtaWQiLCAic3VjY2VzcyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJjb2RlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJpbnRlZ2VyIiwKICAgICAgICAgICJmb3JtYXQiIDogImludDMyIgogICAgICAgIH0sCiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAicmVxdWVzdC1pZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0sCiAgICAiRmluZFNhbGFyeS1mdWxsIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJlbXBfbm8iIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiYmlydGhfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImZpcnN0X25hbWUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJsYXN0X25hbWUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJnZW5kZXIiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJoaXJlX2RhdGUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJteXNxbC9zYWxhcmllcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYXJyYXkiLAogICAgICAgICAgIml0ZW1zIiA6IHsgfQogICAgICAgIH0sCiAgICAgICAgImVtcF9ubyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAibnVtYmVyIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJVbmF1dGhvcml6ZWRFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiaWQiLCAibWVzc2FnZSIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZW51bSIgOiBbICJjb20uYXBwY2VsZXJhdG9yLmFwaS51bmF1dGhvcml6ZWQiIF0KICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9iNjJkMzg0MC00NjAyLTRkODgtYWYxMC1jMGMwYjRiMDE0MGEvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhIiwKICAgICJzdGF0ZSIgOiAidW5wdWJsaXNoZWQiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE2NDYyMjk2Nzk0MjEKICB9Cn0=",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.7",
+        "title": "FindSalaryTest - 2022/03/02 - r 7",
+        "metadata": {
+            "id": "8a2e8cc87f466ae7017f4cb015ef23dc",
+            "audit": {
+                "createTimestamp": "2022-03-02T22:11:22.735+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:46.822+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.7"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "b62d3840-4602-4d88-af10-c0c0b4b0140a",
+            "externalAPIName": "FindSalaryTest",
+            "GatewayType": "Edge",
+            "majorHash": "3588217252741223526",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834",
+            "prevAPIServiceRevisionID": "8a2e8cc87f466ae7017f4cafa14623cb"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5e5d25ad-69a5-4e74-8636-e42d2b126513"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5VGVzdCIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaS9lbmRwb2ludHMiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJzZWN1cml0eSIgOiBbIHsKICAgICJBUEkgS2V5IiA6IFsgXQogIH0gXSwKICAicGF0aHMiIDogewogICAgIi9maW5kc2FsYXJ5L3tlbXBfbm99IiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgInRhZ3MiIDogWyAiRmluZFNhbGFyeSIgXSwKICAgICAgICAiZGVzY3JpcHRpb24iIDogIkZpbmQgb25lIEZpbmRTYWxhcnkiLAogICAgICAgICJvcGVyYXRpb25JZCIgOiAiRmluZCBCeSBJRCBmaW5kc2FsYXJ5IiwKICAgICAgICAicHJvZHVjZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIHsKICAgICAgICAgICJuYW1lIiA6ICJlbXBfbm8iLAogICAgICAgICAgImluIiA6ICJwYXRoIiwKICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIEZpbmRTYWxhcnkgSUQiLAogICAgICAgICAgInJlcXVpcmVkIiA6IHRydWUsCiAgICAgICAgICAidHlwZSIgOiAibnVtYmVyIgogICAgICAgIH0gXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoZSBmaW5kIHN1Y2NlZWRlZCwgYW5kIHRoZSByZXN1bHRzIGFyZSBhdmFpbGFibGUuIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvRmluZFNhbGFyeS1mdWxsIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiQmFkIHJlcXVlc3QuIgogICAgICAgICAgfSwKICAgICAgICAgICI0MDEiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlVuYXV0aG9yaXplZCIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1VuYXV0aG9yaXplZEVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjUwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiU29tZXRoaW5nIHdlbnQgd3JvbmcgZHVyaW5nIHRoZSByZXF1ZXN0OyBjaGVjayBvdXQgdGhlIGxvZ3Mgb24geW91ciBzZXJ2ZXIuIgogICAgICAgICAgfSwKICAgICAgICAgICI0MTMiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlBheWxvYWQgdG9vIGxhcmdlIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvUGF5bG9hZFRvb0xhcmdlRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDA0IiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJObyByZXN1bHRzIHdlcmUgZm91bmQuIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJzZWN1cml0eURlZmluaXRpb25zIiA6IHsKICAgICJBUEkgS2V5IiA6IHsKICAgICAgImRlc2NyaXB0aW9uIiA6ICJBUEkgS2V5IiwKICAgICAgInR5cGUiIDogImFwaUtleSIsCiAgICAgICJuYW1lIiA6ICJLZXlJZCIsCiAgICAgICJpbiIgOiAiaGVhZGVyIgogICAgfQogIH0sCiAgImRlZmluaXRpb25zIiA6IHsKICAgICJQYXlsb2FkVG9vTGFyZ2VFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiY29kZSIsICJtZXNzYWdlIiwgInJlcXVlc3QtaWQiLCAic3VjY2VzcyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJjb2RlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJpbnRlZ2VyIiwKICAgICAgICAgICJmb3JtYXQiIDogImludDMyIgogICAgICAgIH0sCiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAicmVxdWVzdC1pZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0sCiAgICAiRmluZFNhbGFyeS1mdWxsIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJlbXBfbm8iIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAiYmlydGhfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImZpcnN0X25hbWUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJsYXN0X25hbWUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJnZW5kZXIiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJoaXJlX2RhdGUiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9LAogICAgICAgICJteXNxbC9zYWxhcmllcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYXJyYXkiLAogICAgICAgICAgIml0ZW1zIiA6IHsgfQogICAgICAgIH0sCiAgICAgICAgImVtcF9ubyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAibnVtYmVyIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJVbmF1dGhvcml6ZWRFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiaWQiLCAibWVzc2FnZSIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZW51bSIgOiBbICJjb20uYXBwY2VsZXJhdG9yLmFwaS51bmF1dGhvcml6ZWQiIF0KICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9iNjJkMzg0MC00NjAyLTRkODgtYWYxMC1jMGMwYjRiMDE0MGEvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2I2MmQzODQwLTQ2MDItNGQ4OC1hZjEwLWMwYzBiNGIwMTQwYS9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiYjYyZDM4NDAtNDYwMi00ZDg4LWFmMTAtYzBjMGI0YjAxNDBhIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQ2MjI5Njc5NDIxCiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.10",
+        "title": "FindSalary - 2022/03/04 - r 10",
+        "metadata": {
+            "id": "8a2e92be7f4fadb1017f5410356026d9",
+            "audit": {
+                "createTimestamp": "2022-03-04T08:33:42.752+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:44.312+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.10"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "f149a575-52aa-44d6-b640-6c6d2bbf4d2b",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "11985649420020227442",
+            "minorHash": "5154189500270149805",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "prevAPIServiceRevisionID": "8a2e85e17f4fad85017f537168561e3a"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5c729d1d-88fb-4d49-a0f5-d61db4e0ee9a"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIkFQSSBLZXkiIDogWyBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIkFQSSBLZXkiLAogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy9mMTQ5YTU3NS01MmFhLTQ0ZDYtYjY0MC02YzZkMmJiZjRkMmIvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9mMTQ5YTU3NS01MmFhLTQ0ZDYtYjY0MC02YzZkMmJiZjRkMmIvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiZjE0OWE1NzUtNTJhYS00NGQ2LWI2NDAtNmM2ZDJiYmY0ZDJiIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQ2MzE1MjYwNDc1CiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "4e5d0795-9a31-11ec-984d-005056be31e6.8",
+        "title": "FindSalary - 2022/03/03 - r 8",
+        "metadata": {
+            "id": "8a2e94837f4fac87017f50deb9cb0925",
+            "audit": {
+                "createTimestamp": "2022-03-03T17:40:48.203+0000",
+                "createUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7",
+                "modifyTimestamp": "2023-07-21T03:46:47.826+0000",
+                "modifyUserId": "service-account-8c1ac9c4-2992-4be2-8994-aa57a1b6f5f7"
+            },
+            "scope": {
+                "id": "8a2e87fd7ee6c062017ef8b03cfe4fb2",
+                "kind": "Environment",
+                "name": "apigateway-south-emea",
+                "title": "apigateway-south-emea",
+                "selfLink": "/management/v1alpha1/environments/apigateway-south-emea"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e85e17f466d27017f4aefe942145f",
+                    "kind": "APIService",
+                    "name": "4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-south-emea",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservices/4e5d0795-9a31-11ec-984d-005056be31e6",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-south-emea/apiservicerevisions/4e5d0795-9a31-11ec-984d-005056be31e6.8"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "f149a575-52aa-44d6-b640-6c6d2bbf4d2b",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "11985649420020227442",
+            "minorHash": "5154189500270149805",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "prevAPIServiceRevisionID": "8a2e8cc87f466ae7017f4cb015ef23dc"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_5c729d1d-88fb-4d49-a0f5-d61db4e0ee9a"
+        ],
+        "spec": {
+            "apiService": "4e5d0795-9a31-11ec-984d-005056be31e6",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIkFQSSBLZXkiIDogWyBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIkFQSSBLZXkiLAogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy9mMTQ5YTU3NS01MmFhLTQ0ZDYtYjY0MC02YzZkMmJiZjRkMmIvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9mMTQ5YTU3NS01MmFhLTQ0ZDYtYjY0MC02YzZkMmJiZjRkMmIvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2YxNDlhNTc1LTUyYWEtNDRkNi1iNjQwLTZjNmQyYmJmNGQyYi9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiZjE0OWE1NzUtNTJhYS00NGQ2LWI2NDAtNmM2ZDJiYmY0ZDJiIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQ2MzE1MjYwNDc1CiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

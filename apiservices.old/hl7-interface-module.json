@@ -1,0 +1,69 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "hl7-interface-module.1",
+        "title": "HL7-Interface-Module (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e91d98054e646018076036da21c67",
+            "audit": {
+                "createTimestamp": "2022-04-29T15:49:37.826+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:45.229+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e8c318054cad3018076036a4b2b2d",
+                    "kind": "APIService",
+                    "name": "hl7-interface-module",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/hl7-interface-module",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/hl7-interface-module.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth"
+        ],
+        "spec": {
+            "apiService": "hl7-interface-module",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIyLjEiLAogICAgInRpdGxlIiA6ICJITDctSW50ZXJmYWNlLU1vZHVsZSIsCiAgICAieC1zdW1tYXJ5IiA6ICJITDcgc3RhbmRhcmRzIG1vZHVsZSB2ZXJpZmljYXRpb25zIgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2hsNy9tb2R1bGUvdmVyaWYiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvMDU1MGJkM2ItZjlhMi00NGE2LWE2ZmQtMTY5Y2RmODY2NDZjL2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvMDU1MGJkM2ItZjlhMi00NGE2LWE2ZmQtMTY5Y2RmODY2NDZjL2lvcy1zd2lmdCIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay8wNTUwYmQzYi1mOWEyLTQ0YTYtYTZmZC0xNjljZGY4NjY0NmMvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzA1NTBiZDNiLWY5YTItNDRhNi1hNmZkLTE2OWNkZjg2NjQ2Yy9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjExZXgiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE1NTY1MjY2MzE5NTMsCiAgICAidGFncyIgOiB7CiAgICAgICJJbmR1c3RyeSIgOiBbICJIZWFsdGhjYXJlIiBdLAogICAgICAiVHlwZSIgOiBbICJEZW1vX0FtcGxpZnlfUGxleHVzSGVhbHRoIiBdCiAgICB9LAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAiaWQiIDogIjA1NTBiZDNiLWY5YTItNDRhNi1hNmZkLTE2OWNkZjg2NjQ2YyIsCiAgICAic3RhdGUiIDogInB1Ymxpc2hlZCIKICB9Cn0=",
+                "version": "2.1",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "15925621817645215055",
+            "minorHash": "9102802598819839363",
+            "externalAPIID": "0550bd3b-f9a2-44a6-a6fd-169cdf86646c",
+            "externalAPIName": "HL7-Interface-Module",
+            "externalAPIPrimaryKey": "path:/api/hl7/module/verif-routingKey:"
+        }
+    }
+]

@@ -1,0 +1,326 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The Skosmos REST API is a read-only interface to the data stored on the vocabulary server. The URL namespace is the base URL of the Skosmos instance followed by `/rest/v1/`. \n\nMost methods return the data as UTF-8 encoded JSON-LD, served using the `application/json` MIME type. The data consists of a single JSON object which includes JSON-LD context information (in the `@context` field) and one or more fields which contain the actual data. Some methods (`data`) return other formats (RDF/XML, Turtle, RDF/JSON) with the appropriate MIME type.\n\nThe API supports Cross-Origin Resource Sharing by setting the Access-Control-Allow-Origin HTTP header to `\"*\"` for all requests.\n\nThe API supports the JSONP convention of appending a callback parameter to any URL. The returned data will then be wrapped in a JavaScript function call using the function name provided as the callback parameter value. JSONP wrapped data will be served using the `application/javascript` MIME type.\n",
+    "version": "1.0.0",
+    "title": "Skosmos-API",
+    "contact": {
+      "email": "ge.pagiatakis@gmail.com"
+    }
+  },
+  "host": "gepagiatakis-eval-test.apigee.net",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/skosmos-api",
+  "paths": {
+    "/vocabularies": {
+      "get": {
+        "operationId": "get /vocabularies",
+        "summary": "Available vocabularies",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "operationId": "get /search",
+        "summary": "Search concepts and collections by query term",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/label": {
+      "get": {
+        "operationId": "get /label",
+        "summary": "List of labels for the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/data": {
+      "get": {
+        "operationId": "get /data",
+        "summary": "RDF data of the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/types": {
+      "get": {
+        "operationId": "get /types",
+        "summary": "Information about the types (classes) of objects contained in all  vocabularies",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/": {
+      "get": {
+        "operationId": "get /{vocid}/",
+        "summary": "General information about the vocabulary",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/types": {
+      "get": {
+        "operationId": "get /{vocid}/types",
+        "summary": "Information about the types (classes) of objects in the vocabulary",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/topConcepts": {
+      "get": {
+        "operationId": "get /{vocid}/topConcepts",
+        "summary": "Top concepts of the vocabulary",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/data": {
+      "get": {
+        "operationId": "get /{vocid}/data",
+        "summary": "RDF data of the whole vocabulary or a specific concept. If the vocabulary has support for it, MARCXML data is available for the whole vocabulary in each language.",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/search": {
+      "get": {
+        "operationId": "get /{vocid}/search",
+        "summary": "Finds concepts and collections from a vocabulary by query term",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/lookup": {
+      "get": {
+        "operationId": "get /{vocid}/lookup",
+        "summary": "Look up concepts by label",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/vocabularyStatistics": {
+      "get": {
+        "operationId": "get /{vocid}/vocabularyStatistics",
+        "summary": "Number of Concepts and Collections in the vocabulary",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/labelStatistics": {
+      "get": {
+        "operationId": "get /{vocid}/labelStatistics",
+        "summary": "Number of labels by language",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/index/": {
+      "get": {
+        "operationId": "get /{vocid}/index/",
+        "summary": "Initial letters of the alphabetical index",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/index/*": {
+      "get": {
+        "operationId": "get /{vocid}/index/{letter}",
+        "summary": "Concepts for a given letter in the alphabetical index",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/label": {
+      "get": {
+        "operationId": "get /{vocid}/label",
+        "summary": "List of labels for the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/broader": {
+      "get": {
+        "operationId": "get /{vocid}/broader",
+        "summary": "Broader concepts of the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/broaderTransitive": {
+      "get": {
+        "operationId": "get /{vocid}/broaderTransitive",
+        "summary": "Broader transitive hierarchy for the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/narrower": {
+      "get": {
+        "operationId": "get /{vocid}/narrower",
+        "summary": "Narrower concepts of the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/narrowerTransitive": {
+      "get": {
+        "operationId": "get /{vocid}/narrowerTransitive",
+        "summary": "Narrower transitive hierarchy for the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/related": {
+      "get": {
+        "operationId": "get /{vocid}/related",
+        "summary": "Related concepts of the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/children": {
+      "get": {
+        "operationId": "get /{vocid}/children",
+        "summary": "Narrower concepts of the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/groups": {
+      "get": {
+        "operationId": "get /{vocid}/groups",
+        "summary": "Concept groups in the vocabulary",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/new": {
+      "get": {
+        "operationId": "get /{vocid}/new",
+        "summary": "New concepts in the vocabulary",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/modified": {
+      "get": {
+        "operationId": "get /{vocid}/modified",
+        "summary": "Modified concepts in the vocabulary",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/groupMembers": {
+      "get": {
+        "operationId": "get /{vocid}/groupMembers",
+        "summary": "Members of the requested concept group",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/hierarchy": {
+      "get": {
+        "operationId": "get /{vocid}/hierarchy",
+        "summary": "Hierarchical context of the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/*/mappings": {
+      "get": {
+        "operationId": "get /{vocid}/mappings",
+        "summary": "Mappings associated with the requested concept",
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    }
+  }
+}

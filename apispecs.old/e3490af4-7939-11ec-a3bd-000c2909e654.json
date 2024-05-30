@@ -1,0 +1,123 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "An API Builder service",
+    "version" : "1.0.0",
+    "title" : "swagger.json"
+  },
+  "host" : "api-env.demo.axway.com:8065",
+  "basePath" : "/api2",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/greet" : {
+      "get" : {
+        "tags" : [ "helloworld" ],
+        "summary" : "Greet a user",
+        "operationId" : "Greet",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "username",
+          "in" : "query",
+          "description" : "The username",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "greeting",
+            "schema" : {
+              "$ref" : "#/definitions/schema.open-weather_greeting"
+            }
+          },
+          "400" : {
+            "description" : "bad request",
+            "schema" : {
+              "$ref" : "#/definitions/schema.open-weather_error"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "413" : {
+            "description" : "Payload too large",
+            "schema" : {
+              "$ref" : "#/definitions/PayloadTooLargeError"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "PayloadTooLargeError" : {
+      "type" : "object",
+      "required" : [ "code", "message", "request-id", "success" ],
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "success" : {
+          "type" : "boolean"
+        },
+        "request-id" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "schema.open-weather_error" : {
+      "type" : "object",
+      "required" : [ "error" ],
+      "properties" : {
+        "error" : {
+          "type" : "string",
+          "description" : "The error message"
+        }
+      }
+    },
+    "schema.open-weather_greeting" : {
+      "type" : "string",
+      "description" : "A greeting message for the user"
+    },
+    "UnauthorizedError" : {
+      "type" : "object",
+      "required" : [ "id", "message", "success" ],
+      "properties" : {
+        "success" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string",
+          "enum" : [ "com.appcelerator.api.unauthorized" ]
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "x-axway" : {
+    "serviceType" : "rest",
+    "basePaths" : [ "https://api-env.demo.axway.com:8065" ],
+    "expired" : false,
+    "retirementDate" : 0,
+    "corsEnabled" : true,
+    "deprecated" : false,
+    "availableSDK" : {
+      "ios-swift" : "/discovery/sdk/cf540050-5b8a-4ffa-8b8b-8e562747c234/ios-swift",
+      "titanium" : "/discovery/sdk/cf540050-5b8a-4ffa-8b8b-8e562747c234/titanium",
+      "android" : "/discovery/sdk/cf540050-5b8a-4ffa-8b8b-8e562747c234/android",
+      "nodejs" : "/discovery/sdk/cf540050-5b8a-4ffa-8b8b-8e562747c234/nodejs"
+    },
+    "apiResourceType" : "swagger20",
+    "id" : "cf540050-5b8a-4ffa-8b8b-8e562747c234",
+    "state" : "unpublished",
+    "accessGrantedDate" : 1627994188419
+  }
+}

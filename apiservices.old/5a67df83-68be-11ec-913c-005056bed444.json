@@ -1,0 +1,70 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "5a67df83-68be-11ec-913c-005056bed444.1",
+        "title": "HL7-Message-Maker - 2021/12/29 - r 1",
+        "metadata": {
+            "id": "8a2e866e7de2adbf017e06de34056722",
+            "audit": {
+                "createTimestamp": "2021-12-29T15:45:32.677+0000",
+                "createUserId": "service-account-f161c415-37e3-4bd4-b146-15f9256921d7",
+                "modifyTimestamp": "2023-07-21T03:47:00.476+0000",
+                "modifyUserId": "service-account-f161c415-37e3-4bd4-b146-15f9256921d7"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e06d566714811",
+                "kind": "Environment",
+                "name": "gtw-v7",
+                "title": "gtw-v7",
+                "selfLink": "/management/v1alpha1/environments/gtw-v7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e866e7de2adbf017e06de32746717",
+                    "kind": "APIService",
+                    "name": "5a67df83-68be-11ec-913c-005056bed444",
+                    "scopeKind": "Environment",
+                    "scopeName": "gtw-v7",
+                    "selfLink": "/management/v1alpha1/environments/gtw-v7/apiservices/5a67df83-68be-11ec-913c-005056bed444",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/gtw-v7/apiservicerevisions/5a67df83-68be-11ec-913c-005056bed444.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "d11c0eac-49d5-4bf3-b087-ad428080b62a",
+            "externalAPIName": "HL7-Message-Maker",
+            "GatewayType": "Edge",
+            "majorHash": "11032536595036511960",
+            "minorHash": "10628335276266471818",
+            "externalAPIPrimaryKey": "vhost:-path:/api/hl7/message-routingKey:"
+        },
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth",
+            "APIID_3e7b8b31-d464-4c45-8d0e-38db23aa6371"
+        ],
+        "spec": {
+            "apiService": "5a67df83-68be-11ec-913c-005056bed444",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIyLjEiLAogICAgInRpdGxlIiA6ICJITDctTWVzc2FnZS1NYWtlciIsCiAgICAieC1zdW1tYXJ5IiA6ICJNYW5hZ2UgbWVzc2FnZSBzdGFuZGFyZHMgZm9yIHRyYW5zZmVyIG9mIGNsaW5pY2FsIGFuZCBhZG1pbmlzdHJhdGl2ZSBkYXRhIGJldHdlZW4gc29mdHdhcmUgYXBwbGljYXRpb25zIHVzZWQgYnkgdmFyaW91cyBoZWFsdGhjYXJlIHByb3ZpZGVycyIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaS9obDcvbWVzc2FnZSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJBbGwiLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIgogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgIngtYXh3YXkiIDogewogICAgInNlcnZpY2VUeXBlIiA6ICJyZXN0IiwKICAgICJpbWFnZSIgOiAiL2FwaS9wb3J0YWwvdjEuMy9kaXNjb3Zlcnkvc3dhZ2dlci9hcGlzL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS9pbWFnZSIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9kMTFjMGVhYy00OWQ1LTRiZjMtYjA4Ny1hZDQyODA4MGI2MmEvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjExZXgiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE1NTY1MjY2MzE1MjYsCiAgICAidGFncyIgOiB7CiAgICAgICJJbmR1c3RyeSIgOiBbICJIZWFsdGhjYXJlIiBdLAogICAgICAiVHlwZSIgOiBbICJEZW1vX0FtcGxpZnlfUGxleHVzSGVhbHRoIiBdCiAgICB9LAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAiaWQiIDogImQxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYSIsCiAgICAic3RhdGUiIDogInB1Ymxpc2hlZCIKICB9Cn0=",
+                "version": "2.1",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

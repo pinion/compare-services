@@ -1,0 +1,70 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "d56183dc-6e0f-11ec-8f15-000c29f56a2a.1",
+        "title": "HL7-Element-DB - 2022/01/05 - r 1",
+        "metadata": {
+            "id": "8a2e8a6f7dca5fce017e29b8cdd926bd",
+            "audit": {
+                "createTimestamp": "2022-01-05T10:11:24.249+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:58.736+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e8ff97dca5e85017e29b8cbfa72b2",
+                    "kind": "APIService",
+                    "name": "d56183dc-6e0f-11ec-8f15-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/d56183dc-6e0f-11ec-8f15-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/d56183dc-6e0f-11ec-8f15-000c29f56a2a.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "f7e1c0b7-21bc-46a5-96ec-55321cf2f9d2",
+            "externalAPIName": "HL7-Element-DB",
+            "GatewayType": "Edge",
+            "majorHash": "2360556459975041765",
+            "minorHash": "18349721384316609990",
+            "externalAPIPrimaryKey": "vhost:-path:/api/hl7/db-routingKey:"
+        },
+        "finalizers": [],
+        "tags": [
+            "Category_Demo_Amplify_PlexusHealth",
+            "Industry_Healthcare",
+            "APIID_40526afa-e058-4c3d-89fc-459b4ed3bcf7"
+        ],
+        "spec": {
+            "apiService": "d56183dc-6e0f-11ec-8f15-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIyLjEiLAogICAgInRpdGxlIiA6ICJITDctRWxlbWVudC1EQiIsCiAgICAieC1zdW1tYXJ5IiA6ICJEYXRhc291cmNlIGFjY2VzcyB0byBITDcgbWVzc2FnZXMiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvaGw3L2RiIiwKICAic2NoZW1lcyIgOiBbICJodHRwcyIgXSwKICAicGF0aHMiIDogewogICAgIi8iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkFsbCIsCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiT0siCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgIngtYXh3YXkiIDogewogICAgInNlcnZpY2VUeXBlIiA6ICJyZXN0IiwKICAgICJpbWFnZSIgOiAiL2FwaS9wb3J0YWwvdjEuMy9kaXNjb3Zlcnkvc3dhZ2dlci9hcGlzL2Y3ZTFjMGI3LTIxYmMtNDZhNS05NmVjLTU1MzIxY2YyZjlkMi9pbWFnZSIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2Y3ZTFjMGI3LTIxYmMtNDZhNS05NmVjLTU1MzIxY2YyZjlkMi9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2Y3ZTFjMGI3LTIxYmMtNDZhNS05NmVjLTU1MzIxY2YyZjlkMi90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9mN2UxYzBiNy0yMWJjLTQ2YTUtOTZlYy01NTMyMWNmMmY5ZDIvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2Y3ZTFjMGI3LTIxYmMtNDZhNS05NmVjLTU1MzIxY2YyZjlkMi9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjExZXgiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE1NTY1MjY2MzE3OTQsCiAgICAidGFncyIgOiB7CiAgICAgICJJbmR1c3RyeSIgOiBbICJIZWFsdGhjYXJlIiBdLAogICAgICAiQ2F0ZWdvcnkiIDogWyAiRGVtb19BbXBsaWZ5X1BsZXh1c0hlYWx0aCIgXQogICAgfSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgImlkIiA6ICJmN2UxYzBiNy0yMWJjLTQ2YTUtOTZlYy01NTMyMWNmMmY5ZDIiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiCiAgfQp9",
+                "version": "2.1",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

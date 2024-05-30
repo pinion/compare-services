@@ -1,0 +1,196 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "stockquote.2",
+        "title": "Stockquote (V7)",
+        "metadata": {
+            "id": "8a2e833e75f497530175f95c8a05068e",
+            "audit": {
+                "createTimestamp": "2020-11-24T08:26:32.837+0000",
+                "createUserId": "DOSA_f4a3c93d5889442fbfc23a3592d2afcd",
+                "modifyTimestamp": "2023-07-21T03:47:10.722+0000",
+                "modifyUserId": "DOSA_f4a3c93d5889442fbfc23a3592d2afcd"
+            },
+            "scope": {
+                "id": "e4e57c9575008de90175216b69eb273f",
+                "kind": "Environment",
+                "name": "axwayv7t",
+                "title": "axwayv7t",
+                "selfLink": "/management/v1alpha1/environments/axwayv7t"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "54571",
+            "references": [
+                {
+                    "id": "e4e87a0475266fe00175269dddb80000",
+                    "kind": "APIService",
+                    "name": "stockquote",
+                    "scopeKind": "Environment",
+                    "scopeName": "axwayv7t",
+                    "selfLink": "/management/v1alpha1/environments/axwayv7t/apiservices/stockquote",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/axwayv7t/apiservicerevisions/stockquote.2"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "2104224d-ddcb-448f-b950-1dd3d201d2aa",
+            "externalAPIName": "Stockquote",
+            "majorHash": "4194052576061431938",
+            "minorHash": "18176467157614858992",
+            "prevAPIServiceRevisionID": "e4f9db047526479a0175269ddeef0001"
+        },
+        "finalizers": [],
+        "tags": [
+            "ENV2_Central",
+            "APIID_94963a55-bacd-49d1-8c03-d4262000611f",
+            "ENV_Central"
+        ],
+        "spec": {
+            "apiService": "stockquote",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJob3N0IiA6ICJwdHgxNTIuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvc3RvY2txdW90ZSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvcmVzdCIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkdldFF1b3RlIiwKICAgICAgICAidGFncyIgOiBbIF0sCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkNvbXBhbnkgc3ltYm9sIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgImluIiA6ICJxdWVyeSIsCiAgICAgICAgICAibmFtZSIgOiAic3ltYm9sIiwKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAic3VjY2VzcyIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJJbnRlcm5hbCBTZXJ2ZXIgRXJyb3IiCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRm9yYmlkZGVuIgogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgImRlc2NyaXB0aW9uIiA6ICJBUEkgS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAic2VjdXJpdHkiIDogWyB7CiAgICAiQVBJIEtleSIgOiBbIF0KICB9IF0sCiAgImluZm8iIDogewogICAgInRpdGxlIiA6ICJTdG9ja3F1b3RlIiwKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIxLjAiLAogICAgIngtc3VtbWFyeSIgOiAiR2V0IHN0b2NrIHF1b3RlIgogIH0sCiAgIngtYXh3YXkiIDogewogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiYmFzZVBhdGhzIiA6IFsgIiIgXSwKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJ0YWdzIiA6IHsKICAgICAgIkVOVjIiIDogWyAiQ2VudHJhbCIgXSwKICAgICAgIkVOViIgOiBbICJDZW50cmFsIiBdCiAgICB9LAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvMjEwNDIyNGQtZGRjYi00NDhmLWI5NTAtMWRkM2QyMDFkMmFhL2ltYWdlIiwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay8yMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay8yMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvMjEwNDIyNGQtZGRjYi00NDhmLWI5NTAtMWRkM2QyMDFkMmFhL2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay8yMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEvbm9kZWpzIgogICAgfSwKICAgICJjdXN0b21Qcm9wZXJ0aWVzIiA6IHsKICAgICAgImFwaWNJZCIgOiAiZTRmOWRiMDQ3NTI2NDc5YTAxNzUyNjlkZTE3MDAwMDgiCiAgICB9CiAgfQp9",
+                "version": "1.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "stockquote.1",
+        "title": "Stockquote (apigateway7.7-shoprite)",
+        "metadata": {
+            "id": "8a2e8c318054cad30180760425972b6e",
+            "audit": {
+                "createTimestamp": "2022-04-29T15:50:24.919+0000",
+                "createUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f",
+                "modifyTimestamp": "2023-07-21T03:46:41.541+0000",
+                "modifyUserId": "service-account-2cbf8f12-05f6-428a-914e-b0101dd6c40f"
+            },
+            "scope": {
+                "id": "8a2e86048054cad0018075fc06821468",
+                "kind": "Environment",
+                "name": "apigateway7.7-shoprite",
+                "title": "apigateway7.7-shoprite",
+                "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e8c318054cad30180760422222b6c",
+                    "kind": "APIService",
+                    "name": "stockquote",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway7.7-shoprite",
+                    "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservices/stockquote",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway7.7-shoprite/apiservicerevisions/stockquote.1"
+        },
+        "attributes": {},
+        "finalizers": [],
+        "tags": [],
+        "spec": {
+            "apiService": "stockquote",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIxLjAiLAogICAgInRpdGxlIiA6ICJTdG9ja3F1b3RlIiwKICAgICJ4LXN1bW1hcnkiIDogIkdldCBzdG9jayBxdW90ZSIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL3N0b2NrcXVvdGUiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJzZWN1cml0eSIgOiBbIHsKICAgICJBUEkgS2V5IiA6IFsgXQogIH0gXSwKICAicGF0aHMiIDogewogICAgIi9yZXN0IiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJHZXRRdW90ZSIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAic3ltYm9sIiwKICAgICAgICAgICJpbiIgOiAicXVlcnkiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJDb21wYW55IHN5bWJvbCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAic3VjY2VzcyIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJJbnRlcm5hbCBTZXJ2ZXIgRXJyb3IiCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRm9yYmlkZGVuIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgIngtYXh3YXkiIDogeyB9CiAgICAgIH0KICAgIH0KICB9LAogICJzZWN1cml0eURlZmluaXRpb25zIiA6IHsKICAgICJBUEkgS2V5IiA6IHsKICAgICAgImRlc2NyaXB0aW9uIiA6ICJBUEkgS2V5IiwKICAgICAgInR5cGUiIDogImFwaUtleSIsCiAgICAgICJuYW1lIiA6ICJLZXlJZCIsCiAgICAgICJpbiIgOiAiaGVhZGVyIgogICAgfQogIH0sCiAgIngtYXh3YXkiIDogewogICAgInNlcnZpY2VUeXBlIiA6ICJyZXN0IiwKICAgICJpbWFnZSIgOiAiL2FwaS9wb3J0YWwvdjEuMy9kaXNjb3Zlcnkvc3dhZ2dlci9hcGlzLzIxMDQyMjRkLWRkY2ItNDQ4Zi1iOTUwLTFkZDNkMjAxZDJhYS9pbWFnZSIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvMjEwNDIyNGQtZGRjYi00NDhmLWI5NTAtMWRkM2QyMDFkMmFhL2lvcy1zd2lmdCIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay8yMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzIxMDQyMjRkLWRkY2ItNDQ4Zi1iOTUwLTFkZDNkMjAxZDJhYS9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjExZXgiLAogICAgImlkIiA6ICIyMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEiLAogICAgInN0YXRlIiA6ICJwdWJsaXNoZWQiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE1NTY1MjYwMTg5MjQKICB9Cn0=",
+                "version": "1.0",
+                "contentType": "application/json"
+            }
+        },
+        "x-agent-details": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "majorHash": "4657989502096622555",
+            "minorHash": "18176467157614858992",
+            "externalAPIID": "2104224d-ddcb-448f-b950-1dd3d201d2aa",
+            "externalAPIName": "Stockquote",
+            "externalAPIPrimaryKey": "path:/stockquote-routingKey:"
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "stockquote",
+        "title": "Stockquote (V7)",
+        "metadata": {
+            "id": "e4f9db047526479a0175269ddeef0001",
+            "audit": {
+                "createTimestamp": "2020-10-14T10:18:01.839+0000",
+                "createUserId": "DOSA_f4a3c93d5889442fbfc23a3592d2afcd",
+                "modifyTimestamp": "2023-07-21T03:47:10.317+0000",
+                "modifyUserId": "DOSA_f4a3c93d5889442fbfc23a3592d2afcd"
+            },
+            "scope": {
+                "id": "e4e57c9575008de90175216b69eb273f",
+                "kind": "Environment",
+                "name": "axwayv7t",
+                "title": "axwayv7t",
+                "selfLink": "/management/v1alpha1/environments/axwayv7t"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "38390",
+            "references": [
+                {
+                    "id": "e4e87a0475266fe00175269dddb80000",
+                    "kind": "APIService",
+                    "name": "stockquote",
+                    "scopeKind": "Environment",
+                    "scopeName": "axwayv7t",
+                    "selfLink": "/management/v1alpha1/environments/axwayv7t/apiservices/stockquote",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/axwayv7t/apiservicerevisions/stockquote"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayAgent",
+            "externalAPIID": "2104224d-ddcb-448f-b950-1dd3d201d2aa"
+        },
+        "finalizers": [],
+        "tags": [
+            "ENV2_Central",
+            "APIID_94963a55-bacd-49d1-8c03-d4262000611f",
+            "ENV_Central"
+        ],
+        "spec": {
+            "apiService": "stockquote",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJob3N0IiA6ICJwdHgxNTIuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvc3RvY2txdW90ZSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvcmVzdCIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkdldFF1b3RlIiwKICAgICAgICAidGFncyIgOiBbIF0sCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkNvbXBhbnkgc3ltYm9sIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgImluIiA6ICJxdWVyeSIsCiAgICAgICAgICAibmFtZSIgOiAic3ltYm9sIiwKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAic3VjY2VzcyIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJJbnRlcm5hbCBTZXJ2ZXIgRXJyb3IiCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRm9yYmlkZGVuIgogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgImRlc2NyaXB0aW9uIiA6ICJBUEkgS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAic2VjdXJpdHkiIDogWyB7CiAgICAiQVBJIEtleSIgOiBbIF0KICB9IF0sCiAgImluZm8iIDogewogICAgInRpdGxlIiA6ICJTdG9ja3F1b3RlIiwKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIxLjAiLAogICAgIngtc3VtbWFyeSIgOiAiR2V0IHN0b2NrIHF1b3RlIgogIH0sCiAgIngtYXh3YXkiIDogewogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiYmFzZVBhdGhzIiA6IFsgIiIgXSwKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJ0YWdzIiA6IHsKICAgICAgIkVOVjIiIDogWyAiQ2VudHJhbCIgXSwKICAgICAgIkVOViIgOiBbICJDZW50cmFsIiBdCiAgICB9LAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvMjEwNDIyNGQtZGRjYi00NDhmLWI5NTAtMWRkM2QyMDFkMmFhL2ltYWdlIiwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay8yMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay8yMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvMjEwNDIyNGQtZGRjYi00NDhmLWI5NTAtMWRkM2QyMDFkMmFhL2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay8yMTA0MjI0ZC1kZGNiLTQ0OGYtYjk1MC0xZGQzZDIwMWQyYWEvbm9kZWpzIgogICAgfSwKICAgICJjdXN0b21Qcm9wZXJ0aWVzIiA6IHsgfQogIH0KfQ==",
+                "version": "1.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

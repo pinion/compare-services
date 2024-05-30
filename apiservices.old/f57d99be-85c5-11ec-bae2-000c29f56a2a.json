@@ -1,0 +1,143 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "f57d99be-85c5-11ec-bae2-000c29f56a2a.1",
+        "title": "FindSalary - 2022/02/04 - r 1",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e8c947ec1ed1e017ec51dfad71f8a",
+            "audit": {
+                "createTimestamp": "2022-02-04T14:23:03.383+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:53.154+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e82ba7ec1ee33017ec51df8dd1b35",
+                    "kind": "APIService",
+                    "name": "f57d99be-85c5-11ec-bae2-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/f57d99be-85c5-11ec-bae2-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/f57d99be-85c5-11ec-bae2-000c29f56a2a.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "50856a13-a3ba-475e-bb75-c9023b00517b",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "3436889914241685777",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6705419841308499834"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_cded7cae-41b5-4459-ab4f-a58e0731cb1f"
+        ],
+        "spec": {
+            "apiService": "f57d99be-85c5-11ec-bae2-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvZmluZHNhbGFyeS97ZW1wX25vfSIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJ0YWdzIiA6IFsgIkZpbmRTYWxhcnkiIF0sCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJGaW5kIG9uZSBGaW5kU2FsYXJ5IiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogIkZpbmQgQnkgSUQgZmluZHNhbGFyeSIsCiAgICAgICAgInByb2R1Y2VzIiA6IFsgImFwcGxpY2F0aW9uL2pzb24iIF0sCiAgICAgICAgInBhcmFtZXRlcnMiIDogWyB7CiAgICAgICAgICAibmFtZSIgOiAiZW1wX25vIiwKICAgICAgICAgICJpbiIgOiAicGF0aCIsCiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlRoZSBGaW5kU2FsYXJ5IElEIiwKICAgICAgICAgICJyZXF1aXJlZCIgOiB0cnVlLAogICAgICAgICAgInR5cGUiIDogIm51bWJlciIKICAgICAgICB9IF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgZmluZCBzdWNjZWVkZWQsIGFuZCB0aGUgcmVzdWx0cyBhcmUgYXZhaWxhYmxlLiIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL0ZpbmRTYWxhcnktZnVsbCIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkJhZCByZXF1ZXN0LiIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDAxIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJVbmF1dGhvcml6ZWQiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9VbmF1dGhvcml6ZWRFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI1MDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlNvbWV0aGluZyB3ZW50IHdyb25nIGR1cmluZyB0aGUgcmVxdWVzdDsgY2hlY2sgb3V0IHRoZSBsb2dzIG9uIHlvdXIgc2VydmVyLiIKICAgICAgICAgIH0sCiAgICAgICAgICAiNDEzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXlsb2FkIHRvbyBsYXJnZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1BheWxvYWRUb29MYXJnZUVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwNCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiTm8gcmVzdWx0cyB3ZXJlIGZvdW5kLiIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ4LWF4d2F5IiA6IHsgfQogICAgICB9CiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAicmV0aXJlbWVudERhdGUiIDogMCwKICAgICJjb3JzRW5hYmxlZCIgOiB0cnVlLAogICAgImRlcHJlY2F0ZWQiIDogZmFsc2UsCiAgICAiYXZhaWxhYmxlU0RLIiA6IHsKICAgICAgImlvcy1zd2lmdCIgOiAiL2Rpc2NvdmVyeS9zZGsvNTA4NTZhMTMtYTNiYS00NzVlLWJiNzUtYzkwMjNiMDA1MTdiL2lvcy1zd2lmdCIsCiAgICAgICJ0aXRhbml1bSIgOiAiL2Rpc2NvdmVyeS9zZGsvNTA4NTZhMTMtYTNiYS00NzVlLWJiNzUtYzkwMjNiMDA1MTdiL3RpdGFuaXVtIiwKICAgICAgImFuZHJvaWQiIDogIi9kaXNjb3Zlcnkvc2RrLzUwODU2YTEzLWEzYmEtNDc1ZS1iYjc1LWM5MDIzYjAwNTE3Yi9hbmRyb2lkIiwKICAgICAgIm5vZGVqcyIgOiAiL2Rpc2NvdmVyeS9zZGsvNTA4NTZhMTMtYTNiYS00NzVlLWJiNzUtYzkwMjNiMDA1MTdiL25vZGVqcyIKICAgIH0sCiAgICAiYXBpUmVzb3VyY2VUeXBlIiA6ICJzd2FnZ2VyMjAiLAogICAgImlkIiA6ICI1MDg1NmExMy1hM2JhLTQ3NWUtYmI3NS1jOTAyM2IwMDUxN2IiLAogICAgInN0YXRlIiA6ICJ1bnB1Ymxpc2hlZCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTY0Mzk4NDU2NDI5OAogIH0KfQ==",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "f57d99be-85c5-11ec-bae2-000c29f56a2a.2",
+        "title": "FindSalary (apigateway-v1-7.7)",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e90b27ec1ed27017ec51e6f411dd1",
+            "audit": {
+                "createTimestamp": "2022-02-04T14:23:33.185+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:53.215+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "3",
+            "references": [
+                {
+                    "id": "8a2e82ba7ec1ee33017ec51df8dd1b35",
+                    "kind": "APIService",
+                    "name": "f57d99be-85c5-11ec-bae2-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/f57d99be-85c5-11ec-bae2-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/f57d99be-85c5-11ec-bae2-000c29f56a2a.2"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "50856a13-a3ba-475e-bb75-c9023b00517b",
+            "externalAPIName": "FindSalary",
+            "GatewayType": "Edge",
+            "majorHash": "15386362578901910194",
+            "externalAPIPrimaryKey": "vhost:-path:/api/endpoints-routingKey:",
+            "minorHash": "6771328233789730746",
+            "prevAPIServiceRevisionID": "8a2e8c947ec1ed1e017ec51dfad71f8a"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_cded7cae-41b5-4459-ab4f-a58e0731cb1f"
+        ],
+        "spec": {
+            "apiService": "f57d99be-85c5-11ec-bae2-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJGaW5kU2FsYXJ5IgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpL2VuZHBvaW50cyIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInNlY3VyaXR5IiA6IFsgewogICAgIkFQSSBLZXkiIDogWyBdCiAgfSBdLAogICJwYXRocyIgOiB7CiAgICAiL2ZpbmRzYWxhcnkve2VtcF9ub30iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJGaW5kU2FsYXJ5IiBdLAogICAgICAgICJkZXNjcmlwdGlvbiIgOiAiRmluZCBvbmUgRmluZFNhbGFyeSIsCiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJGaW5kIEJ5IElEIGZpbmRzYWxhcnkiLAogICAgICAgICJwcm9kdWNlcyIgOiBbICJhcHBsaWNhdGlvbi9qc29uIiBdLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgewogICAgICAgICAgIm5hbWUiIDogImVtcF9ubyIsCiAgICAgICAgICAiaW4iIDogInBhdGgiLAogICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJUaGUgRmluZFNhbGFyeSBJRCIsCiAgICAgICAgICAicmVxdWlyZWQiIDogdHJ1ZSwKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVGhlIGZpbmQgc3VjY2VlZGVkLCBhbmQgdGhlIHJlc3VsdHMgYXJlIGF2YWlsYWJsZS4iLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9GaW5kU2FsYXJ5LWZ1bGwiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYWQgcmVxdWVzdC4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNTAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJTb21ldGhpbmcgd2VudCB3cm9uZyBkdXJpbmcgdGhlIHJlcXVlc3Q7IGNoZWNrIG91dCB0aGUgbG9ncyBvbiB5b3VyIHNlcnZlci4iCiAgICAgICAgICB9LAogICAgICAgICAgIjQxMyIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiUGF5bG9hZCB0b28gbGFyZ2UiLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9QYXlsb2FkVG9vTGFyZ2VFcnJvciIKICAgICAgICAgICAgfQogICAgICAgICAgfSwKICAgICAgICAgICI0MDQiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5vIHJlc3VsdHMgd2VyZSBmb3VuZC4iCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIkFQSSBLZXkiLAogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJGaW5kU2FsYXJ5LWZ1bGwiIDogewogICAgICAidHlwZSIgOiAib2JqZWN0IiwKICAgICAgInJlcXVpcmVkIiA6IFsgImVtcF9ubyIgXSwKICAgICAgInByb3BlcnRpZXMiIDogewogICAgICAgICJiaXJ0aF9kYXRlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAiZmlyc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImxhc3RfbmFtZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImdlbmRlciIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgImhpcmVfZGF0ZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0sCiAgICAgICAgIm15c3FsL3NhbGFyaWVzIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJhcnJheSIsCiAgICAgICAgICAiaXRlbXMiIDogeyB9CiAgICAgICAgfSwKICAgICAgICAiZW1wX25vIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJudW1iZXIiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIlVuYXV0aG9yaXplZEVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJpZCIsICJtZXNzYWdlIiwgInN1Y2Nlc3MiIF0sCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJpZCIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJlbnVtIiA6IFsgImNvbS5hcHBjZWxlcmF0b3IuYXBpLnVuYXV0aG9yaXplZCIgXQogICAgICAgIH0sCiAgICAgICAgIm1lc3NhZ2UiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy81MDg1NmExMy1hM2JhLTQ3NWUtYmI3NS1jOTAyM2IwMDUxN2IvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJleHBpcmVkIiA6IGZhbHNlLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrLzUwODU2YTEzLWEzYmEtNDc1ZS1iYjc1LWM5MDIzYjAwNTE3Yi9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrLzUwODU2YTEzLWEzYmEtNDc1ZS1iYjc1LWM5MDIzYjAwNTE3Yi90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay81MDg1NmExMy1hM2JhLTQ3NWUtYmI3NS1jOTAyM2IwMDUxN2IvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrLzUwODU2YTEzLWEzYmEtNDc1ZS1iYjc1LWM5MDIzYjAwNTE3Yi9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjIwIiwKICAgICJpZCIgOiAiNTA4NTZhMTMtYTNiYS00NzVlLWJiNzUtYzkwMjNiMDA1MTdiIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQzOTg0NTY0Mjk4CiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

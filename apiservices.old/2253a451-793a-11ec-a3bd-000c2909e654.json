@@ -1,0 +1,75 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "2253a451-793a-11ec-a3bd-000c2909e654.1",
+        "title": "EMR-System-Surgery - 2022/01/19 - r 1",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e90957e57ffd4017e72e4f76627f8",
+            "audit": {
+                "createTimestamp": "2022-01-19T15:11:55.238+0000",
+                "createUserId": "service-account-be14cef9-a29e-4bd4-acc8-24caf17a3819",
+                "modifyTimestamp": "2023-07-21T03:46:55.049+0000",
+                "modifyUserId": "service-account-be14cef9-a29e-4bd4-acc8-24caf17a3819"
+            },
+            "scope": {
+                "id": "8a2e90957e57ffd4017e72ddf5852601",
+                "kind": "Environment",
+                "name": "apigateway-v1a-7.7",
+                "title": "apigateway-v1a-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1a-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e94a27e580147017e72e4f5272d30",
+                    "kind": "APIService",
+                    "name": "2253a451-793a-11ec-a3bd-000c2909e654",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1a-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1a-7.7/apiservices/2253a451-793a-11ec-a3bd-000c2909e654",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1a-7.7/apiservicerevisions/2253a451-793a-11ec-a3bd-000c2909e654.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "86fbbb27-3ebe-444f-9cfa-6a59e1ff6c0f",
+            "externalAPIName": "EMR-System-Surgery",
+            "GatewayType": "Edge",
+            "majorHash": "2161061882655033580",
+            "minorHash": "7304764978085705049",
+            "externalAPIPrimaryKey": "vhost:-path:/api/emr/surgery-routingKey:"
+        },
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "APIID_298f90fb-48c0-4292-9027-875c79425066",
+            "Type_Demo_Amplify_PlexusHealth",
+            "Category_Surgery"
+        ],
+        "spec": {
+            "apiService": "2253a451-793a-11ec-a3bd-000c2909e654",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIzLjciLAogICAgInRpdGxlIiA6ICJFTVItU3lzdGVtLVN1cmdlcnkiLAogICAgIngtc3VtbWFyeSIgOiAiUHJvY2Vzc2luZyBlbGVjdHJvbmljIGhlYWx0aGNhcmUgdHJhbnNhY3Rpb25zIGZvciByZXRyaWV2aW5nIHN1cmdlcnkgYXZhaWxhYmlsaXRpZXMiCiAgfSwKICAiaG9zdCIgOiAiYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiwKICAiYmFzZVBhdGgiIDogIi9hcGkvZW1yL3N1cmdlcnkiLAogICJzY2hlbWVzIiA6IFsgImh0dHBzIiBdLAogICJwYXRocyIgOiB7CiAgICAiLyIgOiB7CiAgICAgICJnZXQiIDogewogICAgICAgICJvcGVyYXRpb25JZCIgOiAiQWxsIiwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIF0sCiAgICAgICAgInJlc3BvbnNlcyIgOiB7CiAgICAgICAgICAiMjAwIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJPSyIKICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9LAogICJ4LWF4d2F5IiA6IHsKICAgICJzZXJ2aWNlVHlwZSIgOiAicmVzdCIsCiAgICAiaW1hZ2UiIDogIi9hcGkvcG9ydGFsL3YxLjMvZGlzY292ZXJ5L3N3YWdnZXIvYXBpcy84NmZiYmIyNy0zZWJlLTQ0NGYtOWNmYS02YTU5ZTFmZjZjMGYvaW1hZ2UiLAogICAgImJhc2VQYXRocyIgOiBbICJodHRwczovL2FwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIgXSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay84NmZiYmIyNy0zZWJlLTQ0NGYtOWNmYS02YTU5ZTFmZjZjMGYvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay84NmZiYmIyNy0zZWJlLTQ0NGYtOWNmYS02YTU5ZTFmZjZjMGYvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvODZmYmJiMjctM2ViZS00NDRmLTljZmEtNmE1OWUxZmY2YzBmL2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay84NmZiYmIyNy0zZWJlLTQ0NGYtOWNmYS02YTU5ZTFmZjZjMGYvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIxMWV4IiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNTU2NTI2NjMxNjA5LAogICAgInRhZ3MiIDogewogICAgICAiSW5kdXN0cnkiIDogWyAiSGVhbHRoY2FyZSIgXSwKICAgICAgIlR5cGUiIDogWyAiRGVtb19BbXBsaWZ5X1BsZXh1c0hlYWx0aCIgXSwKICAgICAgIkNhdGVnb3J5IiA6IFsgIlN1cmdlcnkiIF0KICAgIH0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJpZCIgOiAiODZmYmJiMjctM2ViZS00NDRmLTljZmEtNmE1OWUxZmY2YzBmIiwKICAgICJzdGF0ZSIgOiAicHVibGlzaGVkIgogIH0KfQ==",
+                "version": "3.7",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

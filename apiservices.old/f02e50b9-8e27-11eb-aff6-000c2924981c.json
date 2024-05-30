@@ -1,0 +1,69 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "f02e50b9-8e27-11eb-aff6-000c2924981c.1",
+        "title": "HL7-Message-Maker (Edge)",
+        "metadata": {
+            "id": "8a2e876d7847eda401786e551f6916f2",
+            "audit": {
+                "createTimestamp": "2021-03-26T11:39:35.657+0000",
+                "createUserId": "DOSA_4f385d2cff924cddba7a5b91167f6eb6",
+                "modifyTimestamp": "2023-07-21T03:47:07.805+0000",
+                "modifyUserId": "DOSA_4f385d2cff924cddba7a5b91167f6eb6"
+            },
+            "scope": {
+                "id": "8a2e876d7847eda401786e4ab5601682",
+                "kind": "Environment",
+                "name": "esteinholtz-refenv",
+                "title": "esteinholtz-refenv",
+                "selfLink": "/management/v1alpha1/environments/esteinholtz-refenv"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "283931",
+            "references": [
+                {
+                    "id": "8a2e876d7847eda401786e551e5516e8",
+                    "kind": "APIService",
+                    "name": "f02e50b9-8e27-11eb-aff6-000c2924981c",
+                    "scopeKind": "Environment",
+                    "scopeName": "esteinholtz-refenv",
+                    "selfLink": "/management/v1alpha1/environments/esteinholtz-refenv/apiservices/f02e50b9-8e27-11eb-aff6-000c2924981c",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/esteinholtz-refenv/apiservicerevisions/f02e50b9-8e27-11eb-aff6-000c2924981c.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "d11c0eac-49d5-4bf3-b087-ad428080b62a",
+            "externalAPIName": "HL7-Message-Maker",
+            "GatewayType": "Edge",
+            "majorHash": "11032536595036511960",
+            "minorHash": "10628335276266471818"
+        },
+        "finalizers": [],
+        "tags": [
+            "Industry_Healthcare",
+            "Type_Demo_Amplify_PlexusHealth",
+            "APIID_3e7b8b31-d464-4c45-8d0e-38db23aa6371"
+        ],
+        "spec": {
+            "apiService": "f02e50b9-8e27-11eb-aff6-000c2924981c",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiIiwKICAgICJ2ZXJzaW9uIiA6ICIyLjEiLAogICAgInRpdGxlIiA6ICJITDctTWVzc2FnZS1NYWtlciIsCiAgICAieC1zdW1tYXJ5IiA6ICJNYW5hZ2UgbWVzc2FnZSBzdGFuZGFyZHMgZm9yIHRyYW5zZmVyIG9mIGNsaW5pY2FsIGFuZCBhZG1pbmlzdHJhdGl2ZSBkYXRhIGJldHdlZW4gc29mdHdhcmUgYXBwbGljYXRpb25zIHVzZWQgYnkgdmFyaW91cyBoZWFsdGhjYXJlIHByb3ZpZGVycyIKICB9LAogICJob3N0IiA6ICJhcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiLAogICJiYXNlUGF0aCIgOiAiL2FwaS9obDcvbWVzc2FnZSIsCiAgInNjaGVtZXMiIDogWyAiaHR0cHMiIF0sCiAgInBhdGhzIiA6IHsKICAgICIvIiA6IHsKICAgICAgImdldCIgOiB7CiAgICAgICAgIm9wZXJhdGlvbklkIiA6ICJBbGwiLAogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgXSwKICAgICAgICAicmVzcG9uc2VzIiA6IHsKICAgICAgICAgICIyMDAiIDogewogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk9LIgogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgIngtYXh3YXkiIDogewogICAgInNlcnZpY2VUeXBlIiA6ICJyZXN0IiwKICAgICJpbWFnZSIgOiAiL2FwaS9wb3J0YWwvdjEuMy9kaXNjb3Zlcnkvc3dhZ2dlci9hcGlzL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS9pbWFnZSIsCiAgICAiYmFzZVBhdGhzIiA6IFsgImh0dHBzOi8vYXBpLWVudi5kZW1vLmF4d2F5LmNvbTo4MDY1IiBdLAogICAgInJldGlyZW1lbnREYXRlIiA6IDAsCiAgICAiY29yc0VuYWJsZWQiIDogdHJ1ZSwKICAgICJkZXByZWNhdGVkIiA6IGZhbHNlLAogICAgImF2YWlsYWJsZVNESyIgOiB7CiAgICAgICJpb3Mtc3dpZnQiIDogIi9kaXNjb3Zlcnkvc2RrL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS9pb3Mtc3dpZnQiLAogICAgICAidGl0YW5pdW0iIDogIi9kaXNjb3Zlcnkvc2RrL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS90aXRhbml1bSIsCiAgICAgICJhbmRyb2lkIiA6ICIvZGlzY292ZXJ5L3Nkay9kMTFjMGVhYy00OWQ1LTRiZjMtYjA4Ny1hZDQyODA4MGI2MmEvYW5kcm9pZCIsCiAgICAgICJub2RlanMiIDogIi9kaXNjb3Zlcnkvc2RrL2QxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYS9ub2RlanMiCiAgICB9LAogICAgImFwaVJlc291cmNlVHlwZSIgOiAic3dhZ2dlcjExZXgiLAogICAgImFjY2Vzc0dyYW50ZWREYXRlIiA6IDE1NTY1MjY2MzE1MjYsCiAgICAidGFncyIgOiB7CiAgICAgICJJbmR1c3RyeSIgOiBbICJIZWFsdGhjYXJlIiBdLAogICAgICAiVHlwZSIgOiBbICJEZW1vX0FtcGxpZnlfUGxleHVzSGVhbHRoIiBdCiAgICB9LAogICAgImV4cGlyZWQiIDogZmFsc2UsCiAgICAiaWQiIDogImQxMWMwZWFjLTQ5ZDUtNGJmMy1iMDg3LWFkNDI4MDgwYjYyYSIsCiAgICAic3RhdGUiIDogInB1Ymxpc2hlZCIKICB9Cn0=",
+                "version": "2.1",
+                "contentType": "application/json"
+            }
+        }
+    }
+]

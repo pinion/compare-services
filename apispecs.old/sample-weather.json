@@ -1,0 +1,179 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "A weather test API. Frontend API is using OAuth 2.0. Grant Type: Client Credentials. API Gateway can act as the client application in an OAuth 2.0 scenario, and as such API Gateway can instigate the authorization process handle redirects, and request OAuth tokens from an authorization server. Received tokens are stored securely and subsequently used to access protected resources on behalf of users. Axway Doc here : https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_policydev/apigw_oauth/gw_oauth_client/index.html",
+    "version" : "1.0.0",
+    "title" : "Sample-Weather",
+    "x-summary" : "This is a mock api test."
+  },
+  "host" : "api-env.demo.axway.com:8065",
+  "basePath" : "/sample",
+  "schemes" : [ "https" ],
+  "security" : [ {
+    "OAuthImplicit" : [ "resource.WRITE" ]
+  }, {
+    "OAuthImplicit" : [ "resource.READ" ]
+  }, {
+    "OAuthAccessCode" : [ "resource.WRITE" ]
+  }, {
+    "OAuthAccessCode" : [ "resource.READ" ]
+  }, {
+    "OAuthApplication" : [ "resource.WRITE" ]
+  }, {
+    "OAuthApplication" : [ "resource.READ" ]
+  } ],
+  "paths" : {
+    "/weather/{city}" : {
+      "get" : {
+        "tags" : [ "weather" ],
+        "summary" : "Your GET weather endpoint",
+        "description" : "A weather api.",
+        "operationId" : "get-weather",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "city",
+          "in" : "path",
+          "description" : "Insert a valid city name.",
+          "required" : true,
+          "type" : "string",
+          "pattern" : "^[A-Za-z]"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "type" : "object"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "$ref" : "#/definitions/UnauthorizedError"
+            }
+          },
+          "413" : {
+            "description" : "Payload too large",
+            "schema" : {
+              "$ref" : "#/definitions/PayloadTooLargeError"
+            }
+          }
+        },
+        "x-axway" : { }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "OAuthApplication" : {
+      "description" : "OAuth",
+      "type" : "oauth2",
+      "tokenUrl" : "https://localhost:8089/api/oauth/token",
+      "flow" : "application",
+      "scopes" : {
+        "resource.WRITE" : "",
+        "resource.READ" : ""
+      },
+      "x-axway" : {
+        "tokenName" : "access_token",
+        "scopesMatching" : "Any",
+        "accessTokenLocation" : "HEADER",
+        "typeDisplayName" : "OAuth 2.0",
+        "authorizationHeaderPrefix" : "Bearer"
+      }
+    },
+    "OAuthImplicit" : {
+      "description" : "OAuth",
+      "type" : "oauth2",
+      "authorizationUrl" : "https://localhost:8089/api/oauth/authorize",
+      "flow" : "implicit",
+      "scopes" : {
+        "resource.WRITE" : "",
+        "resource.READ" : ""
+      },
+      "x-axway" : {
+        "tokenName" : "access_token",
+        "scopesMatching" : "Any",
+        "accessTokenLocation" : "HEADER",
+        "typeDisplayName" : "OAuth 2.0",
+        "authorizationHeaderPrefix" : "Bearer"
+      }
+    },
+    "OAuthAccessCode" : {
+      "description" : "OAuth",
+      "type" : "oauth2",
+      "authorizationUrl" : "https://localhost:8089/api/oauth/authorize",
+      "tokenUrl" : "https://localhost:8089/api/oauth/token",
+      "flow" : "accessCode",
+      "scopes" : {
+        "resource.WRITE" : "",
+        "resource.READ" : ""
+      },
+      "x-axway" : {
+        "clientSecretName" : "client_secret",
+        "authorizationHeaderPrefix" : "Bearer",
+        "clientIdName" : "client_id",
+        "tokenName" : "access_code",
+        "scopesMatching" : "Any",
+        "accessTokenLocation" : "HEADER",
+        "typeDisplayName" : "OAuth 2.0"
+      }
+    }
+  },
+  "definitions" : {
+    "PayloadTooLargeError" : {
+      "type" : "object",
+      "required" : [ "code", "message", "request-id", "success" ],
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "success" : {
+          "type" : "boolean"
+        },
+        "request-id" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "UnauthorizedError" : {
+      "type" : "object",
+      "required" : [ "id", "message", "success" ],
+      "properties" : {
+        "success" : {
+          "type" : "boolean"
+        },
+        "id" : {
+          "type" : "string",
+          "enum" : [ "com.appcelerator.api.unauthorized" ]
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "x-axway" : {
+    "serviceType" : "rest",
+    "image" : "/api/portal/v1.3/discovery/swagger/apis/dc65acf8-41a0-465a-aaf7-12bfdeba69fa/image",
+    "basePaths" : [ "https://api-env.demo.axway.com:8065" ],
+    "retirementDate" : 0,
+    "corsEnabled" : true,
+    "deprecated" : false,
+    "availableSDK" : {
+      "ios-swift" : "/discovery/sdk/dc65acf8-41a0-465a-aaf7-12bfdeba69fa/ios-swift",
+      "android" : "/discovery/sdk/dc65acf8-41a0-465a-aaf7-12bfdeba69fa/android",
+      "nodejs" : "/discovery/sdk/dc65acf8-41a0-465a-aaf7-12bfdeba69fa/nodejs"
+    },
+    "apiResourceType" : "swagger20",
+    "accessGrantedDate" : 1651477690382,
+    "tags" : {
+      "sample" : [ "sample", " test" ]
+    },
+    "expired" : false,
+    "id" : "dc65acf8-41a0-465a-aaf7-12bfdeba69fa",
+    "state" : "published"
+  }
+}

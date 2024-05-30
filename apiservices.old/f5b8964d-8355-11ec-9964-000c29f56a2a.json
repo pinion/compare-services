@@ -1,0 +1,143 @@
+[
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "f5b8964d-8355-11ec-9964-000c29f56a2a.2",
+        "title": "weather - 2022/02/01 - r 2",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e87617e9f0d26017eb524fc902182",
+            "audit": {
+                "createTimestamp": "2022-02-01T11:56:47.120+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:52.812+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e93297e9f0e23017eb524889d19bd",
+                    "kind": "APIService",
+                    "name": "f5b8964d-8355-11ec-9964-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/f5b8964d-8355-11ec-9964-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/f5b8964d-8355-11ec-9964-000c29f56a2a.2"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "d33b966e-7c05-4189-a92a-b9c8d4e8e924",
+            "externalAPIName": "weather",
+            "GatewayType": "Edge",
+            "majorHash": "13857799639385828448",
+            "externalAPIPrimaryKey": "vhost:-path:/api-routingKey:",
+            "minorHash": "14417029309167460926",
+            "prevAPIServiceRevisionID": "8a2e94247e9f0d06017eb5248ab61e88"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_b0931f09-3599-4bd8-b04e-dd80b66d7628"
+        ],
+        "spec": {
+            "apiService": "f5b8964d-8355-11ec-9964-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJ3ZWF0aGVyIgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpIiwKICAic2NoZW1lcyIgOiBbICJodHRwcyIgXSwKICAic2VjdXJpdHkiIDogWyB7CiAgICAiQVBJIEtleSIgOiBbIF0KICB9IF0sCiAgInBhdGhzIiA6IHsKICAgICIvd2VhdGhlci97Y2l0eX0iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJ3ZWF0aGVyIiBdLAogICAgICAgICJzdW1tYXJ5IiA6ICJZb3VyIEdFVCB3ZWF0aGVyIGVuZHBvaW50IiwKICAgICAgICAiZGVzY3JpcHRpb24iIDogIkEgd2VhdGhlciBhcGkuIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogImdldC13ZWF0aGVyIiwKICAgICAgICAicHJvZHVjZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIHsKICAgICAgICAgICJuYW1lIiA6ICJjaXR5IiwKICAgICAgICAgICJpbiIgOiAicGF0aCIsCiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkluc2VydCBhIHZhbGlkIGNpdHkgbmFtZS4iLAogICAgICAgICAgInJlcXVpcmVkIiA6IHRydWUsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJwYXR0ZXJuIiA6ICJeW0EtWmEtel0iCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiT0siLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAidHlwZSIgOiAib2JqZWN0IgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDEzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXlsb2FkIHRvbyBsYXJnZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1BheWxvYWRUb29MYXJnZUVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIkFQSSBLZXkiLAogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJVbmF1dGhvcml6ZWRFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiaWQiLCAibWVzc2FnZSIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZW51bSIgOiBbICJjb20uYXBwY2VsZXJhdG9yLmFwaS51bmF1dGhvcml6ZWQiIF0KICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvZDMzYjk2NmUtN2MwNS00MTg5LWE5MmEtYjljOGQ0ZThlOTI0L2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay9kMzNiOTY2ZS03YzA1LTQxODktYTkyYS1iOWM4ZDRlOGU5MjQvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay9kMzNiOTY2ZS03YzA1LTQxODktYTkyYS1iOWM4ZDRlOGU5MjQvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvZDMzYjk2NmUtN2MwNS00MTg5LWE5MmEtYjljOGQ0ZThlOTI0L2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay9kMzNiOTY2ZS03YzA1LTQxODktYTkyYS1iOWM4ZDRlOGU5MjQvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIyMCIsCiAgICAiaWQiIDogImQzM2I5NjZlLTdjMDUtNDE4OS1hOTJhLWI5YzhkNGU4ZTkyNCIsCiAgICAic3RhdGUiIDogInB1Ymxpc2hlZCIsCiAgICAiYWNjZXNzR3JhbnRlZERhdGUiIDogMTY0MzcxNjU1NDA5NwogIH0KfQ==",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    },
+    {
+        "group": "management",
+        "apiVersion": "v1alpha1",
+        "kind": "APIServiceRevision",
+        "name": "f5b8964d-8355-11ec-9964-000c29f56a2a.1",
+        "title": "weather - 2022/02/01 - r 1",
+        "owner": {
+            "type": "team",
+            "id": "e4f77cd969cdaf3a0169d3e170c4071d"
+        },
+        "metadata": {
+            "id": "8a2e94247e9f0d06017eb5248ab61e88",
+            "audit": {
+                "createTimestamp": "2022-02-01T11:56:17.974+0000",
+                "createUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019",
+                "modifyTimestamp": "2023-07-21T03:46:52.763+0000",
+                "modifyUserId": "service-account-324df404-581a-4dd8-a9b6-b89fa18d8019"
+            },
+            "scope": {
+                "id": "8a2e8ff97dca5e85017e29b2d385720f",
+                "kind": "Environment",
+                "name": "apigateway-v1-7.7",
+                "title": "apigateway-v1-7.7",
+                "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7"
+            },
+            "acl": [],
+            "accessRights": {
+                "canChangeOwner": true,
+                "canDelete": true,
+                "canWrite": true,
+                "canRead": true
+            },
+            "resourceVersion": "2",
+            "references": [
+                {
+                    "id": "8a2e93297e9f0e23017eb524889d19bd",
+                    "kind": "APIService",
+                    "name": "f5b8964d-8355-11ec-9964-000c29f56a2a",
+                    "scopeKind": "Environment",
+                    "scopeName": "apigateway-v1-7.7",
+                    "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservices/f5b8964d-8355-11ec-9964-000c29f56a2a",
+                    "type": "hard",
+                    "group": "management"
+                }
+            ],
+            "selfLink": "/management/v1alpha1/environments/apigateway-v1-7.7/apiservicerevisions/f5b8964d-8355-11ec-9964-000c29f56a2a.1"
+        },
+        "attributes": {
+            "createdBy": "EnterpriseEdgeGatewayDiscoveryAgent",
+            "externalAPIID": "d33b966e-7c05-4189-a92a-b9c8d4e8e924",
+            "externalAPIName": "weather",
+            "GatewayType": "Edge",
+            "majorHash": "12705359298744402429",
+            "externalAPIPrimaryKey": "vhost:-path:/api-routingKey:",
+            "minorHash": "6705419841308499834"
+        },
+        "finalizers": [],
+        "tags": [
+            "APIID_b0931f09-3599-4bd8-b04e-dd80b66d7628"
+        ],
+        "spec": {
+            "apiService": "f5b8964d-8355-11ec-9964-000c29f56a2a",
+            "definition": {
+                "type": "oas2",
+                "value": "ewogICJzd2FnZ2VyIiA6ICIyLjAiLAogICJpbmZvIiA6IHsKICAgICJkZXNjcmlwdGlvbiIgOiAiQW4gQVBJIEJ1aWxkZXIgc2VydmljZSIsCiAgICAidmVyc2lvbiIgOiAiMS4wLjAiLAogICAgInRpdGxlIiA6ICJ3ZWF0aGVyIgogIH0sCiAgImhvc3QiIDogImFwaS1lbnYuZGVtby5heHdheS5jb206ODA2NSIsCiAgImJhc2VQYXRoIiA6ICIvYXBpIiwKICAic2NoZW1lcyIgOiBbICJodHRwcyIgXSwKICAic2VjdXJpdHkiIDogWyB7CiAgICAiQVBJIEtleSIgOiBbIF0KICB9IF0sCiAgInBhdGhzIiA6IHsKICAgICIvd2VhdGhlci97Y2l0eX0iIDogewogICAgICAiZ2V0IiA6IHsKICAgICAgICAidGFncyIgOiBbICJ3ZWF0aGVyIiBdLAogICAgICAgICJzdW1tYXJ5IiA6ICJZb3VyIEdFVCB3ZWF0aGVyIGVuZHBvaW50IiwKICAgICAgICAiZGVzY3JpcHRpb24iIDogIkEgd2VhdGhlciBhcGkuIiwKICAgICAgICAib3BlcmF0aW9uSWQiIDogImdldC13ZWF0aGVyIiwKICAgICAgICAicHJvZHVjZXMiIDogWyAiYXBwbGljYXRpb24vanNvbiIgXSwKICAgICAgICAicGFyYW1ldGVycyIgOiBbIHsKICAgICAgICAgICJuYW1lIiA6ICJjaXR5IiwKICAgICAgICAgICJpbiIgOiAicGF0aCIsCiAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkluc2VydCBhIHZhbGlkIGNpdHkgbmFtZS4iLAogICAgICAgICAgInJlcXVpcmVkIiA6IHRydWUsCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwKICAgICAgICAgICJwYXR0ZXJuIiA6ICJeW0EtWmEtel0iCiAgICAgICAgfSBdLAogICAgICAgICJyZXNwb25zZXMiIDogewogICAgICAgICAgIjIwMCIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiT0siLAogICAgICAgICAgICAic2NoZW1hIiA6IHsKICAgICAgICAgICAgICAidHlwZSIgOiAib2JqZWN0IgogICAgICAgICAgICB9CiAgICAgICAgICB9LAogICAgICAgICAgIjQwMSIgOiB7CiAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiVW5hdXRob3JpemVkIiwKICAgICAgICAgICAgInNjaGVtYSIgOiB7CiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvVW5hdXRob3JpemVkRXJyb3IiCiAgICAgICAgICAgIH0KICAgICAgICAgIH0sCiAgICAgICAgICAiNDEzIiA6IHsKICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJQYXlsb2FkIHRvbyBsYXJnZSIsCiAgICAgICAgICAgICJzY2hlbWEiIDogewogICAgICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL1BheWxvYWRUb29MYXJnZUVycm9yIgogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAieC1heHdheSIgOiB7IH0KICAgICAgfQogICAgfQogIH0sCiAgInNlY3VyaXR5RGVmaW5pdGlvbnMiIDogewogICAgIkFQSSBLZXkiIDogewogICAgICAiZGVzY3JpcHRpb24iIDogIkFQSSBLZXkiLAogICAgICAidHlwZSIgOiAiYXBpS2V5IiwKICAgICAgIm5hbWUiIDogIktleUlkIiwKICAgICAgImluIiA6ICJoZWFkZXIiCiAgICB9CiAgfSwKICAiZGVmaW5pdGlvbnMiIDogewogICAgIlBheWxvYWRUb29MYXJnZUVycm9yIiA6IHsKICAgICAgInR5cGUiIDogIm9iamVjdCIsCiAgICAgICJyZXF1aXJlZCIgOiBbICJjb2RlIiwgIm1lc3NhZ2UiLCAicmVxdWVzdC1pZCIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgImNvZGUiIDogewogICAgICAgICAgInR5cGUiIDogImludGVnZXIiLAogICAgICAgICAgImZvcm1hdCIgOiAiaW50MzIiCiAgICAgICAgfSwKICAgICAgICAic3VjY2VzcyIgOiB7CiAgICAgICAgICAidHlwZSIgOiAiYm9vbGVhbiIKICAgICAgICB9LAogICAgICAgICJyZXF1ZXN0LWlkIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfSwKICAgICAgICAibWVzc2FnZSIgOiB7CiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJVbmF1dGhvcml6ZWRFcnJvciIgOiB7CiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLAogICAgICAicmVxdWlyZWQiIDogWyAiaWQiLCAibWVzc2FnZSIsICJzdWNjZXNzIiBdLAogICAgICAicHJvcGVydGllcyIgOiB7CiAgICAgICAgInN1Y2Nlc3MiIDogewogICAgICAgICAgInR5cGUiIDogImJvb2xlYW4iCiAgICAgICAgfSwKICAgICAgICAiaWQiIDogewogICAgICAgICAgInR5cGUiIDogInN0cmluZyIsCiAgICAgICAgICAiZW51bSIgOiBbICJjb20uYXBwY2VsZXJhdG9yLmFwaS51bmF1dGhvcml6ZWQiIF0KICAgICAgICB9LAogICAgICAgICJtZXNzYWdlIiA6IHsKICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAieC1heHdheSIgOiB7CiAgICAic2VydmljZVR5cGUiIDogInJlc3QiLAogICAgImltYWdlIiA6ICIvYXBpL3BvcnRhbC92MS4zL2Rpc2NvdmVyeS9zd2FnZ2VyL2FwaXMvZDMzYjk2NmUtN2MwNS00MTg5LWE5MmEtYjljOGQ0ZThlOTI0L2ltYWdlIiwKICAgICJiYXNlUGF0aHMiIDogWyAiaHR0cHM6Ly9hcGktZW52LmRlbW8uYXh3YXkuY29tOjgwNjUiIF0sCiAgICAiZXhwaXJlZCIgOiBmYWxzZSwKICAgICJyZXRpcmVtZW50RGF0ZSIgOiAwLAogICAgImNvcnNFbmFibGVkIiA6IHRydWUsCiAgICAiZGVwcmVjYXRlZCIgOiBmYWxzZSwKICAgICJhdmFpbGFibGVTREsiIDogewogICAgICAiaW9zLXN3aWZ0IiA6ICIvZGlzY292ZXJ5L3Nkay9kMzNiOTY2ZS03YzA1LTQxODktYTkyYS1iOWM4ZDRlOGU5MjQvaW9zLXN3aWZ0IiwKICAgICAgInRpdGFuaXVtIiA6ICIvZGlzY292ZXJ5L3Nkay9kMzNiOTY2ZS03YzA1LTQxODktYTkyYS1iOWM4ZDRlOGU5MjQvdGl0YW5pdW0iLAogICAgICAiYW5kcm9pZCIgOiAiL2Rpc2NvdmVyeS9zZGsvZDMzYjk2NmUtN2MwNS00MTg5LWE5MmEtYjljOGQ0ZThlOTI0L2FuZHJvaWQiLAogICAgICAibm9kZWpzIiA6ICIvZGlzY292ZXJ5L3Nkay9kMzNiOTY2ZS03YzA1LTQxODktYTkyYS1iOWM4ZDRlOGU5MjQvbm9kZWpzIgogICAgfSwKICAgICJhcGlSZXNvdXJjZVR5cGUiIDogInN3YWdnZXIyMCIsCiAgICAiaWQiIDogImQzM2I5NjZlLTdjMDUtNDE4OS1hOTJhLWI5YzhkNGU4ZTkyNCIsCiAgICAic3RhdGUiIDogInVucHVibGlzaGVkIiwKICAgICJhY2Nlc3NHcmFudGVkRGF0ZSIgOiAxNjQzNzE2NTU0MDk3CiAgfQp9",
+                "version": "1.0.0",
+                "contentType": "application/json"
+            }
+        }
+    }
+]
