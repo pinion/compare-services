@@ -4,4 +4,5 @@ service-docs*
 categorytraining*
 .venv
 all_files.csv
-all_files.json.credentials
+all_files.json
+.credentials
