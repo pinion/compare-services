@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_pinion_compare_services_1723574342540-push-trigger-input-set
+  identifier: Build_pinion_compare_services_1723574342540pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_pinion_compare_services_1723574342540
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
